@@ -1,0 +1,66 @@
+2023.11.30:
+- In the implementation of the "MPEGVideoStreamFramer" class, gave "TimeCode::operator==()"
+  the "const" qualifier, to make some compilers happy.
+  (Thanks to Dmitry Bely for the report)
+- Performed the annual update of the copyright years near the start of each file
+2023.11.08:
+- Changed the signature to the virtual function "getRTPSinkandRTCP()" (in "ServerMediaSubession",
+  and its subclasses "OnDemandServerMediaSession" and "PassiveServerMediaSubsession")
+  to make its 'result' arguments "rtpSink" and "rtcp" no longer "const *".  There was no
+  real reason to make those "const *".  (Thanks to Andy Hawkins for prompting this.)
+2023.11.07:
+- In the class "GenericMediaServer", made the variables "fServerMediaSessions",
+  "fClientConnections", and "fClientSessions" 'protected' rather than 'private',
+  to allow subclasses to access them if desired.
+2023.10.30:
+- Fixed a bug in "deleteEventTrigger()" that had accidentally been introduced during the
+  change to 'event trigger' implementation back in June.
+  (Thanks to Jörg Dommaschk for reporting this.)
+2023.07.24:
+- Updated the event trigger implementation once again, to allow for the possibility of
+  developers redefining MAX_NUM_EVENT_TRIGGERS (it must always be <= the number of bits
+  in an "EventTriggerId", though.  (Thanks to Jan Rørgaard Hansen for this suggestion.)
+2023.06.20:
+- Updated the event trigger implementation again - in the case where "NO_STD_LIB" is
+  defined.  In this case, "fTriggersAwaitingHandling" is implemented as an array of
+  "Boolean volatile"s, rather than as a 32-bit bitmap.  This should make 'race conditions'
+  less likely even if "NO_STD_LIB" is defined (though you should use the preferred, default
+  implementation - that uses an array of "std::atomic_flag"s - if possible).
+2023.06.16:
+- Changed the (default) implementation of 'event triggers' in "BasicTaskScheduler" to
+  implement "fTriggersAwaitingHandling" using "std:atomic_flag"s, rather than as a bitmap.
+  This should overcome 'race conditions' that some users experienced when calling
+  "triggerEvent()" from a non-LIVE555 thread.  (Thanks to Jan Rørgaard Hansen for reporting
+  this issue.)
+  Note that this is the first time the LIVE555 code has required the C++ standard library.
+  (If you cannot use the C++ standard library, then you can compile the code - but getting the
+  old behavior - by defining "NO_STD_LIB".)
+- Minor change to "RTSPCommon.cpp" to overcome a compilation error in XCode on Mac OS X.
+2023.06.14:
+- Fixed a bug in the Matroska file parsing code that could sometimes cause a 'use after free'
+  error.  (Thanks to Meng Ruijie, Martin Mirchev, and "jerry testing" for reporting this.)
+2023.06.10:
+- Minor change to "GroupsockHelper.cpp" to overcome a compilation error in XCode on Mac OS X.
+2023.06.08:
+- Updated the "dateHeader()" function in "RTSPCommon.cpp" to use "gmtime_r()" instead of
+  the older, non-thread-safe "gmtime()".  (Thanks to Russell Greene for the patch.)
+2023.05.10:
+- Fixed a minor memory leak in the "RTSPServer" code.
+  (Thanks to Zhudong Jie for reporting this.)
+2023.03.30:
+- Calls to "send()" and "sendto()" now explicitly take "MSG_NOSIGNAL" rather than 0 as the
+  'flags' parameter.  In most systems, 0 seems to work, but apparently not in
+  Debian Linux.  (Thanks to Eric Beuque for reporting this.)
+2023.01.19:
+- By default, we no longer compile "groupsock/NetAddress.cpp" for Windows to use
+  "gethostbyname()", because of a report that this breaks IPv6 name resolution.
+  (From now on, if you still want to use "gethostbyname()" for Windows, edit the
+  "win32config" file before running "genWindowsMakefiles".)
+2023.01.11:
+- Updated the "BasicTaskScheduler"/"DelayQueue" implementation to make the 'token counter'
+  a field of the task scheduler object, rather than having it be a static variable.
+  This avoids potential problems if an application uses more than one thread (with each thread
+  having its own task scheduler).  (Thanks to Jan Rørgaard Hansen for reporting this issue.)
+- Performed the annual update of the copyright years near the start of each file
+2022.12.01:
+- Yet another fix to the previous fix for RTSP-over-HTTP streaming.
