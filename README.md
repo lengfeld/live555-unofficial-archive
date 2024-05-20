@@ -49,6 +49,8 @@ I can assure that the tarballs I collected should be fine and authentic.
 Nevertheless you have to trust me for this. For the other tarballs, that are
 collected from third parties archives, like gentoo, you have to trust them.
 
+But the code is open source. Inspecting the code is always possible.
+
 
 ## Contributions
 
@@ -63,6 +65,10 @@ Add tarballs as tag/tree/commit objects to a git repository. The code is
 already there, but the usability is currently bad and must be fixed.
 
 Search the wayback machine for tarballs and add them.
+
+Get tarballs from videolan
+(https://download.videolan.org/pub/contrib/live555/). Check for vlc specific
+modifications.
 
 Find more public tarballs and add them.
 
