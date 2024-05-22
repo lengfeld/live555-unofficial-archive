@@ -70,6 +70,9 @@ Get tarballs from videolan
 (https://download.videolan.org/pub/contrib/live555/). Check for vlc specific
 modifications.
 
+Look at github repo https://github.com/museoa/live555-backups and it's upstream
+source https://src.rrz.uni-hamburg.de/files/src/live555/
+
 Find more public tarballs and add them.
 
 Include the `changelog.txt` and add a list of all existing live555 library
