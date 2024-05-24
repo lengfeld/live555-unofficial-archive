@@ -5,6 +5,9 @@ import sys
 import fnmatch
 from os.path import join
 
+# NOTE: All paths are hardcoded. It must be executed in the top level driectory
+# of the repo.
+
 
 def is_potential_version_line(line):
     if len(line) == 0:
@@ -21,6 +24,9 @@ def is_line_with_version(line):
     # Normale cases
     if fnmatch.fnmatch(line, '????.??.??:'):
         return True
+    elif fnmatch.fnmatch(line, '????-??-??:'):
+        # New format since 2024-03-08:
+        return True
     elif fnmatch.fnmatch(line, '????.??.??[a-b]:'):
         return True
     elif line == "2012.08.08":  # special case without colon
@@ -28,6 +34,16 @@ def is_line_with_version(line):
     elif line == "2003:03;11:":  # special case
         return True
     return False
+
+
+def normalize_version(line):
+    line = line.rstrip(":")
+    line = line.replace("-", ".")
+    if line == "2003:03;11":
+        line = "2003.03.11"
+    if not (fnmatch.fnmatch(line, '????.??.??[a-b]') or fnmatch.fnmatch(line, '????.??.??')):
+        raise Exception("Version number is not normal: %s" % (line,))
+    return line
 
 
 # Generator
@@ -44,7 +60,7 @@ def parse_changelog(filename):
                         yield version, text
                         version = None
                         text = []
-                    version = line.rstrip(":")
+                    version = normalize_version(line)
                 else:
                     raise Exception("Unknown line: %s" % (line,))
             else:
@@ -113,6 +129,23 @@ def check_tarballs_for_equality():
     return 0
 
 
+def check_tarballs_for_versions_in_changelog():
+    # TODO combine with other function
+    srcs_with_tarballs = read_tarballs()
+    tarballs = reverse_dict(srcs_with_tarballs)
+
+    changelog = list(parse_changelog("changelog.txt"))
+    versions_from_tarballs = set(tarballs.keys())
+    versions_from_changelog = set("live." + version + ".tar.gz" for version, _ in changelog)
+
+    should_be_empty = versions_from_tarballs - versions_from_changelog
+    if len(should_be_empty) != 0:
+        print("ERROR: Some versions from tarballs are not in the changelog:", should_be_empty)
+        return 1
+
+    return 0
+
+
 # tarballs :: dict<filename, srcs>
 # TODO make naming convention consistent!
 def link_tarballs():
@@ -155,7 +188,10 @@ def main():
     cmd = sys.argv[1]
 
     if cmd == "check":
-        return check_tarballs_for_equality()
+        ret = check_tarballs_for_equality()
+        if ret != 0:
+            return ret
+        return check_tarballs_for_versions_in_changelog()
     elif cmd == "link":
         return link_tarballs()
     else:
