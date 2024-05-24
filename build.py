@@ -69,15 +69,13 @@ def parse_changelog(filename):
         yield version, text
 
 
-ARCHIVES_DIR = "archives"
+SRCS_DIR = "srcs"
 
 
 def read_tarballs():
     tarballs = {}
-    for src in os.listdir(ARCHIVES_DIR):
-        if src == "all":
-            continue  # Ignore this special dir!
-        for file in os.listdir(join(ARCHIVES_DIR, src)):
+    for src in os.listdir(SRCS_DIR):
+        for file in os.listdir(join(SRCS_DIR, src)):
             if file in ("README.md", "files.md5", "changelog.txt"):
                 pass
             elif fnmatch.fnmatch(file, 'live.????.??.??.tar.gz') or fnmatch.fnmatch(file, 'live.????.??.???.tar.gz'):
@@ -115,9 +113,9 @@ def check_tarballs_for_equality():
 
     for duplicate in duplicates:
         srcs = tarballs[duplicate]
-        file_a = join(ARCHIVES_DIR, srcs[0], duplicate)
+        file_a = join(SRCS_DIR, srcs[0], duplicate)
         for src in srcs[1:]:
-            file_b = join(ARCHIVES_DIR, src, duplicate)
+            file_b = join(SRCS_DIR, src, duplicate)
             check = filecmp.cmp(file_a, file_b)
             if not check:
                 print("ERROR: Tarballs '%s' are different" % (duplicate,))
@@ -157,8 +155,8 @@ def link_tarballs():
         # Use "sorted" to make the selection consistent
         src = sorted(srcs)[0]
 
-        link_target = join("..", src, filename)
-        link_path = join(ARCHIVES_DIR, "all", filename)
+        link_target = join("..", "..", "srcs", src, filename)
+        link_path = join("archives", "all", filename)
 
         os.symlink(link_target, link_path)
 

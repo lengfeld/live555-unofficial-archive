@@ -26,7 +26,7 @@ create-links:
 .PHONY: create-tags
 create-tags:
 	for src in $(SRCS); do \
-		for archive in archives/$$src/*.tar.gz; do \
+		for archive in srcs/$$src/*.tar.gz; do \
 			scripts/unpack.sh $$archive $$src; \
 		done \
 	done
