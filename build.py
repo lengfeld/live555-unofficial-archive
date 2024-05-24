@@ -70,6 +70,7 @@ def parse_changelog(filename):
 
 
 SRCS_DIR = "srcs"
+ARCHIVES_DIR = "pub-tmp/archives"
 
 
 def read_tarballs():
@@ -156,9 +157,16 @@ def link_tarballs():
         src = sorted(srcs)[0]
 
         link_target = join("..", "..", "srcs", src, filename)
-        link_path = join("archives", "all", filename)
+        link_path = join(ARCHIVES_DIR, filename)
 
         os.symlink(link_target, link_path)
+
+    return 0
+
+
+def versions():
+    for version, _ in parse_changelog("changelog.txt"):
+        print(version)
 
     return 0
 
@@ -192,6 +200,8 @@ def main():
         return check_tarballs_for_versions_in_changelog()
     elif cmd == "link":
         return link_tarballs()
+    elif cmd == "versions":
+        return versions()
     else:
         print("ERROR: Unknown cmd '%s'" % (cmd,))
         return 1

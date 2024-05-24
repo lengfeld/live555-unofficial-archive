@@ -6,8 +6,11 @@ Streaming Media libraries](http://live555.com/liveMedia/).
 
 ## How to use it?
 
-All collected tarballs are in the folder [archives/all](archives/all). There
+All collected tarballs are in the folder [pub/archives](pub/archives). There
 you can download the archives and use them.
+
+You can find a list of all existing live555 version numbers in the file
+[pub/versions.txt](pub/versions.txt).
 
 
 ## Frequently Ask Questions
@@ -73,6 +76,3 @@ modifications.
 Look at github repo https://github.com/museoa/live555-backups
 
 Find more public tarballs and add them.
-
-Include the `changelog.txt` and add a list of all existing live555 library
-versions.

@@ -13,15 +13,26 @@ checks/git.show-ref.tags:
 	git show-ref --dereference | grep archives > $@
 
 checks/links.all:
-	 ls -l archives/all | cut -d" " -f 9- | sort > $@
+	 ls -l pub/archives | cut -d" " -f 12- | sort > $@
 
-# TODO Refactorg with build.py. It does not use hardcoded list!
+# TODO Refactor with build.py. It does not use hardcoded list!
 SRCS = gentoo local2023 jog.id.distfiles.macports.org uni-hamburg.de
 
-.PHONY: create-links
-create-links:
+.PHONY: checks
+checks:
 	./build.py check
+
+pub:
+	rm -rf pub-tmp
+	mkdir -p pub-tmp/archives
 	./build.py link
+	./build.py versions > pub-tmp/versions.txt
+	cd pub-tmp/archives && \
+		md5sum *.tar.gz > checksums.md5 && \
+		sha256sum *.tar.gz > checksums.sha256 && \
+		sha512sum *.tar.gz > checksums.sha512
+	rm -rf pub
+	mv pub-tmp pub
 
 .PHONY: create-tags
 create-tags:
@@ -31,17 +42,12 @@ create-tags:
 		done \
 	done
 
-.PHONY: create-hard
-#create-hard: create-tags create-links
-# TODO tags do not work correctly yet!
-create-hard: create-links
-
 
 # TODO Find correct way to remove refs in 'refs/archives'
 .PHONY: clean-hard
 clean-hard:
-	for tag in $$(git show-ref | grep archives | cut -d" " -f 2); do git update-ref -d $$tag; done
-	rm -f archives/all/*.tar.gz
+	#for tag in $$(git show-ref | grep archives | cut -d" " -f 2); do git update-ref -d $$tag; done
+	rm -rf pub
 
 .PHONY: clean
 clean:
