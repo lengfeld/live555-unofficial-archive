@@ -15,7 +15,8 @@ checks/git.show-ref.tags:
 checks/links.all:
 	 ls -l archives/all | cut -d" " -f 9- | sort > $@
 
-SRCS = gentoo local2023 jog.id.distfiles.macports.org
+# TODO Refactorg with build.py. It does not use hardcoded list!
+SRCS = gentoo local2023 jog.id.distfiles.macports.org uni-hamburg.de
 
 .PHONY: create-links
 create-links:
