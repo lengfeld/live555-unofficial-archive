@@ -19,13 +19,8 @@ SRCS = gentoo local2023 jog.id.distfiles.macports.org
 
 .PHONY: create-links
 create-links:
-	cd archives && \
-	for src in $(SRCS); do \
-		for archive in $$src/*.tar.gz; do \
-			ln -s ../$$archive all/$$(basename $$archive); \
-		done; \
-	done
-
+	./build.py check
+	./build.py link
 
 .PHONY: create-tags
 create-tags:
