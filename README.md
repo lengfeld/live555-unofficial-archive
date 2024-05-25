@@ -12,6 +12,26 @@ you can download the archives and use them.
 You can find a list of all existing live555 version numbers in the file
 [pub/versions.txt](pub/versions.txt).
 
+If you want to work with the code directly in a git repository, please
+have a look at
+[live555-unofficial-git-archive](https://github.com/lengfeld/live555-unofficial-git-archive).
+It's a repository that contains all live555 tarballs in the folder
+[pub/archives](pub/archives) as git tags.
+
+Exmaple usage:
+
+    $ git clone https://github.com/lengfeld/live555-unofficial-git-archive.git
+    $ cd live555-unofficial-git-archive
+    $ git tag  # list all versions/tags
+    $ git diff v2024.04.19-tree v2024.05.05-tree  # compare two versions
+
+    # Checkout the source code without creating a branch
+    $ git switch --detach v2024.04.19-tree
+
+_Note_: The tags have the suffix `-tree`. The git tags point to commit objects
+without a history. The only contain the file contents of the tarballs. so `git
+log` does not work!
+
 
 ## Frequently Ask Questions
 

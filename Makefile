@@ -1,27 +1,29 @@
 
-#TARGETS += checks/git.show.tags checks/git.show-ref.tags
+TARGETS += checks/git.show.tags checks/git.ls-remote checks/git.ls-tree.tags
 TARGETS += checks/links.all
 
 all: $(TARGETS)
 
-# TODO Avoid "grep archives"!!!
 checks/git.show.tags:
-	for tag in $$(git show-ref | grep archives | cut -d" " -f 1); do git show $$tag; echo ----; done > $@
+	(cd live555-unofficial-git-archive && \
+		for tag in $$(git tag); do git show --no-patch $$tag; echo ----; done) > $@
 
-# TODO Avoid "| grep achives". Find out of the refspec for show-ref works!!
-checks/git.show-ref.tags:
-	git show-ref --dereference | grep archives > $@
+checks/git.ls-tree.tags:
+	(cd live555-unofficial-git-archive && \
+		for tag in $$(git tag); do git ls-tree --name-only -r $$tag; done) | sort | uniq -c> $@
+
+checks/git.ls-remote:
+	git ls-remote live555-unofficial-git-archive/ > $@
 
 checks/links.all:
 	 ls -l pub/archives | cut -d" " -f 12- | sort > $@
-
-# TODO Refactor with build.py. It does not use hardcoded list!
-SRCS = gentoo local2023 jog.id.distfiles.macports.org uni-hamburg.de
 
 .PHONY: checks
 checks:
 	./build.py check
 
+# TODO This build arragement is bad. It does not use dependencies to avoid
+# rebuilding and recomputing (e.g. the checksums).
 pub:
 	rm -rf pub-tmp
 	mkdir -p pub-tmp/archives
@@ -34,19 +36,25 @@ pub:
 	rm -rf pub
 	mv pub-tmp pub
 
+.PHONY: create-pub
+create-pub: pub
+
 .PHONY: create-tags
 create-tags:
-	for src in $(SRCS); do \
+	for src in $$(cd srcs && echo * ); do \
 		for archive in srcs/$$src/*.tar.gz; do \
 			scripts/unpack.sh $$archive $$src; \
 		done \
 	done
 
 
-# TODO Find correct way to remove refs in 'refs/archives'
 .PHONY: clean-hard
-clean-hard:
-	#for tag in $$(git show-ref | grep archives | cut -d" " -f 2); do git update-ref -d $$tag; done
+clean-tags:
+	cd live555-unofficial-git-archive && \
+		for tag in $$(git tag); do git tag -d $$tag; done
+
+.PHONY: clean-pub
+clean-pub:
 	rm -rf pub
 
 .PHONY: clean
