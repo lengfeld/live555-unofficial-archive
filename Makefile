@@ -16,7 +16,7 @@ checks/git.ls-remote:
 	git ls-remote live555-unofficial-git-archive/ > $@
 
 checks/links.all:
-	 ls -l pub/archives | cut -d" " -f 13- | sort > $@
+	ls -l pub/archives | cut -d" " -f 13- | sort > $@
 
 .PHONY: checks
 checks:
@@ -33,6 +33,8 @@ pub:
 		md5sum *.tar.gz > checksums.md5 && \
 		sha256sum *.tar.gz > checksums.sha256 && \
 		sha512sum *.tar.gz > checksums.sha512
+	./build.py list > pub-tmp/list.html
+	./build.py table > pub-tmp/table.html
 	rm -rf pub
 	mv pub-tmp pub
 
@@ -53,6 +55,29 @@ clean-tags:
 clean-pub:
 	rm -rf pub
 
+# TODO Cleanup the build and pub folder mess!
+build:
+	mkdir -p $@
+
+build/index.html: index.md build
+	pandoc -f markdown -t html $< -o $@
+
+pub/index.html: build/index.html
+	cp $< $@
+
+.PHONY:
+page: pub/index.html pub/list.html pub/table.html
+	git worktree add gh-pages origin/gh-pages
+	(cd gh-pages && \
+		git rm * && \
+		touch .nojekyll && \
+		cd .. && cp $^ gh-pages/ && cd gh-pages && \
+		git add * .nojekyll && \
+		git commit -m "update gh-pages" && \
+		echo git push origin $$(git rev-parse HEAD):gh-pages --dry-run); \
+	git worktree remove --force gh-pages
+
+
 .PHONY: clean
 clean:
-	rm -f $(TARGETS)
+	rm -f $(TARGETS) -r build/

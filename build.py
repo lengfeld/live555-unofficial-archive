@@ -5,6 +5,7 @@ import sys
 import fnmatch
 from os.path import join
 from subprocess import run
+from enum import Enum
 
 # NOTE: All paths are hard coded. It must be executed in the top level
 # directory of the repo.
@@ -110,7 +111,7 @@ def read_srcs_tarballs():
                     # TODO set() is the better datastructure
                     srcs_tarballs[src] = [filename]
             else:
-                print("Warning: Ignoring '%s'" % (filename,))
+                print("Warning: Ignoring '%s'" % (filename,), file=sys.stderr)
 
     return srcs_tarballs
 
@@ -159,7 +160,7 @@ def check_tarballs_for_versions_in_changelog():
     tarballs_srcs = reverse_dict(srcs_tarballs)
     versions_from_tarballs = set(tarballs_srcs.keys())
 
-    changelog = list(parse_changelog("changelog.txt"))
+    changelog = parse_changelog("changelog.txt")
     versions_from_changelog = set("live." + version + ".tar.gz" for version, _ in changelog)
 
     should_be_empty = versions_from_tarballs - versions_from_changelog
@@ -210,6 +211,103 @@ def link_tarballs():
         link_path = join(ARCHIVES_DIR, tarball)
 
         os.symlink(link_target, link_path)
+
+    return 0
+
+
+def get_checksum_for_tarball(tarball_filename, checksum_file):
+    with open(checksum_file) as f:
+        for line in f:
+            checksum, filename = line.rstrip("\n").split("  ", 1)
+            if filename == tarball_filename:
+                return checksum
+    raise Exception("Checksum for tarball %s not found" % (tarball_filename,))
+
+
+class PageType(Enum):
+    LIST = "list"
+    TABLE = "table"
+
+
+def print_entry_for_tarball(page_type, version, tarball_filename, srcs, text):
+    src = choose_preferred_src(tarball_filename, srcs)
+    tarball_link = "https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/%s/%s" % (src, tarball_filename)
+    git_tag_name = "v%s-tree" % (version,)
+    git_tag_link = "https://github.com/lengfeld/live555-unofficial-git-archive/tree/%s" % (git_tag_name,)
+    tarball_size = os.path.getsize("pub-tmp/archives/" + tarball_filename)
+    md5sum = get_checksum_for_tarball(tarball_filename, "pub-tmp/archives/checksums.md5")
+    sha256sum = get_checksum_for_tarball(tarball_filename, "pub-tmp/archives/checksums.sha256")
+    sha512sum = get_checksum_for_tarball(tarball_filename, "pub-tmp/archives/checksums.sha512")
+
+    if page_type == PageType.LIST:
+        print("<h2 id='%s'>%s</h2>" % (version, version))
+        print("<ul>")
+        print("<li>size: %d K</li>" % (tarball_size / 1024,))
+        print("<li>tarball: <a href='%s'>%s</a></li>" % (tarball_link, tarball_filename))
+        print("<li>git tag link: <a href='%s'>%s</a></li>" % (git_tag_link, git_tag_name))
+        print("</ul>")
+        # TODO add link to "git diff tag1..tag2"
+        # TODO add link to patch file
+
+        print("<h3>Changelog</h3>")
+        print("<pre>%s</pre>" % ("\n".join(text),))
+
+        print("<h3>Checksums</h3>")
+        print("<ul>")
+        print("<li>md5: %s</li>" % (md5sum,))
+        print("<li>sha256: %s</li>" % (sha256sum,))
+        print("<li>sha512: %s</li>" % (sha512sum,))
+        print("</ul>")
+    elif page_type == PageType.TABLE:
+        print("<tr>")
+        print("<td>%s</td>" % (version,))
+        print("<td><a href='%s'>%s</a><p>" % (tarball_link, tarball_filename))
+        print("<td><a href='%s'>%s</a><p>" % (git_tag_link, git_tag_name))
+        print("<td>%d K</td>" % (tarball_size / 1024,))
+        print("<td><a href='list.html#%s'>more</a></td>" % (version,))
+        print("</tr>")
+    else:
+        assert(False)
+
+
+def gen_list_or_table(page_type):
+    srcs_tarballs = read_srcs_tarballs()
+    tarballs_srcs = reverse_dict(srcs_tarballs)
+
+    changelog = parse_changelog("changelog.txt")
+
+    type
+    print("<!doctype html>")
+    print("<html lang='en-US'>")
+    print("<head>")
+    print("<meta charset='utf-8' />")
+    print("<title>live555 unofficial archive - %s</title>" % (page_type.value,))
+    print("</head>")
+    print("<body>")
+    print("<h1>live555 unofficial archive - %s</h1>" % (page_type.value,))
+
+    if page_type == PageType.TABLE:
+        print("<table>")
+        print("<tr>")
+        print("<th>filename</th>")
+        print("<th>tarball</th>")
+        print("<th>git tag</th>")
+        print("<th>size</th>")
+        print("<th>more information</th>")
+        print("</tr>")
+
+
+    for version, text in changelog:
+        tarball = "live." + version + ".tar.gz"
+        if tarball in tarballs_srcs:
+            srcs = tarballs_srcs[tarball]
+            print_entry_for_tarball(page_type, version, tarball, srcs, text)
+
+    if page_type == PageType.TABLE:
+        print("</table>")
+
+    print("</body>")
+    print("</html>")
 
     return 0
 
@@ -270,6 +368,10 @@ def main():
         return link_tarballs()
     elif cmd == "tag":
         return create_git_tags()
+    elif cmd == "list":
+        return gen_list_or_table(PageType.LIST)
+    elif cmd == "table":
+        return gen_list_or_table(PageType.TABLE)
     elif cmd == "versions":
         return versions()
     else:
