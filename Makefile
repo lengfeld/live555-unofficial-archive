@@ -33,6 +33,7 @@ pub:
 		md5sum *.tar.gz > checksums.md5 && \
 		sha256sum *.tar.gz > checksums.sha256 && \
 		sha512sum *.tar.gz > checksums.sha512
+	./build.py page > pub-tmp/index.html
 	rm -rf pub
 	mv pub-tmp pub
 

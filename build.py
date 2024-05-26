@@ -110,7 +110,7 @@ def read_srcs_tarballs():
                     # TODO set() is the better datastructure
                     srcs_tarballs[src] = [filename]
             else:
-                print("Warning: Ignoring '%s'" % (filename,))
+                print("Warning: Ignoring '%s'" % (filename,), file=sys.stderr)
 
     return srcs_tarballs
 
@@ -159,7 +159,7 @@ def check_tarballs_for_versions_in_changelog():
     tarballs_srcs = reverse_dict(srcs_tarballs)
     versions_from_tarballs = set(tarballs_srcs.keys())
 
-    changelog = list(parse_changelog("changelog.txt"))
+    changelog = parse_changelog("changelog.txt")
     versions_from_changelog = set("live." + version + ".tar.gz" for version, _ in changelog)
 
     should_be_empty = versions_from_tarballs - versions_from_changelog
@@ -210,6 +210,69 @@ def link_tarballs():
         link_path = join(ARCHIVES_DIR, tarball)
 
         os.symlink(link_target, link_path)
+
+    return 0
+
+
+def get_checksum_for_tarball(tarball_filename, checksum_file):
+    with open(checksum_file) as f:
+        for line in f:
+            checksum, filename = line.rstrip("\n").split("  ", 1)
+            if filename == tarball_filename:
+                return checksum
+    raise Exception("Checksum for tarball %s not found" % (tarball_filename,))
+
+
+def print_entry_for_tarball(tarball_filename, srcs, text):
+    print("<tr>")
+    # %s</h2>" % (tarball_filename,))
+    print("<td>%s</td>" % (tarball_filename,)) # TODO use version
+    print("<td><a href='archives/%s'>tarball</a><p>" % (tarball_filename,))
+    tarball_size = os.path.getsize("pub-tmp/archives/" + tarball_filename)
+    print("<td>%d K</td>" % (tarball_size / 1024,))
+    print("<td>%s</td>" % (", ".join(srcs),))
+
+    # TODO add link to changelog
+    # TODO add changelog file
+
+    # md5sum = get_checksum_for_tarball(tarball_filename, "pub-tmp/archives/checksums.md5")
+    # sha256sum = get_checksum_for_tarball(tarball_filename, "pub-tmp/archives/checksums.sha256")
+    # sha512sum = get_checksum_for_tarball(tarball_filename, "pub-tmp/archives/checksums.sha512")
+
+    # print("<p>Checksums:<p>")
+    # print("<pre>")
+    # print("md5:    %s" % (md5sum,))
+    # print("sha256: %s" % (sha256sum,))
+    # print("sha512: %s" % (sha512sum,))
+    # print("</pre>")
+
+    print("</tr>")
+
+
+def gen_page():
+    srcs_tarballs = read_srcs_tarballs()
+    tarballs_srcs = reverse_dict(srcs_tarballs)
+
+    changelog = parse_changelog("changelog.txt")
+
+    # TODO write html5 header and footer
+    print("<h1>Live555 tarballs</h1>")
+
+    print("<table>")
+    print("<tr>")
+    print("<th>Filename</th>")
+    print("<th>Link</th>")
+    print("<th>Size</th>")
+    print("<th>Sources</th>")
+    print("</tr>")
+
+    for version, text in changelog:
+        tarball = "live." + version + ".tar.gz"
+        if tarball in tarballs_srcs:
+            srcs = tarballs_srcs[tarball]
+            print_entry_for_tarball(tarball, srcs, text)
+
+    print("</table>")
 
     return 0
 
@@ -269,6 +332,8 @@ def main():
         return link_tarballs()
     elif cmd == "tag":
         return create_git_tags()
+    elif cmd == "page":
+        return gen_page()
     elif cmd == "versions":
         return versions()
     else:
