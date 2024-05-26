@@ -29,7 +29,7 @@ Exmaple usage:
     $ git switch --detach v2024.04.19-tree
 
 _Note_: The tags have the suffix `-tree`. The git tags point to commit objects
-without a history. The only contain the file contents of the tarballs. so `git
+without a history. They only contain the file contents of the tarballs. So `git
 log` does not work!
 
 
