@@ -84,9 +84,6 @@ most complete set of source code archives for live555.
 
 ## TODOs
 
-Add tarballs as tag/tree/commit objects to a git repository. The code is
-already there, but the usability is currently bad and must be fixed.
-
 Search the wayback machine for tarballs and add them.
 
 Get tarballs from videolan
