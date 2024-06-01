@@ -75,14 +75,19 @@ collected from third parties archives, like gentoo, you have to trust them.
 But the code is open source. Inspecting the code is always possible.
 
 
-## Contributions
+## Contributions and Questions
 
 If you like to contribute, open a PR or create an issue. Especially new sources
 of historical tarballs are welcome. The goal of this project is to have the
 most complete set of source code archives for live555.
 
+If you have questions, you can also email me:
+[stefan+live@lengfeld.xyz](mailto:stefan+live@lengfeld.xyz)
+
 
 ## TODOs
+
+Add overview html page for all collected tarballs.
 
 Add my cronjob watcher script to continously polls the live555 download page.
 
