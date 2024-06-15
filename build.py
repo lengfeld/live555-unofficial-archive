@@ -199,9 +199,6 @@ def create_git_tags():
         src = sorted(srcs)[0]
 
         version = get_version_from_filename(tarball)
-        if version == "2018.08.28a":
-            # Skip for now! This was a bug in the unpack.sh script
-            continue
 
         p = run(["scripts/unpack.sh", version, src])
         if p.returncode != 0:

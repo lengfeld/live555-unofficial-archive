@@ -1034,6 +1034,20 @@ Date:   Mon Aug 27 00:00:00 2018 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2018.08.28a-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Tue Aug 28 00:00:00 2018 +0000
+
+live555 2018.08.28a from uni-hamburg.de
+
+commit 69f1311e7c42a98e0e924c1de13d8694d384fd6a
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Tue Aug 28 00:00:00 2018 +0000
+
+    unpack live.2018.08.28a.tar.gz from uni-hamburg.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
 tag v2018.09.05-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Wed Sep 5 00:00:00 2018 +0000
