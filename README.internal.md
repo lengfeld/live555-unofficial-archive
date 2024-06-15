@@ -7,4 +7,8 @@ Command to clean and create everything
     $ make clean clean-pub && make checks && make create-pub && make
     $ make clean clean-tags && make checks && make create-tags && make
 
+As one command
+
+    $ make clean clean-pub clean-tags checks && make create-pub create-tags && make
+
 TODO This should be at least one single make command! Refactoring is needed!
