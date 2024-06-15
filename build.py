@@ -170,6 +170,23 @@ def check_tarballs_for_versions_in_changelog():
     return 0
 
 
+PREFER_UNIHAMBURG = {
+    "live.2024.02.15.tar.gz", "live.2024.02.23.tar.gz",
+    "live.2024.02.28.tar.gz", "live.2024.04.14.tar.gz",
+    "live.2024.04.19.tar.gz", "live.2024.05.05.tar.gz",
+    "live.2024.05.15.tar.gz"}
+
+
+def choose_preferred_src(tarball, srcs):
+    # Special case until 2024-06-15 before 'local2024' was introduced!
+    if tarball in PREFER_UNIHAMBURG:
+        assert "uni-hamburg.de" in srcs
+        return "uni-hamburg.de"
+
+    # The default was to use the first one of the sorted list.
+    return sorted(srcs)[0]
+
+
 # tarballs_srcs :: dict<tarball :: string , [src :: string]>
 # TODO make naming convention consistent!
 def link_tarballs():
@@ -177,9 +194,8 @@ def link_tarballs():
     tarballs_srcs = reverse_dict(srcs_tarballs)
 
     for tarball, srcs in tarballs_srcs.items():
-        # Just pick the first one. Assumption: All tarballs are equal
-        # Use "sorted" to make the selection consistent
-        src = sorted(srcs)[0]
+        # Assumption: All tarballs are equal
+        src = choose_preferred_src(tarball, srcs)
 
         link_target = join("..", "..", "srcs", src, tarball)
         link_path = join(ARCHIVES_DIR, tarball)
@@ -194,9 +210,8 @@ def create_git_tags():
     tarballs_srcs = reverse_dict(srcs_tarballs)
 
     for tarball, srcs in tarballs_srcs.items():
-        # Just pick the first one. Assumption: All tarballs are equal
-        # Use "sorted" to make the selection consistent
-        src = sorted(srcs)[0]
+        # Assumption: All tarballs are equal
+        src = choose_preferred_src(tarball, srcs)
 
         version = get_version_from_filename(tarball)
 
