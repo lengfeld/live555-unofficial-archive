@@ -18,11 +18,11 @@ REPO_DIR=live555-unofficial-git-archive/.git/
 # Solution: Even when it's not logically (because it has no parrent), create an
 # additional commit object.
 
-archive_name=$1
+version=$1
 src=$2
 
-version=$(echo $archive_name | egrep  -o -e "([0-9]{4}\.[0-9]{2}\.[0-9]{2}).tar.gz$" | sed 's/.tar.gz//g')
-
+archive_name="live.$version.tar.gz"
+archive_path="srcs/$src/$archive_name"
 archive_filename=$(basename $archive_name)
 
 version_long="live.$version"
@@ -40,8 +40,8 @@ fi
 
 echo tagname: $tagname
 
-if [ ! -f "$archive_name" ]; then
-	echo "File $archive_name does not exist!"
+if [ ! -f "$archive_path" ]; then
+	echo "File $archive_path does not exist!"
 	exit 1
 fi
 
@@ -53,14 +53,14 @@ mkdir tmp
 
 # Check tar archive. It must contain a toplevel folder "live" and nothing more
 # at the top level!
-if [ "$(tar tf $archive_name |  cut -d/ -f 1 | sort | uniq)" != "live" ]; then
+if [ "$(tar tf $archive_path | cut -d/ -f 1 | sort | uniq)" != "live" ]; then
 	echo "ERROR: tar archive is more then 'live' at the toplevel"
 	echo ""
 	exit 1
 fi
 
 # Strip toplevel 'live' folder
-(cd tmp && tar xf ../$archive_name --strip-components=1)
+(cd tmp && tar xf ../$archive_path --strip-components=1)
 
 (cd tmp && git add .)
 

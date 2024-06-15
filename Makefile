@@ -41,11 +41,7 @@ create-pub: pub
 
 .PHONY: create-tags
 create-tags:
-	for src in $$(cd srcs && echo * ); do \
-		for archive in srcs/$$src/*.tar.gz; do \
-			scripts/unpack.sh $$archive $$src; \
-		done \
-	done
+	./build.py tag
 
 
 .PHONY: clean-hard

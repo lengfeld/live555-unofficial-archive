@@ -4,9 +4,10 @@ import os
 import sys
 import fnmatch
 from os.path import join
+from subprocess import run
 
-# NOTE: All paths are hardcoded. It must be executed in the top level driectory
-# of the repo.
+# NOTE: All paths are hard coded. It must be executed in the top level
+# directory of the repo.
 
 
 def is_potential_version_line(line):
@@ -21,8 +22,8 @@ def is_potential_version_line(line):
 
 
 def is_line_with_version(line):
-    # Normale cases
     if fnmatch.fnmatch(line, '????.??.??:'):
+        # Normal cases
         return True
     elif fnmatch.fnmatch(line, '????-??-??:'):
         # New format since 2024-03-08:
@@ -36,13 +37,19 @@ def is_line_with_version(line):
     return False
 
 
+# The version should look like "2012.08.08" or "2003.02.03b"
 def normalize_version(line):
     line = line.rstrip(":")
     line = line.replace("-", ".")
+
+    # Special case
     if line == "2003:03;11":
         line = "2003.03.11"
+
+    # Check
     if not (fnmatch.fnmatch(line, '????.??.??[a-b]') or fnmatch.fnmatch(line, '????.??.??')):
         raise Exception("Version number is not normal: %s" % (line,))
+
     return line
 
 
@@ -73,24 +80,43 @@ SRCS_DIR = "srcs"
 ARCHIVES_DIR = "pub-tmp/archives"
 
 
-def read_tarballs():
-    tarballs = {}
+def is_tarball_filename(filename):
+    if fnmatch.fnmatch(filename, 'live.????.??.??.tar.gz'):
+        return True
+    return fnmatch.fnmatch(filename, 'live.????.??.???.tar.gz')
+
+
+def get_version_from_filename(filename):
+    if fnmatch.fnmatch(filename, 'live.????.??.??.tar.gz'):
+        return filename[5:5 + 10]
+    if fnmatch.fnmatch(filename, 'live.????.??.???.tar.gz'):
+        return filename[5:5 + 11]
+
+    raise Exception("Filename '%s' is not a valid live555 tarball" % (filename,))
+
+
+# Returns
+# srcs_tarballs :: dict<src :: String, [filename :: String]>
+def read_srcs_tarballs():
+    srcs_tarballs = {}
     for src in os.listdir(SRCS_DIR):
-        for file in os.listdir(join(SRCS_DIR, src)):
-            if file in ("README.md", "files.md5", "changelog.txt"):
+        for filename in os.listdir(join(SRCS_DIR, src)):
+            if filename in ("README.md", "files.md5", "changelog.txt"):
                 pass
-            elif fnmatch.fnmatch(file, 'live.????.??.??.tar.gz') or fnmatch.fnmatch(file, 'live.????.??.???.tar.gz'):
+            elif is_tarball_filename(filename):
                 try:
-                    tarballs[src].append(file)
+                    srcs_tarballs[src].append(filename)
                 except KeyError:
                     # TODO set() is the better datastructure
-                    tarballs[src] = [file]
+                    srcs_tarballs[src] = [filename]
             else:
-                print("Warning: Ignoring '%s'" % (file,))
+                print("Warning: Ignoring '%s'" % (filename,))
 
-    return tarballs
+    return srcs_tarballs
 
 
+# Swap keys and values
+# - values must be a list/set!
 def reverse_dict(d):
     r = {}
     for key in d:
@@ -105,21 +131,20 @@ def reverse_dict(d):
 def check_tarballs_for_equality():
     import filecmp
 
-    srcs_with_tarballs = read_tarballs()
-    tarballs = reverse_dict(srcs_with_tarballs)
+    srcs_tarballs = read_srcs_tarballs()
+    tarballs_srcs = reverse_dict(srcs_tarballs)
 
     at_least_one_error = False
 
-    duplicates = [tarball for tarball, srcs in tarballs.items() if len(srcs) >= 2]
+    duplicates = [(tarball, srcs) for tarball, srcs in tarballs_srcs.items() if len(srcs) >= 2]
 
-    for duplicate in duplicates:
-        srcs = tarballs[duplicate]
-        file_a = join(SRCS_DIR, srcs[0], duplicate)
+    for tarball, srcs in duplicates:
+        file_a = join(SRCS_DIR, srcs[0], tarball)
         for src in srcs[1:]:
-            file_b = join(SRCS_DIR, src, duplicate)
+            file_b = join(SRCS_DIR, src, tarball)
             check = filecmp.cmp(file_a, file_b)
             if not check:
-                print("ERROR: Tarballs '%s' are different" % (duplicate,))
+                print("ERROR: Tarballs '%s' are different" % (tarball,))
                 at_least_one_error = True
 
     if at_least_one_error:
@@ -130,11 +155,11 @@ def check_tarballs_for_equality():
 
 def check_tarballs_for_versions_in_changelog():
     # TODO combine with other function
-    srcs_with_tarballs = read_tarballs()
-    tarballs = reverse_dict(srcs_with_tarballs)
+    srcs_tarballs = read_srcs_tarballs()
+    tarballs_srcs = reverse_dict(srcs_tarballs)
+    versions_from_tarballs = set(tarballs_srcs.keys())
 
     changelog = list(parse_changelog("changelog.txt"))
-    versions_from_tarballs = set(tarballs.keys())
     versions_from_changelog = set("live." + version + ".tar.gz" for version, _ in changelog)
 
     should_be_empty = versions_from_tarballs - versions_from_changelog
@@ -145,21 +170,42 @@ def check_tarballs_for_versions_in_changelog():
     return 0
 
 
-# tarballs :: dict<filename, srcs>
+# tarballs_srcs :: dict<tarball :: string , [src :: string]>
 # TODO make naming convention consistent!
 def link_tarballs():
-    srcs_with_tarballs = read_tarballs()
-    tarballs = reverse_dict(srcs_with_tarballs)
+    srcs_tarballs = read_srcs_tarballs()
+    tarballs_srcs = reverse_dict(srcs_tarballs)
 
-    for filename, srcs in tarballs.items():
+    for tarball, srcs in tarballs_srcs.items():
         # Just pick the first one. Assumption: All tarballs are equal
         # Use "sorted" to make the selection consistent
         src = sorted(srcs)[0]
 
-        link_target = join("..", "..", "srcs", src, filename)
-        link_path = join(ARCHIVES_DIR, filename)
+        link_target = join("..", "..", "srcs", src, tarball)
+        link_path = join(ARCHIVES_DIR, tarball)
 
         os.symlink(link_target, link_path)
+
+    return 0
+
+
+def create_git_tags():
+    srcs_tarballs = read_srcs_tarballs()
+    tarballs_srcs = reverse_dict(srcs_tarballs)
+
+    for tarball, srcs in tarballs_srcs.items():
+        # Just pick the first one. Assumption: All tarballs are equal
+        # Use "sorted" to make the selection consistent
+        src = sorted(srcs)[0]
+
+        version = get_version_from_filename(tarball)
+        if version == "2018.08.28a":
+            # Skip for now! This was a bug in the unpack.sh script
+            continue
+
+        p = run(["scripts/unpack.sh", version, src])
+        if p.returncode != 0:
+            raise Exception("Command failed")
 
     return 0
 
@@ -171,7 +217,7 @@ def versions():
     return 0
 
 
-# TODO Renable this code
+# TODO Enable this code
 def unused_code():
     only_versions = False
     if "--versions" in sys.argv:
@@ -200,6 +246,8 @@ def main():
         return check_tarballs_for_versions_in_changelog()
     elif cmd == "link":
         return link_tarballs()
+    elif cmd == "tag":
+        return create_git_tags()
     elif cmd == "versions":
         return versions()
     else:
