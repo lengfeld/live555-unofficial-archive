@@ -1,3 +1,6 @@
+2024-05-30:
+- Fixed a mistake that caused the config file "config.raspberrypi" to not appear in
+  the distribution.  (It's there now.)
 2024-05-15:
 - Added a new config file "config.raspberrypi" that is known to work for
   building the code on/for a Raspberry Pi 5.

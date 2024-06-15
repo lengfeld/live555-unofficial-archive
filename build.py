@@ -183,6 +183,15 @@ def choose_preferred_src(tarball, srcs):
         assert "uni-hamburg.de" in srcs
         return "uni-hamburg.de"
 
+    # And other special case. Otherwise 'localgetter' cannot be the preferred
+    # src.
+    if tarball == "live.2024.03.08.tar.gz":
+        assert "jog.id.distfiles.macports.org" in srcs
+        return "jog.id.distfiles.macports.org"
+
+    if "localgetter" in srcs:
+        return "localgetter"
+
     # The default was to use the first one of the sorted list.
     return sorted(srcs)[0]
 
