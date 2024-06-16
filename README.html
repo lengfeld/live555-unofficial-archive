@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="live555-unofficial-archive">live555 unofficial archive</h1>
+<p>This project is an unofficial archive of the source code of the <a
+href="http://live555.com/liveMedia/">LIVE555 Streaming Media
+libraries</a>.</p>
+<h2 id="how-to-use-it">How to use it?</h2>
+<p>All collected tarballs are in the folder <a
+href="pub/archives">pub/archives</a>. There you can download the
+archives and use them.</p>
+<p>You can find a list of all existing live555 version numbers in the
+file <a href="pub/versions.txt">pub/versions.txt</a>.</p>
+<p>If you want to work with the code directly in a git repository,
+please have a look at <a
+href="https://github.com/lengfeld/live555-unofficial-git-archive">live555-unofficial-git-archive</a>.
+It’s a repository that contains all live555 tarballs in the folder <a
+href="pub/archives">pub/archives</a> as git tags.</p>
+<p>Exmaple usage:</p>
+<pre><code>$ git clone https://github.com/lengfeld/live555-unofficial-git-archive.git
+$ cd live555-unofficial-git-archive
+$ git tag  # list all versions/tags
+$ git diff v2024.04.19-tree v2024.05.05-tree  # compare two versions
+
+# Checkout the source code without creating a branch
+$ git switch --detach v2024.04.19-tree</code></pre>
+<p><em>Note</em>: The tags have the suffix <code>-tree</code>. The git
+tags point to commit objects without a history. They only contain the
+file contents of the tarballs. So <code>git log</code> does not
+work!</p>
+<h2 id="frequently-ask-questions">Frequently Ask Questions</h2>
+<h3 id="why-was-this-project-created">Why was this project created?</h3>
+<p>The original author of the libraries does not maintain historical
+versions of the source code. The reasons are stated in the <a
+href="http://live555.com/liveMedia/faq.html#no-source-code-repository">FAQ</a>:</p>
+<blockquote>
+<p>Why do you not make the code available under a ‘source code
+repository’?</p>
+<p>Unlike some other open source projects, the source code for this
+project is provided as a ‘tarball’, rather than in a source code
+repository - because old versions of the code are not supported. (A
+source code repository might also encourage developers to extend the
+source code by modifying it ‘in place’ (and then upgrading the code by
+‘merging diffs’). As noted above, modifying the supplied code ‘in place’
+is something that we discourage; instead, developers should use C++
+subclassing to extend the code.)</p>
+</blockquote>
+<p>I can follow the reasoning that only the newest and current version
+is supported. That’s a fair decision.</p>
+<p>Nevertheless I also value traceability. This means that you can
+follow the development process. E.g. when a bug was fixed or a feature
+was introduced. This can only achieved if you have a development history
+as a source code repository or historical archives. Relying on third
+parties for this goal has a couple of issues.</p>
+<h3 id="are-the-tarballs-authentic">Are the tarballs authentic?</h3>
+<p>You will never know for sure! Since the original auther does not
+maintain a reference archive of the historical source code, you have to
+rely on third parties, like this project, to provide the old tarballs.
+Since the published tarballs are not signed by the original author, you
+can only rely on trust.</p>
+<p>I can assure that the tarballs I collected should be fine and
+authentic. Nevertheless you have to trust me for this. For the other
+tarballs, that are collected from third parties archives, like gentoo,
+you have to trust them.</p>
+<p>But the code is open source. Inspecting the code is always
+possible.</p>
+<h2 id="contributions-and-questions">Contributions and Questions</h2>
+<p>If you like to contribute, open a PR or create an issue. Especially
+new sources of historical tarballs are welcome. The goal of this project
+is to have the most complete set of source code archives for
+live555.</p>
+<p>If you have questions, you can also email me: <a
+href="mailto:stefan+live@lengfeld.xyz">stefan+live@lengfeld.xyz</a></p>
+<h2 id="todos">TODOs</h2>
+<p>Add my cronjob watcher script to continously polls the live555
+download page.</p>
+<p>Search the wayback machine for tarballs and add them.</p>
+<p>Get tarballs from videolan
+(https://download.videolan.org/pub/contrib/live555/). Check for vlc
+specific modifications.</p>
+<p>Look at github repo https://github.com/museoa/live555-backups</p>
+<p>Find more public tarballs and add them.</p>
+</body>
+</html>
