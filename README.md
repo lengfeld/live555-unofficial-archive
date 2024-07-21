@@ -18,7 +18,7 @@ have a look at
 It's a repository that contains all live555 tarballs in the folder
 [pub/archives](pub/archives) as git tags.
 
-Exmaple usage:
+Example usage:
 
     $ git clone https://github.com/lengfeld/live555-unofficial-git-archive.git
     $ cd live555-unofficial-git-archive
@@ -63,7 +63,7 @@ a couple of issues.
 
 ### Are the tarballs authentic?
 
-You will never know for sure! Since the original auther does not maintain a
+You will never know for sure! Since the original author does not maintain a
 reference archive of the historical source code, you have to rely on third
 parties, like this project, to provide the old tarballs. Since the published
 tarballs are not signed by the original author, you can only rely on trust.
