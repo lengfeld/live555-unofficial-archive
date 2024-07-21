@@ -85,6 +85,15 @@ If you have questions, you can also email me:
 [stefan+live@lengfeld.xyz](mailto:stefan+live@lengfeld.xyz)
 
 
+## Prior Art
+
+The need for a live555 tarball backup is also seen by other people. I know of
+the following sister projects that also provide an up to date tarball backup:
+
+* https://github.com/museoa/live555-backups
+* https://src.rrz.uni-hamburg.de/files/src/live555/
+
+
 ## TODOs
 
 Add overview html page for all collected tarballs.
