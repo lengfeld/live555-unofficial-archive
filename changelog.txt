@@ -1,3 +1,11 @@
+2024-08-01:
+- Updated "ServerMediaSession::generateSDPDescription()" to treat "time_t" as (long long).
+  (Thanks to Godmar for reporting this.)
+2024-06-26:
+- Updated the "OnDemandServerMediaSubsession" implementation to output an error message
+  if the "sink->startPlaying()" call failed (e.g., due to its source not being
+  compatible with the sink).  This makes some common errors (e.g, a proper 'framer' not
+  being used) easier to detect.
 2024-05-30:
 - Fixed a mistake that caused the config file "config.raspberrypi" to not appear in
   the distribution.  (It's there now.)
