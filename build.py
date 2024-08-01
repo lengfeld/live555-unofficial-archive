@@ -218,7 +218,8 @@ def create_git_tags():
     srcs_tarballs = read_srcs_tarballs()
     tarballs_srcs = reverse_dict(srcs_tarballs)
 
-    for tarball, srcs in tarballs_srcs.items():
+    for tarball in sorted(tarballs_srcs):
+        srcs = tarballs_srcs[tarball]
         # Assumption: All tarballs are equal
         src = choose_preferred_src(tarball, srcs)
 
