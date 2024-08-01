@@ -13,6 +13,13 @@ As one command
 
 TODO This should be at least one single make command! Refactoring is needed!
 
+To only include new tarballs, execute
+
+    $ make clean clean-pub checks && make create-pub create-tags && make
+
+It's faster but does not created existing git tags.
+
+
 ## How to publish
 
 Execute the commands
