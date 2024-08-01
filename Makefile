@@ -10,7 +10,7 @@ checks/git.show.tags:
 
 checks/git.ls-tree.tags:
 	(cd live555-unofficial-git-archive && \
-		for tag in $$(git tag); do git ls-tree --name-only -r $$tag; done) | sort | uniq -c> $@
+		for tag in $$(git tag); do git ls-tree --name-only -r $$tag; done) | sort | uniq > $@
 
 checks/git.ls-remote:
 	git ls-remote live555-unofficial-git-archive/ > $@
