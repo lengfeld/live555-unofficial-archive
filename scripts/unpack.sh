@@ -62,13 +62,14 @@ fi
 # Strip toplevel 'live' folder
 (cd tmp && tar xf ../$archive_path --strip-components=1)
 
-(cd tmp && git add .)
+# Use "--force" to ignore global git config on ignore files
+(cd tmp && git add --force .)
 
 date=$(echo $version  | sed 's/\./-/g')T00:00:00+00
 (cd tmp && GIT_COMMITTER_NAME=live555-unofficial-archive \
 	GIT_COMMITTER_EMAIL=invalid@example.com \
 	GIT_COMMITTER_DATE=$date \
-	GIT_AUTHOR_NAME="Live Networks, Inc." \
+	GIT_AUTHOR_NAME="Live Networks, Inc" \
 	GIT_AUTHOR_EMAIL=invalid@example.com \
 	GIT_AUTHOR_DATE=$date \
 	git commit -m "unpack $archive_filename from $src" -m "Copyright (c), Live Networks, Inc.  All rights reserved" -q)
