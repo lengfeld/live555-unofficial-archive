@@ -94,3 +94,7 @@ the following sister projects that also provide an up to date tarball backup:
 
 * [github.com/museoa/live555-backups](https://github.com/museoa/live555-backups)
 * [src.rrz.uni-hamburg.de/files/src/live555/](https://src.rrz.uni-hamburg.de/files/src/live555/)
+
+The following project added the tarballs including the changelog text as git commits:
+
+* [github.com/rayl/live555](https://github.com/rayl/live555)
