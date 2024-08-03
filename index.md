@@ -110,3 +110,12 @@ the following sister projects that also provide an up to date tarball backup:
 The following project added the tarballs including the changelog text as git commits:
 
 * [github.com/rayl/live555](https://github.com/rayl/live555)
+
+
+## Impressum
+
+This website is created and maintained by
+
+* name: Stefan Lengfeld
+* address: Germany, 53721 Siegburg
+* e-mail: [stefan+live@lengfeld.xyz](mailto:stefan+live@lengfeld.xyz)
