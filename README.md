@@ -66,3 +66,5 @@ Get grid of `pub/archives` but include checksums!
 Define and implement public "API" for tarball mirror.
 
 Include the list of sources on the gh-pages website.
+
+Add custom pandoc template to make the pages stylestyle the same.
