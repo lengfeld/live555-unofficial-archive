@@ -53,3 +53,5 @@ modifications.
 Find more public tarballs and add them.
 
 Add distributions to the prior art list
+
+Get grid of `pub/archives` but include checksums!
