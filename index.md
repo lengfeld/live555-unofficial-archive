@@ -83,8 +83,8 @@ If you like to contribute, open a PR or create an issue. Especially new sources
 of historical tarballs are welcome. The goal of this project is to have the
 most complete set of source code archives for live555.
 
-If you have questions, you can also email me:
-[stefan+live@lengfeld.xyz](mailto:stefan+live@lengfeld.xyz)
+If you have questions, just send me a [mail](mailto:stefan+live@lengfeld.xyz)
+or open a [github issue](https://github.com/lengfeld/live555-unofficial-archive/issues/new).
 
 
 ## Prior Art

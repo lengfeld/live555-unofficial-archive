@@ -37,7 +37,13 @@ Execute the commands
     $ git push --dry-run
     $ git push
 
-TODO add commands to publish gh-pages!
+TODO rework the above section
+
+To publish only the gh-pages, execute
+
+    $ make clean clean-pub checks && make create-pub && make && make page
+
+and then execute the `git push` command.
 
 
 ## TODOs
