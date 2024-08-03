@@ -43,7 +43,8 @@ To publish only the gh-pages, execute
 
     $ make clean clean-pub checks && make create-pub && make && make page
 
-and then execute the `git push` command.
+and then execute the `git push` command to the branch `gh-pages`. And then
+commit the local changes and also push them.
 
 
 ## TODOs
@@ -58,6 +59,10 @@ modifications.
 
 Find more public tarballs and add them.
 
-Add distributions to the prior art list
+Add distributions/mirrors to the prior art list
 
 Get grid of `pub/archives` but include checksums!
+
+Define and implement public "API" for tarball mirror.
+
+Include the list of sources on the gh-pages website.
