@@ -74,6 +74,18 @@ collected from third parties archives, like gentoo, you have to trust them.
 
 But the code is open source. Inspecting the code is always possible.
 
+### Can I use this site as a tarball mirror?
+
+Not yet. For now the links to the live555 tarballs are direct links into the
+git repository on github. I don't consider these links as stable. They may
+change in the future.
+
+Nevertheless it is definitely planed and reasonable. There will be a single
+directory that contains all tarballs and has stable links. So it can be used
+like other distributions or software project source code archives.
+
+If you need this feature now, please send me an [email](mailto:stefan+live@lengfeld.xyz).
+
 
 ## Contributions and Questions
 
