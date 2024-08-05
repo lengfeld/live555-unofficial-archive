@@ -175,7 +175,8 @@ PREFER_UNIHAMBURG = {
     "live.2024.02.15.tar.gz", "live.2024.02.23.tar.gz",
     "live.2024.02.28.tar.gz", "live.2024.04.14.tar.gz",
     "live.2024.04.19.tar.gz", "live.2024.05.05.tar.gz",
-    "live.2024.05.15.tar.gz"}
+    "live.2024.05.15.tar.gz", "live.2017.04.10.tar.gz",
+    "live.2019.03.06.tar.gz", "live.2019.08.28.tar.gz"}
 
 
 def choose_preferred_src(tarball, srcs):

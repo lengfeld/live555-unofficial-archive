@@ -62,6 +62,7 @@ genWindowsMakefiles
 genWindowsMakefiles.cmd
 groupsock/COPYING
 groupsock/COPYING.LESSER
+groupsock/foo.patch
 groupsock/GroupEId.cpp
 groupsock/Groupsock.cpp
 groupsock/GroupsockHelper.cpp
@@ -244,6 +245,8 @@ liveMedia/include/MatroskaFile.hh.orig
 liveMedia/include/MatroskaFileServerDemux.hh
 liveMedia/include/Media.hh
 liveMedia/include/MediaSession.hh
+liveMedia/include/MediaSession.hh.orig
+liveMedia/include/#MediaSink.hh#
 liveMedia/include/MediaSink.hh
 liveMedia/include/MediaSource.hh
 liveMedia/include/MediaTranscodingTable.hh
@@ -313,12 +316,16 @@ liveMedia/include/RawVideoRTPSink.hh.orig
 liveMedia/include/RawVideoRTPSource.hh
 liveMedia/include/RTCP.hh
 liveMedia/include/RTPInterface.hh
+liveMedia/include/#RTPSink.hh#
 liveMedia/include/RTPSink.hh
 liveMedia/include/RTPSource.hh
 liveMedia/include/RTSPClient.hh
+liveMedia/include/RTSPClient.hh.orig
 liveMedia/include/RTSPCommon.hh
+liveMedia/include/RTSPOverHTTPServer.hh
 liveMedia/include/RTSPRegisterSender.hh
 liveMedia/include/RTSPServer.hh
+liveMedia/include/RTSPServer.hh.save
 liveMedia/include/RTSPServerSupportingHTTPStreaming.hh
 liveMedia/include/#ServerMediaSession.hh#
 liveMedia/include/ServerMediaSession.hh
@@ -367,6 +374,7 @@ liveMedia/MatroskaFileServerMediaSubsession.cpp
 liveMedia/MatroskaFileServerMediaSubsession.hh
 liveMedia/Media.cpp
 liveMedia/MediaSession.cpp
+liveMedia/MediaSession.cpp.save
 liveMedia/MediaSink.cpp
 liveMedia/MediaSource.cpp
 liveMedia/MIKEY.cpp
@@ -476,6 +484,7 @@ liveMedia/RTSPClient.cpp
 liveMedia/RTSPClient.cpp.save
 liveMedia/RTSPCommon.cpp
 liveMedia/RTSPCommon.cpp.new
+liveMedia/RTSPOverHTTPServer.cpp
 liveMedia/RTSPRegisterSender.cpp
 liveMedia/#RTSPServer.cpp#
 liveMedia/RTSPServer.cpp
@@ -536,6 +545,7 @@ proxyServer/Makefile.tail
 README
 testProgs/announceURL.cpp
 testProgs/announceURL.hh
+testProgs/application-VND.ONVIF.METADATA-2
 testProgs/COPYING
 testProgs/COPYING.LESSER
 testProgs/foo.patch
@@ -589,6 +599,7 @@ testProgs/testOnDemandRTSPServer.cpp
 testProgs/testRelay.cpp
 testProgs/testReplicator.cpp
 testProgs/testRTSPClient.cpp
+testProgs/testRTSPClient.cpp.save
 testProgs/test.txt
 testProgs/testWAVAudioStreamer.cpp
 testProgs/vobStreamer.cpp

@@ -1,3 +1,17 @@
+tag v2005.10.05-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Wed Oct 5 00:00:00 2005 +0000
+
+live555 2005.10.05 from sources.openembedded.org
+
+commit 5fdb5d43b9a94b5dcd7e7515da5114139c3254f2
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Wed Oct 5 00:00:00 2005 +0000
+
+    unpack live.2005.10.05.tar.gz from sources.openembedded.org
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
 tag v2005.11.11-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Fri Nov 11 00:00:00 2005 +0000
@@ -26,6 +40,48 @@ Date:   Tue Feb 20 00:00:00 2007 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2009.06.02-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Tue Jun 2 00:00:00 2009 +0000
+
+live555 2009.06.02 from sources.openembedded.org
+
+commit 06fc45345244906a82c6317b9677fc95af56b1a1
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Tue Jun 2 00:00:00 2009 +0000
+
+    unpack live.2009.06.02.tar.gz from sources.openembedded.org
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2011.03.14-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Mar 14 00:00:00 2011 +0000
+
+live555 2011.03.14 from sources.openembedded.org
+
+commit 88f0af4fc691f0109ae300e3a2c7a1d1c318d8d8
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Mar 14 00:00:00 2011 +0000
+
+    unpack live.2011.03.14.tar.gz from sources.openembedded.org
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2011.11.20-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sun Nov 20 00:00:00 2011 +0000
+
+live555 2011.11.20 from sources.openembedded.org
+
+commit 312b5641d46749839b848fe3bb52c563e0f07da3
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sun Nov 20 00:00:00 2011 +0000
+
+    unpack live.2011.11.20.tar.gz from sources.openembedded.org
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
 tag v2011.12.23-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Fri Dec 23 00:00:00 2011 +0000
@@ -51,6 +107,34 @@ Author: Live Networks, Inc <invalid@example.com>
 Date:   Sat Feb 4 00:00:00 2012 +0000
 
     unpack live.2012.02.04.tar.gz from jog.id.distfiles.macports.org
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2013.03.23-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sat Mar 23 00:00:00 2013 +0000
+
+live555 2013.03.23 from sources.openembedded.org
+
+commit 3b43de644090869e3c82c2c19006075544892ca4
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sat Mar 23 00:00:00 2013 +0000
+
+    unpack live.2013.03.23.tar.gz from sources.openembedded.org
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2013.04.30-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Tue Apr 30 00:00:00 2013 +0000
+
+live555 2013.04.30 from sources.openembedded.org
+
+commit 2f3c7ecd2e8fbec18553e656ec8c6e8a306effdf
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Tue Apr 30 00:00:00 2013 +0000
+
+    unpack live.2013.04.30.tar.gz from sources.openembedded.org
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----

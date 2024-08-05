@@ -30,7 +30,23 @@ Then publish the gh-pages. The previous commands prints a `git push` command.
 
 ## How to publish
 
-Execute the commands
+How to add new tarballs
+
+    $ git add srcs/<new source>
+
+    # generate: only add new tarballs
+    $ make clean clean-pub checks && make create-pub create-tags && make && make page
+
+    # generate: also geenerate all tags
+    $ make clean clean-pub checks clean-tags && make create-pub create-tags && make && make page
+
+    # Review changes and maybe add fixes.
+    $ git diff
+    # Then regenerate
+
+    # Commit the final result
+
+    #
 
     $ (cd live555-unofficial-git-archive && git push --tags --dry-run)
     $ (cd live555-unofficial-git-archive && git push --tags)

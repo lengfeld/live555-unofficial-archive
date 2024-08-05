@@ -3999,6 +3999,46 @@
 <li>sha256: 53fec3995a78b3d4ea8546e65ad8235dd823527785fb6009281eb727bae3df3b</li>
 <li>sha512: debe29d480732d31ecc9562a30721f7d05cc6dcf56d1709d6292baa0d26aec86813c5077a768151815ae6f62518d3bc9e7ebb44889a56b9c228bde59d65703ca</li>
 </ul>
+<h2 id='2013.04.30'>2013.04.30</h2>
+<ul>
+<li>size: 565 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/sources.openembedded.org/live.2013.04.30.tar.gz'>live.2013.04.30.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2013.04.30-tree'>v2013.04.30-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- The bugfix in the previous version was incomplete.  This should fix it for real.
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 95533d91bd196e42fd748076dc244b09</li>
+<li>sha256: e549af608c9961d85cb647bc3b99804fec0fbaf5338c1b72d057558ae5cd2aea</li>
+<li>sha512: f09305e9735b4015fdc57baa0c5bc4c29e48bcd4dcf173e60ce5566f818607c7940c99e772f0ae0c8f18c87a22895673a9c2a55f1d589da3e9c951f476e68983</li>
+</ul>
+<h2 id='2013.03.23'>2013.03.23</h2>
+<ul>
+<li>size: 558 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/sources.openembedded.org/live.2013.03.23.tar.gz'>live.2013.03.23.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2013.03.23-tree'>v2013.03.23-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Updated our RTSP server implementation so that we send an initial RTCP "SR" packet before sending the first RTP packet.
+  This will make it likely (though still not certain) that the receiver will immediately start getting RTCP-synchronized
+  presentation times.
+  (Note that client application code must still allow for the possibility of initial presentation times not being RTCP-synchronized,
+  in case they don't receive this initial "SR" packet (or in case they are streaming from a server other than this one).)
+- Updated the "RTSPClient" NAT 'hole punching' hack that we made in version 2012.02.03 so that it also sends dummy packets
+  on the RTCP port, as well as the RTP port.  This increases the chance that clients that are behind a NAT will receive the
+  initial RTCP "SR" packet that we noted above.
+- The RTSP server modification that we made in version 2013.02.27 (to better support "PLAY" requests with no "Range:" header)
+  had a bug computing the current 'normal play time' if more than one such consecutive "PLAY" requests were received.
+  This is now fixed.  (Thanks to 'kingaceck' for reporting this.)
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: e9a75e0cfbf4f25aedd4ee4a10a7c26f</li>
+<li>sha256: 9aaa736ee3b11ac0aa33655d8c59eefa893ef7c84a8f87d8ac0176c33b8f4deb</li>
+<li>sha512: 4b588608ea8806891f615736a5b9494b6de1af6ff1643b9c84237b2fb0bdb3ce659c7f5af09523b9399ce0f6bbdcd67259212fd81435329ead3d6d2a25dc2dac</li>
+</ul>
 <h2 id='2012.02.04'>2012.02.04</h2>
 <ul>
 <li>size: 528 K</li>
@@ -4036,6 +4076,67 @@
 <li>sha256: 8717e706a82f6b73cbcc66a190f20469154dfddffcdfb0ee0fec1b67ff70a5a5</li>
 <li>sha512: 6d84373dc81df478e3870acd38d72b60d61070861d4b6f394728cf21be06eb41d6e84bc97848c997fe205ec93133c5f4f67bdd7865631a148901b48629c69286</li>
 </ul>
+<h2 id='2011.11.20'>2011.11.20</h2>
+<ul>
+<li>size: 515 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/sources.openembedded.org/live.2011.11.20.tar.gz'>live.2011.11.20.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2011.11.20-tree'>v2011.11.20-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Fixed "RTCP.cpp" to not call a "BYE" handler (if one's set) until the very end of the incoming RTCP report handler member
+  function.  This is to allow for the (common) possibility of the "BYE" handler causing "this" to get deleted.
+  (Thanks to Jeff Shanab for noticing this.)
+- Updated some counters used by "MPEG2TransportStreamFramer" from "unsigned long" to "u_int64_t", to better support streams
+  that last for several days.  (Thanks to Tim Shackleton for this fix.)
+- Modified the "RTSPServer" code to properly handle weird RTSP clients that ask for RAW UDP streaming, but also specify two
+  port numbers in the "client_port=" part of the "Transport:" header.
+  (Thanks to "homepuh(at)yandex.ru" for this suggestion.)
+- Made a small change to the "VP8VideoRTPSource" implementation to reflect a minor change (the addition of the "K" header flag)
+  in the most recent IETF Internet-Draft (draft-ietf-payload-vp8-02.txt)
+- Added an #ifndef to "Boolean.hh" to deal with a Windows development environment that already defines (not "#define"s)
+  "True" and "False".  (Thanks to Jeff Shanab for this suggestion.)
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 8e5ebefdf7d12ca9cfd7175ff3d7eef2</li>
+<li>sha256: 695cf22d43516f082e26ee9eb8373a0ae3b4ed472f1e224b51d881219f694f2e</li>
+<li>sha512: 4df7b2b18a92cd06050620f17f684893c2716f60cc9872f6b1e4a40155489fa1b266910e0bb84ced10b0c8cbf3790c7001a82fc3768a53f9c1060dcb7b2a2887</li>
+</ul>
+<h2 id='2011.03.14'>2011.03.14</h2>
+<ul>
+<li>size: 464 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/sources.openembedded.org/live.2011.03.14.tar.gz'>live.2011.03.14.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2011.03.14-tree'>v2011.03.14-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Updated the "MPEG2TransportFileServerMediaSubsession" to use the "streamDuration" parameter (if >0.0) to limit
+  the number of Transport Packets that are streamed from the source file.  (This happens only if the file is indexed.)
+  This allows the server to implement finite RTSP ranges for such streams.
+- Fixed a minor bug in "OnDemandServerMediaSubsession" if "reuseFirstSource" is set.  (Thanks to Andreas Gaer for noting this.)
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: ff65b2c598e970b4b6c8219a1811de00</li>
+<li>sha256: c6ce050a7f9f69901e6f7f81a6745c82d9419e3904a753b2d5db1139caaf6738</li>
+<li>sha512: 60b78c08135e1e40e1aa5711df284509dfa15ea4800f77eeace8b579a07a216c586af2b62ac2794f7131f3d68a83cdb72b3850142babbedd310b8c51a58c239e</li>
+</ul>
+<h2 id='2009.06.02'>2009.06.02</h2>
+<ul>
+<li>size: 458 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/sources.openembedded.org/live.2009.06.02.tar.gz'>live.2009.06.02.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2009.06.02-tree'>v2009.06.02-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Updated the MPEG Transport Stream multiplexor implementation to allow for H.264 video.  (Thanks to Massimo Zito.)
+- Updated "MultiFramedRTPSink" to allow for subclasses for RTP payload formats (such as DV, coming soon) that impose
+  a granularity on RTP fragment sizes.
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 088f848b64cef1d54034bc24cfa3c156</li>
+<li>sha256: 66c54241bfcc7ea42fe40e1c93739be79a3c065390c4163c0f2647ac45c24758</li>
+<li>sha512: f6af661796e86d380a3236bbb1f59a827b44db56f73df225ff21880bb3a02848fe9c0211525d756d73e9c89a9f08d8e46fc1033cadf85c712bd504bbec705d88</li>
+</ul>
 <h2 id='2007.02.20'>2007.02.20</h2>
 <ul>
 <li>size: 432 K</li>
@@ -4072,6 +4173,21 @@
 <li>md5: fb117582539e2231b632009c57a5f68c</li>
 <li>sha256: 48e900b8cbbd5b648464e15f2ad1612802967e1ad33b4b981533a34040b322e3</li>
 <li>sha512: f5090a4303e7cc7760a48f2ce54fc025b465d6a7d93cce2faa19f630169481e7343a221bba8f33fcc277998c1dd8ad004c5a3cd7a914ade7dda254cba43a4f2d</li>
+</ul>
+<h2 id='2005.10.05'>2005.10.05</h2>
+<ul>
+<li>size: 392 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/sources.openembedded.org/live.2005.10.05.tar.gz'>live.2005.10.05.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2005.10.05-tree'>v2005.10.05-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Fixed a couple of bugs noticed by David Bertrand.
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 6f15406664ef31172c68d46567569bb8</li>
+<li>sha256: 9532b981c9b8974ceedd3d25a8f9a0e167a92c9da0dece47f34a4ec34e34b1cf</li>
+<li>sha512: 3018bb70751addfbe06948679d7ee24ba5af958c3a4d34b80f54c1746727f80e20ca5528f175a6d991c0ca3a1f2bf3605d01f419abb4ae845c0c111b66a10aeb</li>
 </ul>
 </body>
 </html>
