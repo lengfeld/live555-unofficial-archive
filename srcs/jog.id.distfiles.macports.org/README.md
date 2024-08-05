@@ -12,3 +12,9 @@ with the following commands
     $ md5sum *.tar.gz > files.md5
 
 Done at 2024-05-19.
+
+Update 2024-08-05: The mirror site
+
+    http://www.mirrorservice.org/sites/distfiles.macports.org/live555/
+
+contains the same files. Found by googleing.
