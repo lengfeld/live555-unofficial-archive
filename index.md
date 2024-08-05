@@ -1,7 +1,9 @@
-# live555 unofficial archive
+% live555 unofficial archive and mirror
 
-This project is an unofficial archive of the source code of the [LIVE555
-Streaming Media libraries](http://live555.com/liveMedia/). It collects
+# live555 unofficial archive and mirror
+
+This project is an unofficial archive and mirror of the source code of the
+[LIVE555 Streaming Media libraries](http://live555.com/liveMedia/). It collects
 the source tarballs released on the server
 [live555.com/liveMedia/public/](http://live555.com/liveMedia/public/).
 
@@ -60,6 +62,10 @@ This can only achieved if you have a development history as a source code
 repository or historical archives.  Relying on third parties for this goal has
 a couple of issues.
 
+See also this [[Live-devel] older source
+archives](http://lists.live555.com/pipermail/live-devel/2011-November/014127.html)
+thread on the live555 mailing list for more details about the decisions.
+
 
 ### Are the tarballs authentic?
 
@@ -74,17 +80,19 @@ collected from third parties archives, like gentoo, you have to trust them.
 
 But the code is open source. Inspecting the code is always possible.
 
+
 ### Can I use this site as a tarball mirror?
 
 Not yet. For now the links to the live555 tarballs are direct links into the
 git repository on github. I don't consider these links as stable. They may
 change in the future.
 
-Nevertheless it is definitely planed and reasonable. There will be a single
-directory that contains all tarballs and has stable links. So it can be used
-like other distributions or software project source code archives.
+Nevertheless being a mirror is definitely planed and reasonable. There will be
+a single directory that contains all tarballs and has stable links. So it can
+be used like other distributions or software project source code archives.
 
-If you need this feature now, please send me an [email](mailto:stefan+live@lengfeld.xyz).
+If you need this feature now, please send me an
+[email](mailto:stefan+live@lengfeld.xyz).
 
 
 ## Contributions and Questions
@@ -112,7 +120,7 @@ The following project added the tarballs including the changelog text as git com
 * [github.com/rayl/live555](https://github.com/rayl/live555)
 
 
-## Impressum
+## Imprint
 
 This website is created and maintained by
 
