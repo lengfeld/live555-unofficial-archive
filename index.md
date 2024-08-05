@@ -1,7 +1,5 @@
 % live555 unofficial archive and mirror
 
-# live555 unofficial archive and mirror
-
 This project is an unofficial archive and mirror of the source code of the
 [LIVE555 Streaming Media libraries](http://live555.com/liveMedia/). It collects
 the source tarballs released on the server
