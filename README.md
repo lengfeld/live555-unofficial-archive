@@ -89,3 +89,15 @@ Define and implement public "API" for tarball mirror.
 Include the list of sources on the gh-pages website.
 
 Add custom pandoc template to make the pages stylestyle the same.
+
+Looking at https://code.google.com/archive/p/live555sourcecontrol/source/default/commits
+https://code.google.com/archive/p/live555sourcecontrol/
+
+See also the mailing list messages. Add to documentation
+http://lists.live555.com/pipermail/live-devel/2011-November/014127.html
+
+Also look at https://github.com/live555-mirror/live555-mirror
+
+Also look at https://github.com/rgaufman/live555
+
+Optimize webpage for the "mirror" term for SEO.
