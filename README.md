@@ -45,15 +45,20 @@ How to add new tarballs
     # Then regenerate
 
     # Commit the final result
+    $ git add [...]
+    $ git commit -m "add new src and tarballs"
 
-    #
+    $ Publish the result
+    $ make page
+    # Review the changes with "git diff"
 
+    $ git push origin <commit>:gh-pages --dry-run
+    $ git push origin main --dry-run
+
+    # Publish new git tags
     $ (cd live555-unofficial-git-archive && git push --tags --dry-run)
-    $ (cd live555-unofficial-git-archive && git push --tags)
-    $ git push --dry-run
-    $ git push
 
-TODO rework the above section
+    # NOTE: Remove the "--dry-run" after check/test
 
 To publish only the gh-pages, execute
 
