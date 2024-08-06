@@ -54,6 +54,20 @@ Date:   Tue Jun 2 00:00:00 2009 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2010.01.11-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Jan 11 00:00:00 2010 +0000
+
+live555 2010.01.11 from mirror.sobukus.de
+
+commit 697099d12be0041a00cd9134d27069544b139e47
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Jan 11 00:00:00 2010 +0000
+
+    unpack live.2010.01.11.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
 tag v2011.03.14-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Mon Mar 14 00:00:00 2011 +0000
@@ -65,6 +79,20 @@ Author: Live Networks, Inc <invalid@example.com>
 Date:   Mon Mar 14 00:00:00 2011 +0000
 
     unpack live.2011.03.14.tar.gz from sources.openembedded.org
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2011.09.02-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Fri Sep 2 00:00:00 2011 +0000
+
+live555 2011.09.02 from mirror.sobukus.de
+
+commit b0fb93c4a8174576fc98ae4119ae18fea4a15c7b
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Fri Sep 2 00:00:00 2011 +0000
+
+    unpack live.2011.09.02.tar.gz from mirror.sobukus.de
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
@@ -96,6 +124,20 @@ Date:   Fri Dec 23 00:00:00 2011 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2012.01.26-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Jan 26 00:00:00 2012 +0000
+
+live555 2012.01.26 from mirror.sobukus.de
+
+commit 8b2f1173f0fd5fb79e611b42709dbc4ff8d2fb45
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Jan 26 00:00:00 2012 +0000
+
+    unpack live.2012.01.26.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
 tag v2012.02.04-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Sat Feb 4 00:00:00 2012 +0000
@@ -107,6 +149,34 @@ Author: Live Networks, Inc <invalid@example.com>
 Date:   Sat Feb 4 00:00:00 2012 +0000
 
     unpack live.2012.02.04.tar.gz from jog.id.distfiles.macports.org
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2012.07.26-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Jul 26 00:00:00 2012 +0000
+
+live555 2012.07.26 from mirror.sobukus.de
+
+commit 69196c077c8dae1782db048dd9fa931e937a8401
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Jul 26 00:00:00 2012 +0000
+
+    unpack live.2012.07.26.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2013.02.11-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Feb 11 00:00:00 2013 +0000
+
+live555 2013.02.11 from mirror.sobukus.de
+
+commit bdc4ffef3abe120aebd46513ec7c218ffe8301ad
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Feb 11 00:00:00 2013 +0000
+
+    unpack live.2013.02.11.tar.gz from mirror.sobukus.de
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
@@ -135,6 +205,384 @@ Author: Live Networks, Inc <invalid@example.com>
 Date:   Tue Apr 30 00:00:00 2013 +0000
 
     unpack live.2013.04.30.tar.gz from sources.openembedded.org
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2014.08.26-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Tue Aug 26 00:00:00 2014 +0000
+
+live555 2014.08.26 from mirror.sobukus.de
+
+commit 39d5f7d64edeb2ba86dca2a19c0af7674ae091ab
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Tue Aug 26 00:00:00 2014 +0000
+
+    unpack live.2014.08.26.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2014.09.22-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Sep 22 00:00:00 2014 +0000
+
+live555 2014.09.22 from mirror.sobukus.de
+
+commit e110f29993853b679a0807876aadb7b4f9ef386e
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Sep 22 00:00:00 2014 +0000
+
+    unpack live.2014.09.22.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2014.10.21-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Tue Oct 21 00:00:00 2014 +0000
+
+live555 2014.10.21 from mirror.sobukus.de
+
+commit 691f5d7fb0ad31db43ec0846815db971f8e68a81
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Tue Oct 21 00:00:00 2014 +0000
+
+    unpack live.2014.10.21.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2014.10.28-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Tue Oct 28 00:00:00 2014 +0000
+
+live555 2014.10.28 from mirror.sobukus.de
+
+commit 1be544104208e5f2c9bc2aa0025970bb4c2ae3d6
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Tue Oct 28 00:00:00 2014 +0000
+
+    unpack live.2014.10.28.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2014.11.01-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sat Nov 1 00:00:00 2014 +0000
+
+live555 2014.11.01 from mirror.sobukus.de
+
+commit 689b107db962751d9d650ed2a4a46638d74c403d
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sat Nov 1 00:00:00 2014 +0000
+
+    unpack live.2014.11.01.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2014.11.07-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Fri Nov 7 00:00:00 2014 +0000
+
+live555 2014.11.07 from mirror.sobukus.de
+
+commit 81d0fa86281a005bdc88e1db4c478f94964eb454
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Fri Nov 7 00:00:00 2014 +0000
+
+    unpack live.2014.11.07.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2014.11.12-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Wed Nov 12 00:00:00 2014 +0000
+
+live555 2014.11.12 from mirror.sobukus.de
+
+commit ee3daf4fa5dc2a7e917843689fa6cea5101ebb06
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Wed Nov 12 00:00:00 2014 +0000
+
+    unpack live.2014.11.12.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2014.11.28-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Fri Nov 28 00:00:00 2014 +0000
+
+live555 2014.11.28 from mirror.sobukus.de
+
+commit 73d5dd7f0172b16ac1438980677f25e720611c24
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Fri Nov 28 00:00:00 2014 +0000
+
+    unpack live.2014.11.28.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2014.12.08-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Dec 8 00:00:00 2014 +0000
+
+live555 2014.12.08 from mirror.sobukus.de
+
+commit a9e8b0fb05306368f50b7c95f3173359c1e46787
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Dec 8 00:00:00 2014 +0000
+
+    unpack live.2014.12.08.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2014.12.09-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Tue Dec 9 00:00:00 2014 +0000
+
+live555 2014.12.09 from mirror.sobukus.de
+
+commit d5302d8fa4d734161581ea0736c0c5e0a2af152e
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Tue Dec 9 00:00:00 2014 +0000
+
+    unpack live.2014.12.09.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2014.12.11-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Dec 11 00:00:00 2014 +0000
+
+live555 2014.12.11 from mirror.sobukus.de
+
+commit 258a38dfc6a4cb0ab73f1745176a32ae2dfd6e97
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Dec 11 00:00:00 2014 +0000
+
+    unpack live.2014.12.11.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2014.12.13-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sat Dec 13 00:00:00 2014 +0000
+
+live555 2014.12.13 from mirror.sobukus.de
+
+commit 330c439b627281238e7057b514d2ded6a65283bf
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sat Dec 13 00:00:00 2014 +0000
+
+    unpack live.2014.12.13.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2014.12.16-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Tue Dec 16 00:00:00 2014 +0000
+
+live555 2014.12.16 from mirror.sobukus.de
+
+commit 92c5f417fcc8865fa94436dea14a7c4e8357b731
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Tue Dec 16 00:00:00 2014 +0000
+
+    unpack live.2014.12.16.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2014.12.17-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Wed Dec 17 00:00:00 2014 +0000
+
+live555 2014.12.17 from mirror.sobukus.de
+
+commit b97630660b48058086d4bc39b1a1f6efe267db74
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Wed Dec 17 00:00:00 2014 +0000
+
+    unpack live.2014.12.17.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2015.01.04-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sun Jan 4 00:00:00 2015 +0000
+
+live555 2015.01.04 from mirror.sobukus.de
+
+commit 7ab0d870460449e2f27df35b9e891415c30a658f
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sun Jan 4 00:00:00 2015 +0000
+
+    unpack live.2015.01.04.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2015.01.19-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Jan 19 00:00:00 2015 +0000
+
+live555 2015.01.19 from mirror.sobukus.de
+
+commit f4f538ca3ad4997309bbdbf37479089dff57b4cb
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Jan 19 00:00:00 2015 +0000
+
+    unpack live.2015.01.19.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2015.01.27-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Tue Jan 27 00:00:00 2015 +0000
+
+live555 2015.01.27 from mirror.sobukus.de
+
+commit 690d8efd634be60071b8efff2eb9c83d056775cd
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Tue Jan 27 00:00:00 2015 +0000
+
+    unpack live.2015.01.27.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2015.02.05-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Feb 5 00:00:00 2015 +0000
+
+live555 2015.02.05 from mirror.sobukus.de
+
+commit df7e54f5724ffebf425586522ddc84031c85b217
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Feb 5 00:00:00 2015 +0000
+
+    unpack live.2015.02.05.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2015.02.10-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Tue Feb 10 00:00:00 2015 +0000
+
+live555 2015.02.10 from mirror.sobukus.de
+
+commit cda86c48e6ef368faac6e5e628f6ed683efa297c
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Tue Feb 10 00:00:00 2015 +0000
+
+    unpack live.2015.02.10.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2015.02.13-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Fri Feb 13 00:00:00 2015 +0000
+
+live555 2015.02.13 from mirror.sobukus.de
+
+commit abbfe00cd20141503973e63553112fc37f7f1509
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Fri Feb 13 00:00:00 2015 +0000
+
+    unpack live.2015.02.13.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2015.02.17-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Tue Feb 17 00:00:00 2015 +0000
+
+live555 2015.02.17 from mirror.sobukus.de
+
+commit 236c7ee4e057a3915a84a14e4f28461b98898644
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Tue Feb 17 00:00:00 2015 +0000
+
+    unpack live.2015.02.17.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2015.02.23-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Feb 23 00:00:00 2015 +0000
+
+live555 2015.02.23 from mirror.sobukus.de
+
+commit 125666cebe628b24a6604f38ed3c335fe4e1c1ee
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Feb 23 00:00:00 2015 +0000
+
+    unpack live.2015.02.23.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2015.02.26-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Feb 26 00:00:00 2015 +0000
+
+live555 2015.02.26 from mirror.sobukus.de
+
+commit 359b61bb268a3049f2f30dea089b644462df6a9c
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Feb 26 00:00:00 2015 +0000
+
+    unpack live.2015.02.26.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2015.03.01-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sun Mar 1 00:00:00 2015 +0000
+
+live555 2015.03.01 from mirror.sobukus.de
+
+commit 608d2321d8be4643a0e9e871be928a1954129442
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sun Mar 1 00:00:00 2015 +0000
+
+    unpack live.2015.03.01.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2015.03.06a-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Fri Mar 6 00:00:00 2015 +0000
+
+live555 2015.03.06a from mirror.sobukus.de
+
+commit 30286fbdf2b598f2b67a51ea11b814a4c5d1a194
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Fri Mar 6 00:00:00 2015 +0000
+
+    unpack live.2015.03.06a.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2015.03.16-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Mar 16 00:00:00 2015 +0000
+
+live555 2015.03.16 from mirror.sobukus.de
+
+commit 697f651f0bff17005bd67f9511d146130b898856
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Mar 16 00:00:00 2015 +0000
+
+    unpack live.2015.03.16.tar.gz from mirror.sobukus.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2015.03.19-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Mar 19 00:00:00 2015 +0000
+
+live555 2015.03.19 from mirror.sobukus.de
+
+commit debb07f9e416772d4ea43f6fa3f8a33df4babb6c
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Mar 19 00:00:00 2015 +0000
+
+    unpack live.2015.03.19.tar.gz from mirror.sobukus.de
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
@@ -317,6 +765,20 @@ Author: Live Networks, Inc <invalid@example.com>
 Date:   Thu Jun 25 00:00:00 2015 +0000
 
     unpack live.2015.06.25.tar.gz from uni-hamburg.de
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2015.07.19-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sun Jul 19 00:00:00 2015 +0000
+
+live555 2015.07.19 from mirror.sobukus.de
+
+commit 30fe49369e622f2b77b15d1578286d9a3132dc1d
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sun Jul 19 00:00:00 2015 +0000
+
+    unpack live.2015.07.19.tar.gz from mirror.sobukus.de
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----

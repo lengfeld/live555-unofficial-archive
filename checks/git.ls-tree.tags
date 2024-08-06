@@ -488,6 +488,7 @@ liveMedia/RTSPOverHTTPServer.cpp
 liveMedia/RTSPRegisterSender.cpp
 liveMedia/#RTSPServer.cpp#
 liveMedia/RTSPServer.cpp
+liveMedia/RTSPServer.cpp.save
 liveMedia/RTSPServerRegister.cpp
 liveMedia/RTSPServerSupportingHTTPStreaming.cpp
 liveMedia/ServerMediaSession.cpp
@@ -533,6 +534,7 @@ mediaServer/COPYING
 mediaServer/COPYING.LESSER
 mediaServer/DynamicRTSPServer.cpp
 mediaServer/DynamicRTSPServer.hh
+mediaServer/DynamicRTSPServer.hh.new
 mediaServer/live555MediaServer.cpp
 mediaServer/Makefile.head
 mediaServer/Makefile.tail

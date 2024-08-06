@@ -3713,6 +3713,39 @@
 <li>sha256: c913e3e5642463905f6dc7e02e9f088de60cc53cda2d6bd8708d13339128ca9d</li>
 <li>sha512: dce4323f12362f95f64b92ece100af625d075366b485369745dc34741cb6d4ce321e04458a5439d6620fea91890f1dc05780c149a1be6501f1bb87888b5597f4</li>
 </ul>
+<h2 id='2015.07.19'>2015.07.19</h2>
+<ul>
+<li>size: 601 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2015.07.19.tar.gz'>live.2015.07.19.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2015.07.19-tree'>v2015.07.19-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Fixed a bug in "RTPInterface::sendDataOverTCP()"; it was disabling transmission on its socket
+  if the "send()" call failed.  We now do this only if the error was not "EAGAIN".
+  (Thanks to Erik Oomen for bringing this to our attention.)
+- Changed "QuickTimeFileSink" to try to work around an issue with QuickTime sometimes complaining
+  about the frame number in the last 'sync frame' being 'out of range'.
+- Changed the parameter signature for "ProxyServerMediaSession::createNew()" (and the
+  "ProxyServerMediaSession" constructor) to take a "GenericMediaServer*" rather than
+  a "RTSPServer" as parameter.  This makes it possible to create proxy servers that use protocols
+  other than RTSP at the 'front-end'.  (The 'back-end' protocol will still be RTSP, however.)
+- Defined a new class "MediaTranscodingTable" that can be used to generate "FramedFilter"
+  (subclass) objects that perform media transcoding.  Added a parameter of this type
+  (with default value NULL) to the "ProxyServerMediaSession" constructor and "createNew()"
+  function.  This makes it possible to - if you wish - add transcoding functionality to
+  a proxy server.  (This feature is still experimental, and might be changed in the future.)
+- Added optional "initialPortNum" and "multiplexRTCPWithRTP" parameters to the
+  "ProxyServerMediaSession" constructor - to be passed to the "ProxyServerMediaSubsession"
+  objects that it creates.  This allows subclasses to change these parameters if they wish.
+- Updated "ProxyServerMediaSession" to make it possible for subclasses to create subclasses
+  of "Groupsock" and/or "RTCPInstance", if they wish.
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 1abb3e3cfc5733694bbb91d7dd3d4ed3</li>
+<li>sha256: 72b8b6a3bcb8dc3e8cc5127df43a42251a29ba3df2fe7705f63375c835658c1c</li>
+<li>sha512: ed113c6ca766200f6c219ac0252d2e9dfe1a944e9619abf387a1e7767cd06abbc9a3e9add4a5d7479c7aeb9444be5eb6e3c6699e02d1cc71ba9171d2a67fd651</li>
+</ul>
 <h2 id='2015.06.25'>2015.06.25</h2>
 <ul>
 <li>size: 600 K</li>
@@ -3999,6 +4032,479 @@
 <li>sha256: 53fec3995a78b3d4ea8546e65ad8235dd823527785fb6009281eb727bae3df3b</li>
 <li>sha512: debe29d480732d31ecc9562a30721f7d05cc6dcf56d1709d6292baa0d26aec86813c5077a768151815ae6f62518d3bc9e7ebb44889a56b9c228bde59d65703ca</li>
 </ul>
+<h2 id='2015.03.19'>2015.03.19</h2>
+<ul>
+<li>size: 598 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2015.03.19.tar.gz'>live.2015.03.19.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2015.03.19-tree'>v2015.03.19-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Updated the "RTSPClient" code for handling a "WWW-Authenticate:" header in a "401 Unauthorized"
+  response.  We now check for the "stale=TRUE" parameter.  If it's set, then we resend the
+  command, even if we already handled an earlier "WWW-Authenticate:" header.
+  (Thanks to Deanna Earley for noting the need to handle "stale=TRUE".)
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: ca7d152d7a70f59410460d7056e30111</li>
+<li>sha256: 4bad6713fc84796b431d1628677d943796ec1f48644ecf16c08a360fb2da48f9</li>
+<li>sha512: 6976f46976c6a836b32d7b0b61388a31b2c1d751a572b44749e594734eb87929aaf7b0ae3b3facf3e0311665aec01b078551817f2fa0a267c36551ac7415a35f</li>
+</ul>
+<h2 id='2015.03.16'>2015.03.16</h2>
+<ul>
+<li>size: 598 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2015.03.16.tar.gz'>live.2015.03.16.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2015.03.16-tree'>v2015.03.16-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Made a small change to the "BasicTaskScheduler" implementation to reduce the likelihood of
+  a race condition with external thread(s) calling "triggerEvent()".
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 949f596d95cbb25bff924a16726ce821</li>
+<li>sha256: 0448912f15e0610620f5359ba095fd98fc22bffe8fc9561dc7a7f732c820414c</li>
+<li>sha512: 03dd6762ad7d7bce0cb14959a07c260371bd552111f8927523c51badfbbaad1506b704bc45346adc56215edc8bca628f23cc7845231b55a7b096b69ea5deefd3</li>
+</ul>
+<h2 id='2015.03.06a'>2015.03.06a</h2>
+<ul>
+<li>size: 598 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2015.03.06a.tar.gz'>live.2015.03.06a.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2015.03.06a-tree'>v2015.03.06a-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Oops - forgot to add '\0'-termination to the previous fix.
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: af3ac20263fd76bc851d678bb65af33f</li>
+<li>sha256: 435c5dabdaa0912b61c74992c115a2c933a564b71ce6e8af7edba22718782e23</li>
+<li>sha512: 65c5d1ae5f72199e0c72a059f1a722d170f57a4998f77a70e044982bc5219f52c25de9e418ea61f2d354652002b703cb533ab24a090cf41550879d01ca9da10e</li>
+</ul>
+<h2 id='2015.03.01'>2015.03.01</h2>
+<ul>
+<li>size: 598 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2015.03.01.tar.gz'>live.2015.03.01.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2015.03.01-tree'>v2015.03.01-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Updated the "H264or5VideoRTPSink" implementation to make sure that any stale fragmented
+  data is flushed (discarded) if a server's stream is paused.  This ensures that - after we
+  resume from the pause - that we never stream data with old presentation times.
+  (Thanks to Gilles Chanteperdrix for discovering and reporting this issue.)
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 808abd76de1a998cbaef52ba87331d87</li>
+<li>sha256: 6269b4b7fe43e1feccfefc8b02006ed9fb83008e7df63c57d702950ad01378b3</li>
+<li>sha512: 6a180e3bb7feeefb50009719a9d4b6d6c15ca737937edfdaddec4f5ec721954a110ed8b3d35063967cc878c391767878d2aa12f5bfc1add29c5e492a6de94007</li>
+</ul>
+<h2 id='2015.02.26'>2015.02.26</h2>
+<ul>
+<li>size: 598 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2015.02.26.tar.gz'>live.2015.02.26.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2015.02.26-tree'>v2015.02.26-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Fixed a bug in "ProxyServerMediaSubsession" that could cause a crash if the parent
+  "ProxyServerMediaSession" object is removed from the RTSP server and deleted.
+  (Thanks to Sergio ? for first reporting this problem.  Thanks to Chiung Ikhwan for discovering
+  the source of the bug.)
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: d18754716151de009d330247e9c63b8e</li>
+<li>sha256: d85d32e5bcfd1532ac049b4f662cd39ebb31e16a9f1f2499c1cd657872fb9bc8</li>
+<li>sha512: 66a51b52f5e0c953aba503e57e6051db2cca84483abbeabe46b3cbc91282e2da2486104544f95397d62655ea48b4034a85bb83f9f2cc057ebc5d8e479efa2b32</li>
+</ul>
+<h2 id='2015.02.23'>2015.02.23</h2>
+<ul>
+<li>size: 598 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2015.02.23.tar.gz'>live.2015.02.23.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2015.02.23-tree'>v2015.02.23-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Fixed a bug in "OnDemandServerMediaSubsession::getCurrentNPT()".
+  (Thanks to Gilles Chanteperdrix for noting this.)
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 6e852b5b3e4598e77c3319c37761a9fa</li>
+<li>sha256: f0a3b4ba35f789339f93576e9c97558fdcb85b5970f9812aef97f52e440c4504</li>
+<li>sha512: c55b59087b2148b7a23954194a1ec568ac715892bce67a86b57cfc623841551211700ca1fa706e7f8f3c2d97444d3a095e8eacae57c21238be2d8ac7ab6b2500</li>
+</ul>
+<h2 id='2015.02.17'>2015.02.17</h2>
+<ul>
+<li>size: 598 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2015.02.17.tar.gz'>live.2015.02.17.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2015.02.17-tree'>v2015.02.17-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Latest version of the "LIVE555 Streaming Media" code (reinstalled due to a server crash).
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: df93a4770cd33a7da293ebd38e80083a</li>
+<li>sha256: 37a7e0f7e2d564d95c16ed624de6290ceddefd3730f7836fd37c6294d9964a5c</li>
+<li>sha512: 404ed769276d4a0144fd0a3170983c4ce92fb596a7190cfe76f93f82f10d6b00d6b747c9f60af5d0deaa83b50c18c73bda7174495add27186e093926f7f69b18</li>
+</ul>
+<h2 id='2015.02.13'>2015.02.13</h2>
+<ul>
+<li>size: 616 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2015.02.13.tar.gz'>live.2015.02.13.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2015.02.13-tree'>v2015.02.13-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Oops - removed the "#define DEBUG" that had inadvertently been left in "RTCP.cpp" in
+ the previous version.
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 1a52118b108dd8962e6750d51d5344f1</li>
+<li>sha256: 9a8d7c6aebc9f7502bf7b210f3eadfb25762c67e144fb572b5fb0a1c27b715cd</li>
+<li>sha512: 4ffe02eeab0f70fdd9836766306b282d099743f1346c99f7f1ef69bfdf5e8a26db17cfcf7ce69eca32a38eccd7bd6e6e5c03f64ed2f63a200db421576810df23</li>
+</ul>
+<h2 id='2015.02.10'>2015.02.10</h2>
+<ul>
+<li>size: 616 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2015.02.10.tar.gz'>live.2015.02.10.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2015.02.10-tree'>v2015.02.10-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Added experimental support for sending RTCP "APP" packets, and handling incoming RTCP
+ "APP" packets.  (Thanks to Nick Ogden for suggesting this, and providing an example implementation.)
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 0b50a3127c08ab1ee4e4a932cac9ad3e</li>
+<li>sha256: ca23ee74da015cf6824ea6d611fcdfa1eaa2947aab2534058b2cadd7b4734965</li>
+<li>sha512: 479d5bacb70d63628bd5fd8883ab07847f184f64774046277528f756a60482197bf7d44b2827a9626b5a6a8783db5457ccdda89c7f83b30fad57ab8d8778cb41</li>
+</ul>
+<h2 id='2015.02.05'>2015.02.05</h2>
+<ul>
+<li>size: 615 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2015.02.05.tar.gz'>live.2015.02.05.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2015.02.05-tree'>v2015.02.05-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Made the "ProxyServerMediaSession" code a bit more 'bulletproof'.
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 97daa0a0f615d74c69699c986cc0cecd</li>
+<li>sha256: 948a6ee030b2925169fa33d29a8d5c3a4a91b44df4a4c3a34c6abfed21a49477</li>
+<li>sha512: f54b0e7c90964083f57928c1cc7193da26d54afc01a83559b9d36be20e39ac8a22af98c954c7ad0bd53f84f7c93cea1a5521e7488197ce4926390a210e2454f9</li>
+</ul>
+<h2 id='2015.01.27'>2015.01.27</h2>
+<ul>
+<li>size: 615 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2015.01.27.tar.gz'>live.2015.01.27.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2015.01.27-tree'>v2015.01.27-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Fixed a bug in "MPEG2TransportStreamFromESSource" that could sometimes cause an abort if
+ more than one Elementary Stream Source were multiplexed into a single Transport Stream.
+ (Thanks to Marc Palau for reporting this issue.)
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 3efc05ad1ddb5de053e6b28e646e3a4d</li>
+<li>sha256: 7acfbd11cbbc153df60f6926b5601e830f82a293ee94c07481ee22c448d28fab</li>
+<li>sha512: 26354850d7e96e0e79eb89463029e372c2b50bca7f0825279d65bc168beff43164fb79e75798f0cbbe4be076b612e394246f05fb8fee290319de95c59cd8d2ef</li>
+</ul>
+<h2 id='2015.01.19'>2015.01.19</h2>
+<ul>
+<li>size: 614 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2015.01.19.tar.gz'>live.2015.01.19.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2015.01.19-tree'>v2015.01.19-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Fixed an obscure bug in "RTSPClient" that might conceivably have caused a crash if it received
+ a completely empty RTSP response.
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 09931242ad131d0fcf4572ab38a9a432</li>
+<li>sha256: 031048aad827db393c0535700efb6678e7920a4daa2a26df939910e9b921557b</li>
+<li>sha512: d0071171420657e46416d4d7bb18e0813681f7217f9f2d151fdbae5cc5159c80c8c5c5dc7170fe2f0f84f4bdb22772d57d900a85512296761391336a712b2999</li>
+</ul>
+<h2 id='2015.01.04'>2015.01.04</h2>
+<ul>
+<li>size: 614 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2015.01.04.tar.gz'>live.2015.01.04.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2015.01.04-tree'>v2015.01.04-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Updated "config.iphone-simulator" to work with the latest Xcode. (Thanks to Braden Ackerman.)
+- In the "BasicUsageEnvironment" implementation, renamed "EventTime" to "_EventTime" to avoid
+ a reported naming conflict.
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: c0bb44ab881dd53d5878d93c9d90b21d</li>
+<li>sha256: 858914ccd06d3de23edd507db5611ac27a61e02a1704dc8b78967bd6e33291ab</li>
+<li>sha512: 2060fb5420d2703b555cd39c5c7f79a5320e82e182b89836bb4e55a1f285651d1ed7bfbca58c080524628e4f19b880699a6a125153941bacc58e83ea7ea63bbe</li>
+</ul>
+<h2 id='2014.12.17'>2014.12.17</h2>
+<ul>
+<li>size: 614 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2014.12.17.tar.gz'>live.2014.12.17.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2014.12.17-tree'>v2014.12.17-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Updated "RTSPServerSupportingHTTPStreaming" to make sure that the data stream source gets closed
+  when it's no longer needed.
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: cc66d06558a24c72cc7a9b7b4d7ba1bc</li>
+<li>sha256: 33892797fb3a01d453f09c25be4408435211c6996e84c69e7d5b82031e1955af</li>
+<li>sha512: b4ae5b1ac01e3ac4399eec48e13d9089eb7d33d6d97d08b505e7b0b98031340b4a8f310dfaaa5b8b43c2058a9155bb9c071db21d34de2e16130fe0c5e82285f6</li>
+</ul>
+<h2 id='2014.12.16'>2014.12.16</h2>
+<ul>
+<li>size: 614 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2014.12.16.tar.gz'>live.2014.12.16.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2014.12.16-tree'>v2014.12.16-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Changed the FD_SETSIZE check (introduced in version 2014.12.11) so that it's not done
+  in Windows (because in Windows, FD_SETSIZE has different semantics).
+  (Thanks to Deanna Earley for reporting this.)
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 83ffc8b222d600995aa1780f43056cda</li>
+<li>sha256: 013fcbddfef68c7e5ed57d68e2031f6f1533efbd02e010a9c26af05652aa651a</li>
+<li>sha512: e93d0f7b4a66d468f574cdc47685cc86b85c82e887a3dade2e6a61f449397dadc7ecc9465dec9bac76521851cf3c5cbab510ba143c8d4fe507f581ab5f1f2aac</li>
+</ul>
+<h2 id='2014.12.13'>2014.12.13</h2>
+<ul>
+<li>size: 614 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2014.12.13.tar.gz'>live.2014.12.13.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2014.12.13-tree'>v2014.12.13-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Updated the H.264/H.265 parsing code in "H264or5VideoStreamFramer" to be a little smarter about
+  how it computes a file's frame rate (when streaming a 'raw' H.264 or H.265 file).
+  (Thanks to Michel Promonet for inspiring this.)
+- Updated "config.iphoneos" to work with the latest Xcode.  (Thanks to Braden Ackerman.)
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: f5c4fadd1dc80c0078b042924b7e0441</li>
+<li>sha256: eb6a7245bea2f86492c37b83484acc91a40b7ba4e51a7bf7160ea50fcfe14d09</li>
+<li>sha512: fcc2b8deaffcef4dbd358495b58f14c64855a8354c667adaec385636f60305d246adfce2a8e66aee18d12ab718763342064d99cf8ec343d3dcfd5f3f9dd5e3e8</li>
+</ul>
+<h2 id='2014.12.11'>2014.12.11</h2>
+<ul>
+<li>size: 613 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2014.12.11.tar.gz'>live.2014.12.11.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2014.12.11-tree'>v2014.12.11-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Changed our implementation of "setBackgroundHandling()" and "moveBackgroundHandling()" in
+  "BasicTaskScheduler" to check for (and disallow) socket numbers >= FD_SETSIZE,
+  because <sys/select.h> has a bug (at least, in most systems) that causes buffer overflow
+  in this case.  (Thanks to Michel Promonet for pointing this out.)
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: f3361a2aea1a29927e276f5a1e002a19</li>
+<li>sha256: d6370500a6bd71d1fbd18c5ed6e32d750fcecf582bd2fc903ba8cf8909d54ebd</li>
+<li>sha512: f0a538e78167f0390ca1f14ac90110fd7542db9e52b1ef6c64c9b1bccb2aff4ab5bef718801f58cc64afddd0dc6d065661220d692d4ad115feefc66db724c363</li>
+</ul>
+<h2 id='2014.12.09'>2014.12.09</h2>
+<ul>
+<li>size: 613 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2014.12.09.tar.gz'>live.2014.12.09.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2014.12.09-tree'>v2014.12.09-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Needed to make the "QuickTimeFileSink" constructor and destructor protected: to allow subclassing.
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: a17752a2b42e3d940f93656ab17d3bfd</li>
+<li>sha256: ce19521152d3153b738fa2b559856e0e80a22b0b37c5d26555184d94a17c4f79</li>
+<li>sha512: d5a06ea87d1bfc42027e9bde076eb9d1d821c4a1d811c07102230c4cbca029e14c58b64bc30f2ff558e8a037cd36bf9356655d7a834ad2366bf770c2f4c685b7</li>
+</ul>
+<h2 id='2014.12.08'>2014.12.08</h2>
+<ul>
+<li>size: 613 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2014.12.08.tar.gz'>live.2014.12.08.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2014.12.08-tree'>v2014.12.08-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Fixed a bug in parsing 'absolute' RTSP "Range:" headers with no end time.
+  (Thanks to Ken Chow for reporting this.)
+- Added a new option "-K" to "openRTSP, to tell the client to periodically send "OPTIONS"
+  requests as 'keep-alives' for buggy servers that don't use incoming RTCP "RR" packets to
+  indicate client liveness.  (Thanks to Peter Schlaile for this suggestion.)
+- Added a new 'protected' virtual member function "noteRecordedFrame()" to "QuickTimeFileSink".
+  This function is called whenever a frame is recorded to the output file.
+  The default implementation of this virtual function does nothing, but subclasses can redefine
+  it if they wish.
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 899de6795977d0f9fa89e6bf685f7ba9</li>
+<li>sha256: a803bef59e0aba7c6d42dcd6068a4d420d2a190fd381583f812cebf43de83426</li>
+<li>sha512: 9c5215e326c18e2929ffad02a779005354e79fef0aebb0f0cb1a8a15c6cb3c82d5a4c19c0e2465dd04e6167ea94067c09276fb52b41b02aa5f58f541c4206cfe</li>
+</ul>
+<h2 id='2014.11.28'>2014.11.28</h2>
+<ul>
+<li>size: 613 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2014.11.28.tar.gz'>live.2014.11.28.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2014.11.28-tree'>v2014.11.28-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- When "RTSPClient" parses a RTSP response, we first skip over any blank lines that may be at
+  the start of the response.  This can happen if the previous response (e.g., to a "DESCRIBE")
+  contained extra whitespace.
+  (Thanks to ilwoo Nam for giving an example of a server that exhibited this behavior.)
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 9012399ce9ec42d7718711ede75aef24</li>
+<li>sha256: 183df7d9ec6cc426609275b54d5b0017edc81929cf77f2b99a88ba334318a5b8</li>
+<li>sha512: a4706fcbdc7c0df83f991c6256d93cd02db58ba98513819daa617beb4acbdc15db1745c0977bdaf6e5613b6473706eec4627157b3dbeb49c0af6fcb21656b22f</li>
+</ul>
+<h2 id='2014.11.12'>2014.11.12</h2>
+<ul>
+<li>size: 613 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2014.11.12.tar.gz'>live.2014.11.12.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2014.11.12-tree'>v2014.11.12-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- We had forgotten to initialize the "RTSPClient" member variable "fAllowBasicAuthentication"
+  that we introduced in the previous version.
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 2e401cc9aa22d28795e48cc4ff1a4c89</li>
+<li>sha256: 84a362f481c4cc75cbdfcf592e89e77e08bbd818846fa00949903a7817966188</li>
+<li>sha512: 3c0b457a8a25f38e06b860ddc4b1cd0a9cdf187696d37bf91058054ffe533de8892631c92d4b32fa14c7eef3dd346fe12381fef9037a785cb93fdcfa256620ff</li>
+</ul>
+<h2 id='2014.11.07'>2014.11.07</h2>
+<ul>
+<li>size: 613 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2014.11.07.tar.gz'>live.2014.11.07.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2014.11.07-tree'>v2014.11.07-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Added a new "RTSPClient" member function "disallowBasicAuthentication()" that you can call if
+  you don't want a RTSP client to perform 'basic' authentication (whcih involves sending
+  the username and password over the network), even if the server asks for this.
+  (Thanks to Tomasz Pala for this suggestion.)
+- Updated the debugging printout code in "RTCP.cpp" to identify all known RTCP payload types,
+  even if we don't currently handle them.  We also - when doing debugging printout - parse and
+  print out the contents of SDES RTCP packets.
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: b7e7baccf4b61ff58bbec89b0d7962fe</li>
+<li>sha256: 3fb1b67f1c1b00761096c614e38c90e67cde21a79e9ca1181549524d67a45d5e</li>
+<li>sha512: 7c6e30c9ba320a59d2a8d681e3afc1b6636a1897642cd9bc59d55a71638195d00301c227ce211bba17c58ee3c35f82df8c5fe8bf2c6b3a325dd9777a0f5e6963</li>
+</ul>
+<h2 id='2014.11.01'>2014.11.01</h2>
+<ul>
+<li>size: 612 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2014.11.01.tar.gz'>live.2014.11.01.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2014.11.01-tree'>v2014.11.01-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Updated "RTSPClient" so that it reuses "fCurrentAuthenticator" if we previously
+  updated it with data from a "WWW-Authenticate:" response, even if a non_NULL
+  "authenticator" parameter was passed as a parameter to the command.  This reduces the
+  number of authetication exchanges that take place if the server asks for authentication
+  on more than one command in a RTSP session.
+  (Thanks to Tomasz Pala for this suggestion.)
+- Updated "DigestAuthenticator" to allow for the possibility of "username" or "password"
+  being NULL.
+- Updated the "RTSPServer" implementation to add an access check before the first "SETUP"
+  (the one that doesn't include a session id), because it's possible, in principle, for a client
+  to send such a "SETUP" without first sending a "DESCRIBE".  Therefore, we need to perform
+  access checks on both commands.
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 61ec3927fdff01fdaa831238a857b660</li>
+<li>sha256: 0896b3b787771496436fd0fad4a6a6905c46d4df50088a412216bf360975ca99</li>
+<li>sha512: 718ca5e2d86441d2e30a8ddfcf8cc01bc119e4570d0d03d7dea950f8b641df6629b9ac54c62fe8c68c7216eef79eb5b9ffe44148ace71f1bf88d12a6445c8653</li>
+</ul>
+<h2 id='2014.10.28'>2014.10.28</h2>
+<ul>
+<li>size: 612 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2014.10.28.tar.gz'>live.2014.10.28.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2014.10.28-tree'>v2014.10.28-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Added support for the VP9 video RTP payload format (sending and receiving), including the
+  demultiplexing and streaming of a VP9 video track from a Matroska-format file.
+- Made "VP8VideoRTPSource" more robust against a bad first-byte header field in the payload.
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: ebde9f96eed53c33c28f17161847d96e</li>
+<li>sha256: b0ad7899bab476fb3de5b7a329745e25a15ddf1ec1cdf61ad7cdbb4f899ace5c</li>
+<li>sha512: e21baee9d42ef14b3f431e86ed0034ba280eef6c6516ac33d7c35dcaed5d5a7e138380d6c1cf867e02d8d59838f2df128cfaf40fbbaaf6896ac20c76f709e546</li>
+</ul>
+<h2 id='2014.10.21'>2014.10.21</h2>
+<ul>
+<li>size: 611 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2014.10.21.tar.gz'>live.2014.10.21.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2014.10.21-tree'>v2014.10.21-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Increased the max output packet size for "MultiFramedRTPSink" and "RTCPInstance" from 1448
+  to 1456, because we had a report of problems when proxying incoming JPEG/RTP packets of this
+  size (and because 1456 bytes still gives a packet size of no more than 1500 bytes when we add
+  in IP, UDP, and UMTP headers).
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: c07bbbe7be3add603879431b624b8092</li>
+<li>sha256: 3b6f9e607c575d821cdeca49e0850c71d63e038d43db484f7f975f91393cf0be</li>
+<li>sha512: a5148c1d62253d0ed64b4057f4902dc53f74eccc63d69c1acff03848a31f7df7661ca1d40f642176e6789e181f33c1a657111b1d4fe43703ce7e8e9b44e7a17f</li>
+</ul>
+<h2 id='2014.09.22'>2014.09.22</h2>
+<ul>
+<li>size: 610 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2014.09.22.tar.gz'>live.2014.09.22.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2014.09.22-tree'>v2014.09.22-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Changed the way in which the "RTSPServer" code handles incoming "OPTIONS" commands that contain
+  a "Session:" header.  If the "Session:" header contains a session id that does not exist, then
+  we now return a "Session Not Found" error (even though the handling of the "OPTIONS" command is
+  not session-specific).  This new behavior will help proxy servers (that use our "RTSPServer"
+  implementation as a 'back-end' server) better detect when the back-end server has restarted
+  while streaming.  (Thanks to Jonathan Brady for noticing this issue.)
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 8bdbdc3b03e7c8cc98391722e95842d2</li>
+<li>sha256: 1adb160b5b185dd345e34c51bd232582ec000d3027e57bc2a14d2e3f27424239</li>
+<li>sha512: 3dd65b1bd1f346ff5b9b238151427ec239d6c4ba853ad3bb9ca2770536853c524051a6fdd863b7c32e6e5df1c03345662527bff7e2ff8a62f3740bb9d85e0f47</li>
+</ul>
+<h2 id='2014.08.26'>2014.08.26</h2>
+<ul>
+<li>size: 610 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2014.08.26.tar.gz'>live.2014.08.26.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2014.08.26-tree'>v2014.08.26-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Fixed a bug that was introduced in version 2014.03.25 that could cause excessive CPU usage
+  for servers that stream from a single source to both RTP/UDP and RTP/TCP clients.
+  Thanks to Chris Richardson for noting this.
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 24dfd57f164c3a1041c9dceded210444</li>
+<li>sha256: 86b03480e97d049a6231e0e4eb02f5dec8e7359a59f842425aee90a4e3cd0da0</li>
+<li>sha512: c7c4b0e3d42a0b30857f900afa927de387ecd1f16b61a9256387cf206fe3ec19dbdd3e33665c97e2b3b1fed36116bd8f2182aa9129179563dd8dd7ec7217e406</li>
+</ul>
 <h2 id='2013.04.30'>2013.04.30</h2>
 <ul>
 <li>size: 565 K</li>
@@ -4039,6 +4545,38 @@
 <li>sha256: 9aaa736ee3b11ac0aa33655d8c59eefa893ef7c84a8f87d8ac0176c33b8f4deb</li>
 <li>sha512: 4b588608ea8806891f615736a5b9494b6de1af6ff1643b9c84237b2fb0bdb3ce659c7f5af09523b9399ce0f6bbdcd67259212fd81435329ead3d6d2a25dc2dac</li>
 </ul>
+<h2 id='2013.02.11'>2013.02.11</h2>
+<ul>
+<li>size: 557 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2013.02.11.tar.gz'>live.2013.02.11.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2013.02.11-tree'>v2013.02.11-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Fixed an obscure bug in the way that "RTSPClient" handles some responses.  (Thanks to Michel Promonet for finding this.)
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 1dc7bc4dee0c63efe1eefe13478d168d</li>
+<li>sha256: 2cd619e61b9293a094a2cbb8dd7a7505f8e74e6197b80989093425ac78a86d83</li>
+<li>sha512: c0f2efbf2af06d5e5f2bc58955ca37942022a439e3c48bec06a49b636e08d4d31855e884586448c698b0c90d35ef24f282570d0026c4454c9e58855ff36713be</li>
+</ul>
+<h2 id='2012.07.26'>2012.07.26</h2>
+<ul>
+<li>size: 539 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2012.07.26.tar.gz'>live.2012.07.26.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2012.07.26-tree'>v2012.07.26-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Made the "RTPInterface" code for handling RTP/RTCP-over-TCP a little more robust.
+- Updated the "WAVAudioFileSource" WAV-file parser to skip any extraneous 'chunks' between RIFF and FORMAT.
+  (Thanks to Sid Price for suggesting this.)
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 18374e9f6681f62ab7c987ca0029d494</li>
+<li>sha256: 3423c4d38c03fbbb130ffb41992f043feb0b93d07b6b93067f695dd05a94f77f</li>
+<li>sha512: c1479c59237241ece5aadd65dc0213feaf272c73303976d9d362f31b9945e30053a73b3b18b4143ce266ae3361a2b97ff7f37e4c482881aa6c0cd07cbae61b4a</li>
+</ul>
 <h2 id='2012.02.04'>2012.02.04</h2>
 <ul>
 <li>size: 528 K</li>
@@ -4054,6 +4592,25 @@
 <li>md5: 5c9753e027af08c065f156e2a0bec023</li>
 <li>sha256: bd55b78d72d8a7b32a69d54f1a852ea7c4e666b90272a74091105b8c9292eccd</li>
 <li>sha512: fc1cf2795ff70e519345136a7cecdc6bc8ef4f7c3cec30cee7673b1bd80c718840993d04159097f77b093f4e85691cbd60a57ff25f9c7beda27a0acd459c083c</li>
+</ul>
+<h2 id='2012.01.26'>2012.01.26</h2>
+<ul>
+<li>size: 524 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2012.01.26.tar.gz'>live.2012.01.26.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2012.01.26-tree'>v2012.01.26-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- We now make the "MediaLookupTable" class visible in the header file "include/Media.hh".  This allows developers to, if they wish,
+  iterate over the whole set of "Medium" objects that they've created.
+  (Thanks to Aviad Rozenhek for this suggestion.)
+- "HashTable::Iterator::create()" now takes a "HashTable const&" as parameter, rather than a "HashTable&".
+  (This makes it possible for iterators to work on (references to) hash tables that we've declared as const - for more type safety.)
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: db7f0658583b590fb3d4044935f48b8e</li>
+<li>sha256: 3ff7b0831581c90dd10fe7839a6ab0ba4e5113eb5f0b078d850d7550599858c9</li>
+<li>sha512: 57f69a72eee28a9739a8c8a9ebcaecefcc4f199d49817ec2fa8b74eacdfe5a0fcd04baedcb218243cc5a33ad0d8085800841e15bd29196f4d9e234d45a882cde</li>
 </ul>
 <h2 id='2011.12.23'>2011.12.23</h2>
 <ul>
@@ -4102,6 +4659,24 @@
 <li>sha256: 695cf22d43516f082e26ee9eb8373a0ae3b4ed472f1e224b51d881219f694f2e</li>
 <li>sha512: 4df7b2b18a92cd06050620f17f684893c2716f60cc9872f6b1e4a40155489fa1b266910e0bb84ced10b0c8cbf3790c7001a82fc3768a53f9c1060dcb7b2a2887</li>
 </ul>
+<h2 id='2011.09.02'>2011.09.02</h2>
+<ul>
+<li>size: 489 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2011.09.02.tar.gz'>live.2011.09.02.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2011.09.02-tree'>v2011.09.02-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Updated "MultiFramedRTPSource" to more cleanly handle the situation where the sender's SSRC changes.  We don't yet support
+  streams that contain multiple SSRCs, but we can handle streams where the SSRC changes occasionally - e.g., because a multicast
+  source has been restarted.  (When the SSRC changes, we don't check the RTP sequence number of the first packet.)
+  (Thanks to Dmitriy Vasil'ev for bringing this issue to our attention.)
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: e66901b4bc2b4e6fbd7821880d0373fd</li>
+<li>sha256: ab1462c308807c38f7e0857874262669e3a7e02e225757612f209919175ae142</li>
+<li>sha512: 665932160c561f10a74699276da09a40efbc6055bf36d42e19bb62eda42f4d53f3043e0481a4bec5a2f143851562127d4181b96a27594665db18c392ec4cbc7e</li>
+</ul>
 <h2 id='2011.03.14'>2011.03.14</h2>
 <ul>
 <li>size: 464 K</li>
@@ -4119,6 +4694,23 @@
 <li>md5: ff65b2c598e970b4b6c8219a1811de00</li>
 <li>sha256: c6ce050a7f9f69901e6f7f81a6745c82d9419e3904a753b2d5db1139caaf6738</li>
 <li>sha512: 60b78c08135e1e40e1aa5711df284509dfa15ea4800f77eeace8b579a07a216c586af2b62ac2794f7131f3d68a83cdb72b3850142babbedd310b8c51a58c239e</li>
+</ul>
+<h2 id='2010.01.11'>2010.01.11</h2>
+<ul>
+<li>size: 440 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/mirror.sobukus.de/live.2010.01.11.tar.gz'>live.2010.01.11.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2010.01.11-tree'>v2010.01.11-tree</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Increased the default "FileSink" buffer size in "openRTSP" from 20000 to 100000, because the previous limit was being bumped into
+  too many times.
+- Added #include "GroupsockHelper.hh" to "DVVideoStreamFramer.cpp", because it defines "gettimeofday()".
+</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: a7c84fdb957df5f053a3092d06bb4263</li>
+<li>sha256: 20188918c264237399810d12eae15c91fff9e02a79b20ab1f7f8205c6c518305</li>
+<li>sha512: a663b17055c276beb9996bfc9e06532af6d233f5f35eca2049140b3d3bb542ea4597687dd7d54ba62e110750ce7745cfd815626cb2f17af9727f384bcd942fd2</li>
 </ul>
 <h2 id='2009.06.02'>2009.06.02</h2>
 <ul>
