@@ -37,7 +37,7 @@ How to add new tarballs
     # generate: only add new tarballs
     $ make clean clean-pub checks && make create-pub create-tags && make && make page
 
-    # generate: also geenerate all tags
+    # generate: also regenerate all tags
     $ make clean clean-pub checks clean-tags && make create-pub create-tags && make && make page
 
     # Review changes and maybe add fixes.
