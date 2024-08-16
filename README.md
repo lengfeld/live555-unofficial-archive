@@ -101,3 +101,16 @@ Also look at https://github.com/live555-mirror/live555-mirror
 Also look at https://github.com/rgaufman/live555
 
 Optimize webpage for the "mirror" term for SEO.
+* There is no keyword information whether archive or mirror is the better
+  search term.
+* Use the domain "live555-mirror.net".
+
+Check files in tar archives against files in git tags
+
+    $ for file in pub/archives/*.tar.gz; do tar tf $file ; done | sort | uniq  > x
+
+Watch stack overflow for live555 mirror questions.
+
+Publish cmake file
+
+Add compile tests
