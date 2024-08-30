@@ -275,8 +275,8 @@ def print_entry_for_tarball(page_type, version, tarball_filename, srcs, text):
     elif page_type == PageType.TABLE:
         print("<tr>")
         print("<td>%s</td>" % (version,))
-        print("<td><a href='%s'>%s</a><p>" % (tarball_link, tarball_filename))
-        print("<td><a href='%s'>%s</a><p>" % (git_tag_link, git_tag_name))
+        print("<td><a href='%s'>%s</a></td>" % (tarball_link, tarball_filename))
+        print("<td><a href='%s'>%s</a></td>" % (git_tag_link, git_tag_name))
         print("<td>%d K</td>" % (tarball_size / 1024,))
         print("<td><a href='list.html#%s'>more</a></td>" % (version,))
         print("</tr>")
