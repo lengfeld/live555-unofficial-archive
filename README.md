@@ -114,6 +114,3 @@ Watch stack overflow for live555 mirror questions.
 Publish cmake file
 
 Add compile tests
-
-Add tarballs from src
-http://wex5mlqtzj6mxjwkcugoadlzgwh5qvfuympen2iolo5lep762ramjsqd.onion
