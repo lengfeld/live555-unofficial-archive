@@ -114,3 +114,7 @@ Watch stack overflow for live555 mirror questions.
 Publish cmake file
 
 Add compile tests
+
+The function "choose_preferred_src()" does not scale. There should be at best
+no references to the srcs anywhere. And a table for the final link between
+tarballs and the prefer src for backwards compatibility.
