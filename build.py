@@ -194,6 +194,19 @@ def choose_preferred_src(tarball, srcs):
     if "localgetter" in srcs:
         return "localgetter"
 
+    # Yet another special case: prefer "uni-hamburg.de" always over "tor".
+    # Otherwise 'tor' would overrule all old tarballs.
+    if "uni-hamburg.de" in srcs and "tor" in srcs:
+        # But also use "jog.id.distfiles.macports.org" if there
+        if "jog.id.distfiles.macports.org" in srcs:
+            return "jog.id.distfiles.macports.org"
+        # ... this function/approach does not scale ;-)
+        if "local2023" in srcs:
+            return "local2023"
+        if "gentoo" in srcs:
+            return "gentoo"
+        return "uni-hamburg.de"
+
     # The default was to use the first one of the sorted list.
     return sorted(srcs)[0]
 
