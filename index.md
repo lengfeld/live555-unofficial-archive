@@ -79,6 +79,43 @@ collected from third parties archives, like gentoo, you have to trust them.
 But the code is open source. Inspecting the code is always possible.
 
 
+### Is it legal to redistribute the archives?
+
+Yes, it's legal. The original author released the live555 source code under the
+[GNU Lesser General Public License (LGPL)](https://www.gnu.org/licenses/lgpl-3.0.html).
+This makes it free software and redistributing the source code is allowed.
+See also the FAQ entry: [What is the copyright on the source code, and how is it licensed? What are my obligations under this license?](http://www.live555.com/liveMedia/faq.html#copyright-and-license)
+
+And the original author also explicitly stats that other websites may keep
+older archives and redistribute them.
+
+> I'm not 'hiding' older versions; I'm just not putting them on our web site.
+> (Because this is ope source, other people, if they wish, may keep copies of
+> older versions, but I'm not.)
+> [...]
+
+See [[Live-devel] older source archives](http://lists.live555.com/pipermail/live-devel/2011-November/014131.html).
+
+
+### What is the expected audience of the mirror?
+
+The expected audience of this website are
+
+* security researches and
+* open source package maintainers
+
+Security researches should be able to inspect the source code of older live555
+releases, e.g. when they investigate an insecure hardware device that ships an
+out-of-date version of live555 and other software.
+
+When this site provides stable URLs, also package maintainers for Linux
+distributions, like Ubuntu or debian, and maintainers for embedded build
+systems, like [openwrt](https://openwrt.org/),
+[buildroot](https://buildroot.org/) or [Yocto](https://www.yoctoproject.org/),
+can use this site. It provides stable URLs of all the released tarballs that
+can be put in build scripts and package recipes.
+
+
 ### Can I use this site as a tarball mirror?
 
 Not yet. For now the links to the live555 tarballs are direct links into the

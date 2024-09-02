@@ -60,7 +60,7 @@ build:
 	mkdir -p $@
 
 build/index.html: index.md build
-	pandoc -s -f markdown -t html $< -o $@
+	pandoc --toc -s -f markdown -t html $< -o $@
 
 pub/index.html: build/index.html
 	cp $< $@
