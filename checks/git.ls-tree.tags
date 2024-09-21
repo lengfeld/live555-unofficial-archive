@@ -684,6 +684,8 @@ mediaServer/version.hh
 proxyServer/COPYING
 proxyServer/COPYING.LESSER
 proxyServer/live555ProxyServer.cpp
+proxyServer/live555ProxyServer.cpp.save
+proxyServer/live555ProxyServer.cpp.test
 proxyServer/Makefile.head
 proxyServer/Makefile.tail
 README

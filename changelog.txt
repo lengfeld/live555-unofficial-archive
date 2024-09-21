@@ -1,3 +1,7 @@
+2024-09-20:
+- Ensure that, when streaming SRTP, any change to the server's ROC (rollover counter)
+  gets sent to the RTSP client (in the SDP description), if it joins an ongoing stream.
+  (Thanks to Yahia Benmoussa for reporting this issue.)
 2024-08-01:
 - Updated "ServerMediaSession::generateSDPDescription()" to treat "time_t" as (long long).
   (Thanks to Godmar for reporting this.)
