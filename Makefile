@@ -16,7 +16,7 @@ checks/git.ls-remote:
 	git ls-remote live555-unofficial-git-archive/ > $@
 
 checks/links.all:
-	ls -l pub/archives | cut -d" " -f 13- | sort > $@
+	(cd pub/archives && ls -l live* | cut -c 38- ) | sort > $@
 
 .PHONY: checks
 checks:
