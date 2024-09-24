@@ -243,15 +243,33 @@ class PageType(Enum):
     TABLE = "table"
 
 
-def print_entry_for_tarball(page_type, version, tarball_filename, srcs, text):
-    src = choose_preferred_src(tarball_filename, srcs)
-    tarball_link = "https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/%s/%s" % (src, tarball_filename)
+# NOTE: May return None
+def gen_github_compare_if_possible(version_before, version):
+    assert version is not None
+    if version_before is None:
+        return None
+
     git_tag_name = "v%s-tree" % (version,)
-    git_tag_link = "https://github.com/lengfeld/live555-unofficial-git-archive/tree/%s" % (git_tag_name,)
+    git_tag_name_before = "v%s-tree" % (version_before,)
+
+    git_compare_link = "https://github.com/lengfeld/live555-unofficial-git-archive/compare/%s..%s" % \
+                       (git_tag_name_before, git_tag_name)
+
+    return "<a href='%s'>%s..%s</a>" % (git_compare_link, git_tag_name_before, git_tag_name)
+
+
+def print_entry_for_tarball(page_type, version, tarball_filename, srcs, text, version_before):
+    src = choose_preferred_src(tarball_filename, srcs)
+    tarball_link = "https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/%s/%s" \
+                   % (src, tarball_filename)
+    git_tag_name = "v%s-tree" % (version,)
+    git_tag_link = "https://github.com/lengfeld/live555-unofficial-git-archive/tree/%s" \
+                   % (git_tag_name,)
     tarball_size = os.path.getsize("pub-tmp/archives/" + tarball_filename)
     md5sum = get_checksum_for_tarball(tarball_filename, "pub-tmp/archives/checksums.md5")
     sha256sum = get_checksum_for_tarball(tarball_filename, "pub-tmp/archives/checksums.sha256")
     sha512sum = get_checksum_for_tarball(tarball_filename, "pub-tmp/archives/checksums.sha512")
+    html_a_compare = gen_github_compare_if_possible(version_before, version)
 
     if page_type == PageType.LIST:
         print("<h2 id='%s'>%s</h2>" % (version, version))
@@ -259,8 +277,9 @@ def print_entry_for_tarball(page_type, version, tarball_filename, srcs, text):
         print("<li>size: %d K</li>" % (tarball_size / 1024,))
         print("<li>tarball: <a href='%s'>%s</a></li>" % (tarball_link, tarball_filename))
         print("<li>git tag link: <a href='%s'>%s</a></li>" % (git_tag_link, git_tag_name))
+        if html_a_compare is not None:
+            print("<li>git diff link: %s</li>" % (html_a_compare,))
         print("</ul>")
-        # TODO add link to "git diff tag1..tag2"
         # TODO add link to patch file
 
         print("<h3>Changelog</h3>")
@@ -281,16 +300,20 @@ def print_entry_for_tarball(page_type, version, tarball_filename, srcs, text):
         print("<td><a href='list.html#%s'>more</a></td>" % (version,))
         print("</tr>")
     else:
-        assert(False)
+        assert (False)
 
 
 def gen_list_or_table(page_type):
     srcs_tarballs = read_srcs_tarballs()
     tarballs_srcs = reverse_dict(srcs_tarballs)
 
-    changelog = parse_changelog("changelog.txt")
+    # force generator to parse the changelog at once and output a python list.
+    changelog = list(parse_changelog("changelog.txt"))
 
-    type
+    # Filter all versions in changelog that do not have a tarball here in the
+    # archive.
+    changelog = list(filter(lambda version_text: "live." + version_text[0] + ".tar.gz" in tarballs_srcs, changelog))
+
     print("<!doctype html>")
     print("<html lang='en-US'>")
     print("<head>")
@@ -310,12 +333,17 @@ def gen_list_or_table(page_type):
         print("<th>more information</th>")
         print("</tr>")
 
+    for version_text_before, (version, text) in zip(changelog[1:] + [None], changelog):
+        # Unpack if not None
+        if version_text_before is not None:
+            version_before = version_text_before[0]
+        else:
+            version_before = None
 
-    for version, text in changelog:
         tarball = "live." + version + ".tar.gz"
-        if tarball in tarballs_srcs:
-            srcs = tarballs_srcs[tarball]
-            print_entry_for_tarball(page_type, version, tarball, srcs, text)
+        assert tarball in tarballs_srcs
+        srcs = tarballs_srcs[tarball]
+        print_entry_for_tarball(page_type, version, tarball, srcs, text, version_before)
 
     if page_type == PageType.TABLE:
         print("</table>")

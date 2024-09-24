@@ -22,6 +22,11 @@ checks/links.all:
 checks:
 	./build.py check
 
+
+.PHONY: lint
+lint:
+	pycodestyle *.py
+
 # TODO This build arragement is bad. It does not use dependencies to avoid
 # rebuilding and recomputing (e.g. the checksums).
 pub:
