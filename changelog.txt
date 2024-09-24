@@ -1,3 +1,6 @@
+2024-09-24:
+- Removed an experimental version of "testOnDemandRTSPServer.cpp" (for streaming via SRTP)
+  that had acceidentally been left in the previous release.
 2024-09-20:
 - Ensure that, when streaming SRTP, any change to the server's ROC (rollover counter)
   gets sent to the RTSP client (in the SDP description), if it joins an ongoing stream.

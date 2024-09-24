@@ -9588,3 +9588,17 @@ Date:   Fri Sep 20 00:00:00 2024 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2024.09.24-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Tue Sep 24 00:00:00 2024 +0000
+
+live555 2024.09.24 from localgetter
+
+commit 1b92e3f6009cfff145b7c95bd074244246786ebb
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Tue Sep 24 00:00:00 2024 +0000
+
+    unpack live.2024.09.24.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
