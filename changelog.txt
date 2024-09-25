@@ -1,3 +1,6 @@
+2024-09-25:
+- Fixed another bug in SRTP streaming from a "reuseFirstSource" stream: Make sure we use
+  the same keying material for each client.
 2024-09-24:
 - Removed an experimental version of "testOnDemandRTSPServer.cpp" (for streaming via SRTP)
   that had acceidentally been left in the previous release.
