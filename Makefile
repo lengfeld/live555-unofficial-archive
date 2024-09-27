@@ -70,18 +70,32 @@ build/index.html: index.md build
 pub/index.html: build/index.html
 	cp $< $@
 
-.PHONY:
+
+# NOTE: This only works if there are uncommitted changes to the website (=the
+# gh-pages) branch.
+# NOTE: These commands are just tuned for my local setup.
+.PHONY: page
 page: pub/index.html pub/list.html pub/table.html
 	git worktree add gh-pages origin/gh-pages
 	(cd gh-pages && \
+		git branch -D gh-pages && \
+		git branch gh-pages origin/gh-pages && \
 		git rm * && \
 		touch .nojekyll && \
 		cd .. && cp $^ gh-pages/ && cd gh-pages && \
 		git add * .nojekyll && \
 		git commit -m "update gh-pages" && \
-		echo git push origin $$(git rev-parse HEAD):gh-pages --dry-run); \
+		git branch -D gh-pages && \
+		git branch gh-pages $$(git rev-parse HEAD) && \
+		echo "summary:" && git diff gh-pages origin/gh-pages --compact-summary && \
+		echo show changes: git diff gh-pages origin/gh-pages); \
 	git worktree remove --force gh-pages
 
+# Push two branches and new tags
+.PHONY: publish
+publish:
+	git push origin main gh-pages --dry-run
+	cd live555-unofficial-git-archive && git push --tags --dry-run
 
 .PHONY: clean
 clean:
