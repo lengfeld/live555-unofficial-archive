@@ -9616,3 +9616,17 @@ Date:   Wed Sep 25 00:00:00 2024 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2024.09.29-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sun Sep 29 00:00:00 2024 +0000
+
+live555 2024.09.29 from localgetter
+
+commit bf91beb25963d07071b252b119fff427aa89e0de
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sun Sep 29 00:00:00 2024 +0000
+
+    unpack live.2024.09.29.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----

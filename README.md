@@ -6,6 +6,7 @@ Please see there or in [index.md](index.md) for further details.
 
 This is only the internal README of the project.
 
+
 ## Maintaining
 
 Command to clean and create everything
@@ -30,23 +31,25 @@ Then publish the gh-pages. The previous commands prints a `git push` command.
 
 ## How to publish
 
-How to add new tarballs
+How to add new tarballs from 'localgetter':
 
-    $ git add srcs/<new source>
+    $ ./pull-stcim.sh
+
+    # check the result: tarball and changelog changes
+    $ git status
+    $ git diff --staged
 
     # generate: only add new tarballs
     $ make clean clean-pub checks && make create-pub create-tags && make && make page
 
-    # generate: also regenerate all tags
-    $ make clean clean-pub checks clean-tags && make create-pub create-tags && make && make page
-
-    # Review changes and maybe add fixes.
+    # Review changes
     $ git diff
-    # Then regenerate
+
+    # add new tarball
+    $ git add pub/archives/
 
     # Commit the final result
-    $ git add [...]
-    $ git commit -m "add new src and tarballs"
+    $ git commit -a -m "add new tarballs"
 
     # Generate website
     $ make page

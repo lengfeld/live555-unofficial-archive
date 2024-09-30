@@ -1,3 +1,6 @@
+2024-09-29:
+- Fixed a bug in "ProxyServerMediaSession.cpp" that could cause an 'access after free' error
+  if the proxy server's "-V" option were used.  (Thanks to Andrey Radchenko for reporting this.)
 2024-09-25:
 - Fixed another bug in SRTP streaming from a "reuseFirstSource" stream: Make sure we use
   the same keying material for each client.

@@ -87,8 +87,8 @@ page: pub/index.html pub/list.html pub/table.html
 		git commit -m "update gh-pages" && \
 		git branch -D gh-pages && \
 		git branch gh-pages $$(git rev-parse HEAD) && \
-		echo "summary:" && git diff gh-pages origin/gh-pages --compact-summary && \
-		echo show changes: git diff gh-pages origin/gh-pages); \
+		echo "summary:" && git diff origin/gh-pages gh-pages --compact-summary && \
+		echo show changes: git diff origin/gh-pages gh-pages); \
 	git worktree remove --force gh-pages
 
 # Push two branches and new tags
