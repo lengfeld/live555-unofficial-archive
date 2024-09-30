@@ -70,8 +70,6 @@ commit the local changes and also push them.
 
 ## TODOs
 
-Add my cronjob watcher script to continously polls the live555 download page.
-
 Search the wayback machine for tarballs and add them.
 
 Get tarballs from videolan
