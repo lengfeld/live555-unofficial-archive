@@ -51,21 +51,12 @@ How to add new tarballs from 'localgetter':
     # Commit the final result
     $ git commit -a -m "add new tarballs"
 
-    # Generate website
+    # Generate website again
     $ make page
-    # Review the changes with "git diff"
 
-    # publish with
+    # And publish with
     $ make publish
     # And then remove the --dry-run options
-
-To publish only the gh-pages, execute
-
-    $ make clean clean-pub checks && make create-pub && make && make page
-    # TODO also use "make publish" here
-
-and then execute the `git push` command to the branch `gh-pages`. And then
-commit the local changes and also push them.
 
 
 ## TODOs
