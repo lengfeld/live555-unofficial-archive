@@ -1,46 +1,56 @@
-2024-09-29:
+2024.10.11:
+- Fixed another RTSP server bug in the implementation of RTP-over-TCP streaming.
+  (Thanks again to Sangjun Park.)
+2024.10.10:
+- Fixed a stack-use-after-return bug in the RTSP server implementation.
+  (Thanks to Sangjun Park for reporting this.)
+2024.10.09:
+- Fixed a RTSP server bug in the implementation of RTP-over-TCP streaming that could cause
+  a "RTSPClientConnection" object to be accessed after it had been deleted.
+  (Thanks to Sangjun Park for reporting this issue.)
+2024.09.29:
 - Fixed a bug in "ProxyServerMediaSession.cpp" that could cause an 'access after free' error
   if the proxy server's "-V" option were used.  (Thanks to Andrey Radchenko for reporting this.)
-2024-09-25:
+2024.09.25:
 - Fixed another bug in SRTP streaming from a "reuseFirstSource" stream: Make sure we use
   the same keying material for each client.
-2024-09-24:
+2024.09.24:
 - Removed an experimental version of "testOnDemandRTSPServer.cpp" (for streaming via SRTP)
   that had acceidentally been left in the previous release.
-2024-09-20:
+2024.09.20:
 - Ensure that, when streaming SRTP, any change to the server's ROC (rollover counter)
   gets sent to the RTSP client (in the SDP description), if it joins an ongoing stream.
   (Thanks to Yahia Benmoussa for reporting this issue.)
-2024-08-01:
+2024.08.01:
 - Updated "ServerMediaSession::generateSDPDescription()" to treat "time_t" as (long long).
   (Thanks to Godmar for reporting this.)
-2024-06-26:
+2024.06.26:
 - Updated the "OnDemandServerMediaSubsession" implementation to output an error message
   if the "sink->startPlaying()" call failed (e.g., due to its source not being
   compatible with the sink).  This makes some common errors (e.g, a proper 'framer' not
   being used) easier to detect.
-2024-05-30:
+2024.05.30:
 - Fixed a mistake that caused the config file "config.raspberrypi" to not appear in
   the distribution.  (It's there now.)
-2024-05-15:
+2024.05.15:
 - Added a new config file "config.raspberrypi" that is known to work for
   building the code on/for a Raspberry Pi 5.
-2024-05-05:
+2024.05.05:
 - Updated "QuickTimeFileSink" to add support for recording H.265 video streams.
   (This is not fully working yet; it appears to have some bugs.)
-2024-04-19:
+2024.04.19:
 - Updated "MPEG2TransportStreamFramer" to ignore big jumps (2x or more) in the estimate
   for the duration of each Transport packet.  This is likely caused by an unexpected
   jump in the PCR (not indicated by "discontinuity_indicator").
   (This is in response to a report from Andy Hawkins.)
-2024-04-14:
+2024.04.14:
 - Added constant strings and ints to each library that allow you to get the library version
   at runtime, rather than just at compile time.  For example, for the "liveMedia" library,
   these are:
   	extern char const* const liveMediaLibraryVersionStr;
 	extern int const liveMediaLibraryVersionInt;
   (Thanks to Paul Westlund for this suggestion.)
-2024-03-08:
+2024.03.08:
 - Changed "ServerTLSState::setup()" (in "TLSState.cpp") to call
   "SSL_CTX_use_certificate_chain_file()" instead of "SSL_CTX_use_certificate_file()",
   to allow the server operator to specify a chain of certificates, rather than just one.

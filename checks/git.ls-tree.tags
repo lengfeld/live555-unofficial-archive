@@ -46,8 +46,10 @@ config.linux
 config.linux~
 config.linux-64bit
 config.linux-gdb
+config.linux-gdb-no-std-lib
 config.linux-gdb-sanitize
 config.linux-no-openssl
+config.linux-no-std-lib
 config.linux-with-shared-libraries
 #config.macosx#
 config.macosx
