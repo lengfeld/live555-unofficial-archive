@@ -1,3 +1,7 @@
+2024.10.24:
+- Another change to the code for streaming SRTP to a new client from an ongoing stream:
+  If the ROC changes, then generate a new SDP description, but not a new stream source or
+  RTP sink.  (Thanks to Jean-Claude Saget for reporting this issue.)
 2024.10.11:
 - Fixed another RTSP server bug in the implementation of RTP-over-TCP streaming.
   (Thanks again to Sangjun Park.)

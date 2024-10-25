@@ -49,7 +49,7 @@ How to add new tarballs from 'localgetter':
     $ git add pub/archives/
 
     # Commit the final result
-    $ git commit -a -m "add new tarballs"
+    $ git commit -a -m "add new tarball"
 
     # Generate website again
     $ make page
