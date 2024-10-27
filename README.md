@@ -57,6 +57,7 @@ How to add new tarballs from 'localgetter':
     # And publish with
     $ make publish
     # And then remove the --dry-run options
+    $ make publish DRY_RUN=
 
 
 ## TODOs

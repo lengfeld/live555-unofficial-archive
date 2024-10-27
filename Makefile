@@ -91,11 +91,13 @@ page: pub/index.html pub/list.html pub/table.html
 		echo show changes: git diff origin/gh-pages gh-pages); \
 	git worktree remove --force gh-pages
 
+DRY_RUN=--dry-run
+
 # Push two branches and new tags
 .PHONY: publish
 publish:
-	git push origin main gh-pages --dry-run
-	cd live555-unofficial-git-archive && git push --tags --dry-run
+	git push origin main gh-pages $(DRY_RUN)
+	cd live555-unofficial-git-archive && git push --tags $(DRY_RUN)
 
 .PHONY: clean
 clean:
