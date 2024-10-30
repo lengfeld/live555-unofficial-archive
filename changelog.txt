@@ -1,3 +1,6 @@
+2024.10.29:
+- A fix to the previous release fixing code for streaming SRTP to a new client from an ongoing stream.
+  (Thanks again to Jean-Claude Saget.)
 2024.10.24:
 - Another change to the code for streaming SRTP to a new client from an ongoing stream:
   If the ROC changes, then generate a new SDP description, but not a new stream source or
