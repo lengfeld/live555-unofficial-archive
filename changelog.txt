@@ -1,3 +1,10 @@
+2024.10.31:
+- Yet another fix to the (excrutiatingly tricky) SRTP/ROC-handling code.
+  (Thanks to Jean-Baptiste Renou.)
+2024.10.30:
+- Another fix to the code for SRTP streaming: Make sure that the RTCP instance's
+  cryptographic context gets updated whenever the RTP sink's cryptographic context changes.
+  (Thanks again to Jean-Claude Saget.)
 2024.10.29:
 - A fix to the previous release fixing code for streaming SRTP to a new client from an ongoing stream.
   (Thanks again to Jean-Claude Saget.)

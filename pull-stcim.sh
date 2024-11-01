@@ -38,12 +38,21 @@ rsync -av stcim.de:~/git/live555-unofficial-archive/cronjob/data/ stcimde/
 
 latest_folder=$(ls -1 stcimde/ | grep -v state | sort  | tail -n 1)
 
+# Update changelog
 cp stcimde/$latest_folder/changelog.txt ../../changelog.txt
-git add ../../changelog.txt
 
-# only supports getting one tarball, not all the non-integrated ones
-tarball_filename=$(cd stcimde/$latest_folder/ && ls live.*.tar.gz)
-cp stcimde/$latest_folder/$tarball_filename  ./
-git add $tarball_filename
+# Update missing tarballs
+for tarball_path in stcimde/*/live.*.tar.gz; do
+	tarball_filename=$(basename $tarball_path)
+
+	# Only copy not yet copied tarballs
+	test -f $tarball_filename && continue
+
+	# Special case: Skip this old tarball.
+	[ "live.2023.11.30.tar.gz" = "$tarball_filename" ] && continue
+
+	echo New tarball: $tarball_path
+	cp $tarball_path ./
+done
 
 echo "Now continue with regenerating"

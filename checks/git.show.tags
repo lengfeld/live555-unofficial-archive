@@ -9700,3 +9700,31 @@ Date:   Tue Oct 29 00:00:00 2024 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2024.10.30-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Wed Oct 30 00:00:00 2024 +0000
+
+live555 2024.10.30 from localgetter
+
+commit c78fd16f844a5a94f0fbf7d38fd5cc37d26f24ec
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Wed Oct 30 00:00:00 2024 +0000
+
+    unpack live.2024.10.30.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2024.10.31-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Oct 31 00:00:00 2024 +0000
+
+live555 2024.10.31 from localgetter
+
+commit a8649a9f7897bd6b316220270b3237f552665b68
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Oct 31 00:00:00 2024 +0000
+
+    unpack live.2024.10.31.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----

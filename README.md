@@ -37,7 +37,6 @@ How to add new tarballs from 'localgetter':
 
     # check the result: tarball and changelog changes
     $ git status
-    $ git diff --staged
 
     # generate: only add new tarballs
     $ make clean clean-pub checks && make create-pub create-tags && make && make page
@@ -45,14 +44,11 @@ How to add new tarballs from 'localgetter':
     # Review changes
     $ git diff
 
-    # add new tarball
-    $ git add pub/archives/
+    # add all new stuff and commit
+    $ git add pub/archives/ srcs/localgetter/*.tar.gz
 
     # Commit the final result
     $ git commit -a -m "add new tarball"
-
-    # Generate website again
-    $ make page
 
     # And publish with
     $ make publish
