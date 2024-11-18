@@ -151,7 +151,12 @@ the following sister projects that also provide an up to date tarball backup:
 * [src.rrz.uni-hamburg.de/files/src/live555/](https://src.rrz.uni-hamburg.de/files/src/live555/)
 * http://wex5mlqtzj6mxjwkcugoadlzgwh5qvfuympen2iolo5lep762ramjsqd.onion
 
-The following project added the tarballs including the changelog text as git commits:
+The following project adds tarballs as git commits. It uses a github action for automation:
+
+* [github.com/live555-mirror/live555-mirror/](https://github.com/live555-mirror/live555-mirror/)
+
+The following project added the tarballs including the changelog text as git
+commits, but updates have stalled:
 
 * [github.com/rayl/live555](https://github.com/rayl/live555)
 
