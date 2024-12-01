@@ -1,0 +1,614 @@
+commit 87584272667f30d44a6848855922bcfe5b8930ec
+tree 23fcb75215272eb1c1e68fd30b77d85dc60453bd
+parent 95aff12d36377c00b405604d426137746528fa40
+author Live Networks, Inc <invalid@example.com> 1732752000 +0000
+committer live555-unofficial-archive <invalid@example.com> 1732752000 +0000
+
+    unpack live.2024.11.28.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the signature of "doEventLoop()" to match that of "triggerEvent()", by using
+      "std::atomic_char" as the 'watch variable' type (if NO_STD_LIB is not defined)
+    - Performed the annual update of the copyright years near the start of each file
+
+commit 95aff12d36377c00b405604d426137746528fa40
+tree e53ea03fc364106174601279a2bb7585dc367f4f
+parent 30a1187cd7c51f64c51d32125c64303cc88671a7
+author Live Networks, Inc <invalid@example.com> 1730332800 +0000
+committer live555-unofficial-archive <invalid@example.com> 1730332800 +0000
+
+    unpack live.2024.10.31.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Yet another fix to the (excrutiatingly tricky) SRTP/ROC-handling code.
+      (Thanks to Jean-Baptiste Renou.)
+
+commit 30a1187cd7c51f64c51d32125c64303cc88671a7
+tree 18a04530ba4fcc1704200bd2a1a36106602157ec
+parent 95043d548148a882e991ea7356dc2043f1682765
+author Live Networks, Inc <invalid@example.com> 1730246400 +0000
+committer live555-unofficial-archive <invalid@example.com> 1730246400 +0000
+
+    unpack live.2024.10.30.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Another fix to the code for SRTP streaming: Make sure that the RTCP instance's
+      cryptographic context gets updated whenever the RTP sink's cryptographic context changes.
+      (Thanks again to Jean-Claude Saget.)
+
+commit 95043d548148a882e991ea7356dc2043f1682765
+tree ec42711a731120031e0f85b87283e8c55ec9bfad
+parent 412b5eec62cd27376f27add686c3d4b9fc0f1b0f
+author Live Networks, Inc <invalid@example.com> 1730160000 +0000
+committer live555-unofficial-archive <invalid@example.com> 1730160000 +0000
+
+    unpack live.2024.10.29.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - A fix to the previous release fixing code for streaming SRTP to a new client from an ongoing stream.
+      (Thanks again to Jean-Claude Saget.)
+
+commit 412b5eec62cd27376f27add686c3d4b9fc0f1b0f
+tree 7cce5765e26a6db65b0bafbc2475041504292670
+parent affc8a581d2b830fa478176e4f0e88cf9d021aca
+author Live Networks, Inc <invalid@example.com> 1729728000 +0000
+committer live555-unofficial-archive <invalid@example.com> 1729728000 +0000
+
+    unpack live.2024.10.24.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Another change to the code for streaming SRTP to a new client from an ongoing stream:
+      If the ROC changes, then generate a new SDP description, but not a new stream source or
+      RTP sink.  (Thanks to Jean-Claude Saget for reporting this issue.)
+
+commit affc8a581d2b830fa478176e4f0e88cf9d021aca
+tree d3ff95179a2409088001b2a9bbe2bbca76309ba1
+parent f0830d5957895b12b1446f1c1ce53fbe2e5b394e
+author Live Networks, Inc <invalid@example.com> 1728604800 +0000
+committer live555-unofficial-archive <invalid@example.com> 1728604800 +0000
+
+    unpack live.2024.10.11.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed another RTSP server bug in the implementation of RTP-over-TCP streaming.
+      (Thanks again to Sangjun Park.)
+
+commit f0830d5957895b12b1446f1c1ce53fbe2e5b394e
+tree d24f47c26fcbf5604bf57265f46c399c6d8ffc49
+parent 1111471daaeb989efec0c6bec34075c746b8eae6
+author Live Networks, Inc <invalid@example.com> 1728518400 +0000
+committer live555-unofficial-archive <invalid@example.com> 1728518400 +0000
+
+    unpack live.2024.10.10.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a stack-use-after-return bug in the RTSP server implementation.
+      (Thanks to Sangjun Park for reporting this.)
+
+commit 1111471daaeb989efec0c6bec34075c746b8eae6
+tree b07447877e41a6da7019a7e9500e4b53c009a73f
+parent 052b22b647e7b2b509ec3cd34738d1da287e6685
+author Live Networks, Inc <invalid@example.com> 1728432000 +0000
+committer live555-unofficial-archive <invalid@example.com> 1728432000 +0000
+
+    unpack live.2024.10.09.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a RTSP server bug in the implementation of RTP-over-TCP streaming that could cause
+      a "RTSPClientConnection" object to be accessed after it had been deleted.
+      (Thanks to Sangjun Park for reporting this issue.)
+
+commit 052b22b647e7b2b509ec3cd34738d1da287e6685
+tree 5332009578ae95cca19b4eb127626fec25657953
+parent b628c8fe0ae687b5958061b109475c09e9bb06bf
+author Live Networks, Inc <invalid@example.com> 1727568000 +0000
+committer live555-unofficial-archive <invalid@example.com> 1727568000 +0000
+
+    unpack live.2024.09.29.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a bug in "ProxyServerMediaSession.cpp" that could cause an 'access after free' error
+      if the proxy server's "-V" option were used.  (Thanks to Andrey Radchenko for reporting this.)
+
+commit b628c8fe0ae687b5958061b109475c09e9bb06bf
+tree 00fa12a0a3a79248aa343f2507695e47631f74b7
+parent 18dda2a5815b5dceb4bc84e1cbd7e525ab3b2e98
+author Live Networks, Inc <invalid@example.com> 1727222400 +0000
+committer live555-unofficial-archive <invalid@example.com> 1727222400 +0000
+
+    unpack live.2024.09.25.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed another bug in SRTP streaming from a "reuseFirstSource" stream: Make sure we use
+      the same keying material for each client.
+
+commit 18dda2a5815b5dceb4bc84e1cbd7e525ab3b2e98
+tree db66d48cc563fc834386e929c4263540bb55212f
+parent 1ffaee24f2c029aa0a1f4996c6d2d2f63a04b64f
+author Live Networks, Inc <invalid@example.com> 1727136000 +0000
+committer live555-unofficial-archive <invalid@example.com> 1727136000 +0000
+
+    unpack live.2024.09.24.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Removed an experimental version of "testOnDemandRTSPServer.cpp" (for streaming via SRTP)
+      that had acceidentally been left in the previous release.
+
+commit 1ffaee24f2c029aa0a1f4996c6d2d2f63a04b64f
+tree 07ca26367177b3b538118e89bee32d11955986b8
+parent 272e7a8ea0b0786a77de6ef8fcca5e362c35f2c9
+author Live Networks, Inc <invalid@example.com> 1726790400 +0000
+committer live555-unofficial-archive <invalid@example.com> 1726790400 +0000
+
+    unpack live.2024.09.20.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Ensure that, when streaming SRTP, any change to the server's ROC (rollover counter)
+      gets sent to the RTSP client (in the SDP description), if it joins an ongoing stream.
+      (Thanks to Yahia Benmoussa for reporting this issue.)
+
+commit 272e7a8ea0b0786a77de6ef8fcca5e362c35f2c9
+tree 5ee7c6d49b16208914fd989c019b01ea2d650da0
+parent bd552ce97d734cff0b6641f24f1dc0fc58096c18
+author Live Networks, Inc <invalid@example.com> 1722470400 +0000
+committer live555-unofficial-archive <invalid@example.com> 1722470400 +0000
+
+    unpack live.2024.08.01.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated "ServerMediaSession::generateSDPDescription()" to treat "time_t" as (long long).
+      (Thanks to Godmar for reporting this.)
+
+commit bd552ce97d734cff0b6641f24f1dc0fc58096c18
+tree 435956b620f8aa8cd250b41fc0631c678d0c4538
+parent ec5f7e68193bb650a78326b554c7a932745a59c6
+author Live Networks, Inc <invalid@example.com> 1719360000 +0000
+committer live555-unofficial-archive <invalid@example.com> 1719360000 +0000
+
+    unpack live.2024.06.26.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the "OnDemandServerMediaSubsession" implementation to output an error message
+      if the "sink->startPlaying()" call failed (e.g., due to its source not being
+      compatible with the sink).  This makes some common errors (e.g, a proper 'framer' not
+      being used) easier to detect.
+
+commit ec5f7e68193bb650a78326b554c7a932745a59c6
+tree b1314fbb0f41fccf6633bed3916d07956020c132
+parent e4bcac4b9d68d76c5619ae97d2db062340d6e0f8
+author Live Networks, Inc <invalid@example.com> 1717027200 +0000
+committer live555-unofficial-archive <invalid@example.com> 1717027200 +0000
+
+    unpack live.2024.05.30.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a mistake that caused the config file "config.raspberrypi" to not appear in
+      the distribution.  (It's there now.)
+
+commit e4bcac4b9d68d76c5619ae97d2db062340d6e0f8
+tree 5f11be7a1dcbdcb0c27296f14ce08af1502f4d19
+parent ab5090aba9decb5a2444962fbe66cb7c5253c353
+author Live Networks, Inc <invalid@example.com> 1715731200 +0000
+committer live555-unofficial-archive <invalid@example.com> 1715731200 +0000
+
+    unpack live.2024.05.15.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Added a new config file "config.raspberrypi" that is known to work for
+      building the code on/for a Raspberry Pi 5.
+
+commit ab5090aba9decb5a2444962fbe66cb7c5253c353
+tree f1acaf28225e127e8d65b579fd4c0e5291eed206
+parent 2dbb2b618b5b193eed0c11e98808ed5b63403fb1
+author Live Networks, Inc <invalid@example.com> 1714867200 +0000
+committer live555-unofficial-archive <invalid@example.com> 1714867200 +0000
+
+    unpack live.2024.05.05.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated "QuickTimeFileSink" to add support for recording H.265 video streams.
+      (This is not fully working yet; it appears to have some bugs.)
+
+commit 2dbb2b618b5b193eed0c11e98808ed5b63403fb1
+tree 4ce6f24215e2e85fa245876d2e1fa4b6e28af8b5
+parent 4de4a914bcea85cadefb967a86ea9e1f4ee00d0a
+author Live Networks, Inc <invalid@example.com> 1713484800 +0000
+committer live555-unofficial-archive <invalid@example.com> 1713484800 +0000
+
+    unpack live.2024.04.19.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated "MPEG2TransportStreamFramer" to ignore big jumps (2x or more) in the estimate
+      for the duration of each Transport packet.  This is likely caused by an unexpected
+      jump in the PCR (not indicated by "discontinuity_indicator").
+      (This is in response to a report from Andy Hawkins.)
+
+commit 4de4a914bcea85cadefb967a86ea9e1f4ee00d0a
+tree 94d2c6305a8ff4ceccb155daba97e9a9f4f183c7
+parent 097aac8d6af17c6263c2ed56bbfcabee39b76319
+author Live Networks, Inc <invalid@example.com> 1713052800 +0000
+committer live555-unofficial-archive <invalid@example.com> 1713052800 +0000
+
+    unpack live.2024.04.14.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Added constant strings and ints to each library that allow you to get the library version
+      at runtime, rather than just at compile time.  For example, for the "liveMedia" library,
+      these are:
+      	extern char const* const liveMediaLibraryVersionStr;
+    	extern int const liveMediaLibraryVersionInt;
+      (Thanks to Paul Westlund for this suggestion.)
+
+commit 097aac8d6af17c6263c2ed56bbfcabee39b76319
+tree 86fe86ab0138e66cf332577a8f394e067eeb30e5
+parent 2b8081bf3b9628813f23d0d1f4e66edabef88681
+author Live Networks, Inc <invalid@example.com> 1709856000 +0000
+committer live555-unofficial-archive <invalid@example.com> 1709856000 +0000
+
+    unpack live.2024.03.08.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Changed "ServerTLSState::setup()" (in "TLSState.cpp") to call
+      "SSL_CTX_use_certificate_chain_file()" instead of "SSL_CTX_use_certificate_file()",
+      to allow the server operator to specify a chain of certificates, rather than just one.
+      (Thanks to Raphael Schlarb for this suggestion.)
+
+commit 2b8081bf3b9628813f23d0d1f4e66edabef88681
+tree 9b2884ddd79cd881eb96533c77ada1417532d28e
+parent d40a2cf532abf5d2936ce42cf6f354d3a81c3ade
+author Live Networks, Inc <invalid@example.com> 1709078400 +0000
+committer live555-unofficial-archive <invalid@example.com> 1709078400 +0000
+
+    unpack live.2024.02.28.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the code for "dateHeader()" (in "RTSPCommon.cpp") to avoid using "strftime()",
+      because that can produce a localized date string that violates the RTSP specification
+      (which uses section 3.3.1 of RFC 2068 (the HTTP/1.1 specification) to define the "Date:"
+      header).  (Thanks to Lauri Nurmi for reporting the problem, and providing a patch.)
+
+commit d40a2cf532abf5d2936ce42cf6f354d3a81c3ade
+tree 328bdcde22f57f0a7e6c63519ea416c40f8c624a
+parent 9c69b81b4bb1aa45d4fa50f42bff650ad382d4f7
+author Live Networks, Inc <invalid@example.com> 1708646400 +0000
+committer live555-unofficial-archive <invalid@example.com> 1708646400 +0000
+
+    unpack live.2024.02.23.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the code for "dateHeader()" (in "RTSPCommon.cpp") to use "NULL" instead of "nullptr";
+      the latter was causing compilation problems for someone.
+
+commit 9c69b81b4bb1aa45d4fa50f42bff650ad382d4f7
+tree e1d39be3774373b2dda039f2b9b04c9a2a138638
+parent 26b6f0ecb775de91849441e3bddf6d28bf8df8ed
+author Live Networks, Inc <invalid@example.com> 1707955200 +0000
+committer live555-unofficial-archive <invalid@example.com> 1707955200 +0000
+
+    unpack live.2024.02.15.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the RTCP implementation so that reception stats for a SSRC are no longer deleted,
+      even if a SSRC is reaped due to RTCP inactivity (no RTCP "SR" reports received recently).
+
+commit 26b6f0ecb775de91849441e3bddf6d28bf8df8ed
+tree b1e57ad9fac98ac6d53d415129682da4b511252a
+parent 5462f42474040f8d4237133021e005563ef0ea5f
+author Live Networks, Inc <invalid@example.com> 1701302400 +0000
+committer live555-unofficial-archive <invalid@example.com> 1701302400 +0000
+
+    unpack live.2023.11.30.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - In the implementation of the "MPEGVideoStreamFramer" class, gave "TimeCode::operator==()"
+      the "const" qualifier, to make some compilers happy.
+      (Thanks to Dmitry Bely for the report)
+    - Performed the annual update of the copyright years near the start of each file
+
+commit 5462f42474040f8d4237133021e005563ef0ea5f
+tree c4081be9f4193a41a3e647af38a02c68c2c12ede
+parent 2ae67aa33a3e847846e65d2450cbc0bb4b66a50f
+author Live Networks, Inc <invalid@example.com> 1699401600 +0000
+committer live555-unofficial-archive <invalid@example.com> 1699401600 +0000
+
+    unpack live.2023.11.08.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Changed the signature to the virtual function "getRTPSinkandRTCP()" (in "ServerMediaSubession",
+      and its subclasses "OnDemandServerMediaSession" and "PassiveServerMediaSubsession")
+      to make its 'result' arguments "rtpSink" and "rtcp" no longer "const *".  There was no
+      real reason to make those "const *".  (Thanks to Andy Hawkins for prompting this.)
+
+commit 2ae67aa33a3e847846e65d2450cbc0bb4b66a50f
+tree acd5d7e81f0eb9f6f8f66a5825cd17584647a4a5
+parent 358f5d541d29a5d0ccc497f3b1843cb06159977c
+author Live Networks, Inc <invalid@example.com> 1699315200 +0000
+committer live555-unofficial-archive <invalid@example.com> 1699315200 +0000
+
+    unpack live.2023.11.07.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - In the class "GenericMediaServer", made the variables "fServerMediaSessions",
+      "fClientConnections", and "fClientSessions" 'protected' rather than 'private',
+      to allow subclasses to access them if desired.
+
+commit 358f5d541d29a5d0ccc497f3b1843cb06159977c
+tree a43ce73b94b6dd362751094a7b9bf50a6ea79602
+parent aa815ff60ab82db9c6461c1c61839ab398bce70f
+author Live Networks, Inc <invalid@example.com> 1698624000 +0000
+committer live555-unofficial-archive <invalid@example.com> 1698624000 +0000
+
+    unpack live.2023.10.30.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a bug in "deleteEventTrigger()" that had accidentally been introduced during the
+      change to 'event trigger' implementation back in June.
+      (Thanks to Jörg Dommaschk for reporting this.)
+
+commit aa815ff60ab82db9c6461c1c61839ab398bce70f
+tree bc8e4e91def077cf626fc238bd6dec50e216ca8d
+parent e36beb7c8b5e4f8bb4fd9d7b1d31bc1afaf9be8c
+author Live Networks, Inc <invalid@example.com> 1690156800 +0000
+committer live555-unofficial-archive <invalid@example.com> 1690156800 +0000
+
+    unpack live.2023.07.24.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the event trigger implementation once again, to allow for the possibility of
+      developers redefining MAX_NUM_EVENT_TRIGGERS (it must always be <= the number of bits
+      in an "EventTriggerId", though.  (Thanks to Jan Rørgaard Hansen for this suggestion.)
+
+commit e36beb7c8b5e4f8bb4fd9d7b1d31bc1afaf9be8c
+tree 773d7121f544f865bb8402d6ace0fa749553f5b3
+parent 51e0f3903c603841ef01b3b3eaeb3ce54a279171
+author Live Networks, Inc <invalid@example.com> 1687219200 +0000
+committer live555-unofficial-archive <invalid@example.com> 1687219200 +0000
+
+    unpack live.2023.06.20.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the event trigger implementation again - in the case where "NO_STD_LIB" is
+      defined.  In this case, "fTriggersAwaitingHandling" is implemented as an array of
+      "Boolean volatile"s, rather than as a 32-bit bitmap.  This should make 'race conditions'
+      less likely even if "NO_STD_LIB" is defined (though you should use the preferred, default
+      implementation - that uses an array of "std::atomic_flag"s - if possible).
+
+commit 51e0f3903c603841ef01b3b3eaeb3ce54a279171
+tree cb16936417370fdec29a2a3c1a765b4b5ec4733d
+parent 1568124133222a3f2536e285401a79684e48b1ca
+author Live Networks, Inc <invalid@example.com> 1686873600 +0000
+committer live555-unofficial-archive <invalid@example.com> 1686873600 +0000
+
+    unpack live.2023.06.16.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Changed the (default) implementation of 'event triggers' in "BasicTaskScheduler" to
+      implement "fTriggersAwaitingHandling" using "std:atomic_flag"s, rather than as a bitmap.
+      This should overcome 'race conditions' that some users experienced when calling
+      "triggerEvent()" from a non-LIVE555 thread.  (Thanks to Jan Rørgaard Hansen for reporting
+      this issue.)
+      Note that this is the first time the LIVE555 code has required the C++ standard library.
+      (If you cannot use the C++ standard library, then you can compile the code - but getting the
+      old behavior - by defining "NO_STD_LIB".)
+    - Minor change to "RTSPCommon.cpp" to overcome a compilation error in XCode on Mac OS X.
+
+commit 1568124133222a3f2536e285401a79684e48b1ca
+tree 80c3b9682b647a21e063fbad701bee9e9ad94e60
+parent 9d2527c06ac59a55e4e4d602260533a0612c138a
+author Live Networks, Inc <invalid@example.com> 1686700800 +0000
+committer live555-unofficial-archive <invalid@example.com> 1686700800 +0000
+
+    unpack live.2023.06.14.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a bug in the Matroska file parsing code that could sometimes cause a 'use after free'
+      error.  (Thanks to Meng Ruijie, Martin Mirchev, and "jerry testing" for reporting this.)
+
+commit 9d2527c06ac59a55e4e4d602260533a0612c138a
+tree 151b8b301f022dfa88cf0a791587060136cd5ec0
+parent 0c3afdcd7a6b65290d45937b3b61d320050d2c65
+author Live Networks, Inc <invalid@example.com> 1686355200 +0000
+committer live555-unofficial-archive <invalid@example.com> 1686355200 +0000
+
+    unpack live.2023.06.10.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Minor change to "GroupsockHelper.cpp" to overcome a compilation error in XCode on Mac OS X.
+
+commit 0c3afdcd7a6b65290d45937b3b61d320050d2c65
+tree 018b42b596375665a1108480055e1045d2d65a5e
+parent afb78c4d6be81d9253825fa78543fc11ae68d57a
+author Live Networks, Inc <invalid@example.com> 1686182400 +0000
+committer live555-unofficial-archive <invalid@example.com> 1686182400 +0000
+
+    unpack live.2023.06.08.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the "dateHeader()" function in "RTSPCommon.cpp" to use "gmtime_r()" instead of
+      the older, non-thread-safe "gmtime()".  (Thanks to Russell Greene for the patch.)
+
+commit afb78c4d6be81d9253825fa78543fc11ae68d57a
+tree d88c7b8caf2ea796b7fe883f5257807d94a8ed28
+parent 25c226b6840d34b39e991be737960ccadff3564a
+author Live Networks, Inc <invalid@example.com> 1683676800 +0000
+committer live555-unofficial-archive <invalid@example.com> 1683676800 +0000
+
+    unpack live.2023.05.10.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a minor memory leak in the "RTSPServer" code.
+      (Thanks to Zhudong Jie for reporting this.)
+
+commit 25c226b6840d34b39e991be737960ccadff3564a
+tree fa15c4814a9ce74bc214e7acc5b475a14357d926
+parent 956a3582cbd4a5dda5a4ab5d9d24c6f3131867c0
+author Live Networks, Inc <invalid@example.com> 1680134400 +0000
+committer live555-unofficial-archive <invalid@example.com> 1680134400 +0000
+
+    unpack live.2023.03.30.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Calls to "send()" and "sendto()" now explicitly take "MSG_NOSIGNAL" rather than 0 as the
+      'flags' parameter.  In most systems, 0 seems to work, but apparently not in
+      Debian Linux.  (Thanks to Eric Beuque for reporting this.)
+
+commit 956a3582cbd4a5dda5a4ab5d9d24c6f3131867c0
+tree f80ef123c04603fd47b386e1bbad577986f94401
+parent 1fd7d5ca4aa61aeaeeefde11193e71a312e2dbc2
+author Live Networks, Inc <invalid@example.com> 1674086400 +0000
+committer live555-unofficial-archive <invalid@example.com> 1674086400 +0000
+
+    unpack live.2023.01.19.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - By default, we no longer compile "groupsock/NetAddress.cpp" for Windows to use
+      "gethostbyname()", because of a report that this breaks IPv6 name resolution.
+      (From now on, if you still want to use "gethostbyname()" for Windows, edit the
+      "win32config" file before running "genWindowsMakefiles".)
+
+commit 1fd7d5ca4aa61aeaeeefde11193e71a312e2dbc2
+tree 729401b79bb62aa51718c92e31e7816f8d1429f1
+parent 1e68fc44247d07956dab5dcc10e4d89b3473b03a
+author Live Networks, Inc <invalid@example.com> 1673395200 +0000
+committer live555-unofficial-archive <invalid@example.com> 1673395200 +0000
+
+    unpack live.2023.01.11.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the "BasicTaskScheduler"/"DelayQueue" implementation to make the 'token counter'
+      a field of the task scheduler object, rather than having it be a static variable.
+      This avoids potential problems if an application uses more than one thread (with each thread
+      having its own task scheduler).  (Thanks to Jan Rørgaard Hansen for reporting this issue.)
+    - Performed the annual update of the copyright years near the start of each file
+
+commit 1e68fc44247d07956dab5dcc10e4d89b3473b03a
+tree ee334a520e85abc829ab1787f6837d0f0af81836
+parent ebb837fec82497323f904fdb319d7cf2ca8cf797
+author Live Networks, Inc <invalid@example.com> 1669852800 +0000
+committer live555-unofficial-archive <invalid@example.com> 1669852800 +0000
+
+    unpack live.2022.12.01.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Yet another fix to the previous fix for RTSP-over-HTTP streaming.
+
+commit ebb837fec82497323f904fdb319d7cf2ca8cf797
+tree 4b825dc642cb6eb9a060e54bf8d69288fbee4904
+author Unrelevant author <invalid@example.com> 1669852800 +0000
+committer live555-unofficial-archive <invalid@example.com> 1669852800 +0000
+
+    initial empty commit

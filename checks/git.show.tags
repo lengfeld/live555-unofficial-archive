@@ -9210,6 +9210,24 @@ Date:   Wed Nov 30 00:00:00 2022 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2022.12.01
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Dec 1 00:00:00 2022 +0000
+
+live555 2022.12.01
+
+commit 1e68fc44247d07956dab5dcc10e4d89b3473b03a
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Dec 1 00:00:00 2022 +0000
+
+    unpack live.2022.12.01.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Yet another fix to the previous fix for RTSP-over-HTTP streaming.
+----
 tag v2022.12.01-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Thu Dec 1 00:00:00 2022 +0000
@@ -9223,6 +9241,28 @@ Date:   Thu Dec 1 00:00:00 2022 +0000
     unpack live.2022.12.01.tar.gz from local2023
     
     Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2023.01.11
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Wed Jan 11 00:00:00 2023 +0000
+
+live555 2023.01.11
+
+commit 1fd7d5ca4aa61aeaeeefde11193e71a312e2dbc2
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Wed Jan 11 00:00:00 2023 +0000
+
+    unpack live.2023.01.11.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the "BasicTaskScheduler"/"DelayQueue" implementation to make the 'token counter'
+      a field of the task scheduler object, rather than having it be a static variable.
+      This avoids potential problems if an application uses more than one thread (with each thread
+      having its own task scheduler).  (Thanks to Jan Rørgaard Hansen for reporting this issue.)
+    - Performed the annual update of the copyright years near the start of each file
 ----
 tag v2023.01.11-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
@@ -9238,6 +9278,27 @@ Date:   Wed Jan 11 00:00:00 2023 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2023.01.19
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Jan 19 00:00:00 2023 +0000
+
+live555 2023.01.19
+
+commit 956a3582cbd4a5dda5a4ab5d9d24c6f3131867c0
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Jan 19 00:00:00 2023 +0000
+
+    unpack live.2023.01.19.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - By default, we no longer compile "groupsock/NetAddress.cpp" for Windows to use
+      "gethostbyname()", because of a report that this breaks IPv6 name resolution.
+      (From now on, if you still want to use "gethostbyname()" for Windows, edit the
+      "win32config" file before running "genWindowsMakefiles".)
+----
 tag v2023.01.19-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Thu Jan 19 00:00:00 2023 +0000
@@ -9251,6 +9312,26 @@ Date:   Thu Jan 19 00:00:00 2023 +0000
     unpack live.2023.01.19.tar.gz from local2023
     
     Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2023.03.30
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Mar 30 00:00:00 2023 +0000
+
+live555 2023.03.30
+
+commit 25c226b6840d34b39e991be737960ccadff3564a
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Mar 30 00:00:00 2023 +0000
+
+    unpack live.2023.03.30.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Calls to "send()" and "sendto()" now explicitly take "MSG_NOSIGNAL" rather than 0 as the
+      'flags' parameter.  In most systems, 0 seems to work, but apparently not in
+      Debian Linux.  (Thanks to Eric Beuque for reporting this.)
 ----
 tag v2023.03.30-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
@@ -9266,6 +9347,25 @@ Date:   Thu Mar 30 00:00:00 2023 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2023.05.10
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Wed May 10 00:00:00 2023 +0000
+
+live555 2023.05.10
+
+commit afb78c4d6be81d9253825fa78543fc11ae68d57a
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Wed May 10 00:00:00 2023 +0000
+
+    unpack live.2023.05.10.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a minor memory leak in the "RTSPServer" code.
+      (Thanks to Zhudong Jie for reporting this.)
+----
 tag v2023.05.10-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Wed May 10 00:00:00 2023 +0000
@@ -9279,6 +9379,25 @@ Date:   Wed May 10 00:00:00 2023 +0000
     unpack live.2023.05.10.tar.gz from local2023
     
     Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2023.06.08
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Jun 8 00:00:00 2023 +0000
+
+live555 2023.06.08
+
+commit 0c3afdcd7a6b65290d45937b3b61d320050d2c65
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Jun 8 00:00:00 2023 +0000
+
+    unpack live.2023.06.08.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the "dateHeader()" function in "RTSPCommon.cpp" to use "gmtime_r()" instead of
+      the older, non-thread-safe "gmtime()".  (Thanks to Russell Greene for the patch.)
 ----
 tag v2023.06.08-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
@@ -9294,6 +9413,24 @@ Date:   Thu Jun 8 00:00:00 2023 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2023.06.10
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sat Jun 10 00:00:00 2023 +0000
+
+live555 2023.06.10
+
+commit 9d2527c06ac59a55e4e4d602260533a0612c138a
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sat Jun 10 00:00:00 2023 +0000
+
+    unpack live.2023.06.10.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Minor change to "GroupsockHelper.cpp" to overcome a compilation error in XCode on Mac OS X.
+----
 tag v2023.06.10-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Sat Jun 10 00:00:00 2023 +0000
@@ -9307,6 +9444,25 @@ Date:   Sat Jun 10 00:00:00 2023 +0000
     unpack live.2023.06.10.tar.gz from local2023
     
     Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2023.06.14
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Wed Jun 14 00:00:00 2023 +0000
+
+live555 2023.06.14
+
+commit 1568124133222a3f2536e285401a79684e48b1ca
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Wed Jun 14 00:00:00 2023 +0000
+
+    unpack live.2023.06.14.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a bug in the Matroska file parsing code that could sometimes cause a 'use after free'
+      error.  (Thanks to Meng Ruijie, Martin Mirchev, and "jerry testing" for reporting this.)
 ----
 tag v2023.06.14-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
@@ -9322,6 +9478,32 @@ Date:   Wed Jun 14 00:00:00 2023 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2023.06.16
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Fri Jun 16 00:00:00 2023 +0000
+
+live555 2023.06.16
+
+commit 51e0f3903c603841ef01b3b3eaeb3ce54a279171
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Fri Jun 16 00:00:00 2023 +0000
+
+    unpack live.2023.06.16.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Changed the (default) implementation of 'event triggers' in "BasicTaskScheduler" to
+      implement "fTriggersAwaitingHandling" using "std:atomic_flag"s, rather than as a bitmap.
+      This should overcome 'race conditions' that some users experienced when calling
+      "triggerEvent()" from a non-LIVE555 thread.  (Thanks to Jan Rørgaard Hansen for reporting
+      this issue.)
+      Note that this is the first time the LIVE555 code has required the C++ standard library.
+      (If you cannot use the C++ standard library, then you can compile the code - but getting the
+      old behavior - by defining "NO_STD_LIB".)
+    - Minor change to "RTSPCommon.cpp" to overcome a compilation error in XCode on Mac OS X.
+----
 tag v2023.06.16-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Fri Jun 16 00:00:00 2023 +0000
@@ -9335,6 +9517,28 @@ Date:   Fri Jun 16 00:00:00 2023 +0000
     unpack live.2023.06.16.tar.gz from local2023
     
     Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2023.06.20
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Tue Jun 20 00:00:00 2023 +0000
+
+live555 2023.06.20
+
+commit e36beb7c8b5e4f8bb4fd9d7b1d31bc1afaf9be8c
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Tue Jun 20 00:00:00 2023 +0000
+
+    unpack live.2023.06.20.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the event trigger implementation again - in the case where "NO_STD_LIB" is
+      defined.  In this case, "fTriggersAwaitingHandling" is implemented as an array of
+      "Boolean volatile"s, rather than as a 32-bit bitmap.  This should make 'race conditions'
+      less likely even if "NO_STD_LIB" is defined (though you should use the preferred, default
+      implementation - that uses an array of "std::atomic_flag"s - if possible).
 ----
 tag v2023.06.20-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
@@ -9350,6 +9554,26 @@ Date:   Tue Jun 20 00:00:00 2023 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2023.07.24
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Jul 24 00:00:00 2023 +0000
+
+live555 2023.07.24
+
+commit aa815ff60ab82db9c6461c1c61839ab398bce70f
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Jul 24 00:00:00 2023 +0000
+
+    unpack live.2023.07.24.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the event trigger implementation once again, to allow for the possibility of
+      developers redefining MAX_NUM_EVENT_TRIGGERS (it must always be <= the number of bits
+      in an "EventTriggerId", though.  (Thanks to Jan Rørgaard Hansen for this suggestion.)
+----
 tag v2023.07.24-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Mon Jul 24 00:00:00 2023 +0000
@@ -9363,6 +9587,26 @@ Date:   Mon Jul 24 00:00:00 2023 +0000
     unpack live.2023.07.24.tar.gz from local2023
     
     Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2023.10.30
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Oct 30 00:00:00 2023 +0000
+
+live555 2023.10.30
+
+commit 358f5d541d29a5d0ccc497f3b1843cb06159977c
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Oct 30 00:00:00 2023 +0000
+
+    unpack live.2023.10.30.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a bug in "deleteEventTrigger()" that had accidentally been introduced during the
+      change to 'event trigger' implementation back in June.
+      (Thanks to Jörg Dommaschk for reporting this.)
 ----
 tag v2023.10.30-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
@@ -9378,6 +9622,26 @@ Date:   Mon Oct 30 00:00:00 2023 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2023.11.07
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Tue Nov 7 00:00:00 2023 +0000
+
+live555 2023.11.07
+
+commit 2ae67aa33a3e847846e65d2450cbc0bb4b66a50f
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Tue Nov 7 00:00:00 2023 +0000
+
+    unpack live.2023.11.07.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - In the class "GenericMediaServer", made the variables "fServerMediaSessions",
+      "fClientConnections", and "fClientSessions" 'protected' rather than 'private',
+      to allow subclasses to access them if desired.
+----
 tag v2023.11.07-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Tue Nov 7 00:00:00 2023 +0000
@@ -9391,6 +9655,27 @@ Date:   Tue Nov 7 00:00:00 2023 +0000
     unpack live.2023.11.07.tar.gz from local2023
     
     Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2023.11.08
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Wed Nov 8 00:00:00 2023 +0000
+
+live555 2023.11.08
+
+commit 5462f42474040f8d4237133021e005563ef0ea5f
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Wed Nov 8 00:00:00 2023 +0000
+
+    unpack live.2023.11.08.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Changed the signature to the virtual function "getRTPSinkandRTCP()" (in "ServerMediaSubession",
+      and its subclasses "OnDemandServerMediaSession" and "PassiveServerMediaSubsession")
+      to make its 'result' arguments "rtpSink" and "rtcp" no longer "const *".  There was no
+      real reason to make those "const *".  (Thanks to Andy Hawkins for prompting this.)
 ----
 tag v2023.11.08-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
@@ -9406,6 +9691,27 @@ Date:   Wed Nov 8 00:00:00 2023 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2023.11.30
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Nov 30 00:00:00 2023 +0000
+
+live555 2023.11.30
+
+commit 26b6f0ecb775de91849441e3bddf6d28bf8df8ed
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Nov 30 00:00:00 2023 +0000
+
+    unpack live.2023.11.30.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - In the implementation of the "MPEGVideoStreamFramer" class, gave "TimeCode::operator==()"
+      the "const" qualifier, to make some compilers happy.
+      (Thanks to Dmitry Bely for the report)
+    - Performed the annual update of the copyright years near the start of each file
+----
 tag v2023.11.30-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Thu Nov 30 00:00:00 2023 +0000
@@ -9419,6 +9725,25 @@ Date:   Thu Nov 30 00:00:00 2023 +0000
     unpack live.2023.11.30.tar.gz from local2023
     
     Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2024.02.15
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Feb 15 00:00:00 2024 +0000
+
+live555 2024.02.15
+
+commit 9c69b81b4bb1aa45d4fa50f42bff650ad382d4f7
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Feb 15 00:00:00 2024 +0000
+
+    unpack live.2024.02.15.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the RTCP implementation so that reception stats for a SSRC are no longer deleted,
+      even if a SSRC is reaped due to RTCP inactivity (no RTCP "SR" reports received recently).
 ----
 tag v2024.02.15-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
@@ -9434,6 +9759,25 @@ Date:   Thu Feb 15 00:00:00 2024 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2024.02.23
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Fri Feb 23 00:00:00 2024 +0000
+
+live555 2024.02.23
+
+commit d40a2cf532abf5d2936ce42cf6f354d3a81c3ade
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Fri Feb 23 00:00:00 2024 +0000
+
+    unpack live.2024.02.23.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the code for "dateHeader()" (in "RTSPCommon.cpp") to use "NULL" instead of "nullptr";
+      the latter was causing compilation problems for someone.
+----
 tag v2024.02.23-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Fri Feb 23 00:00:00 2024 +0000
@@ -9447,6 +9791,27 @@ Date:   Fri Feb 23 00:00:00 2024 +0000
     unpack live.2024.02.23.tar.gz from uni-hamburg.de
     
     Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2024.02.28
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Wed Feb 28 00:00:00 2024 +0000
+
+live555 2024.02.28
+
+commit 2b8081bf3b9628813f23d0d1f4e66edabef88681
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Wed Feb 28 00:00:00 2024 +0000
+
+    unpack live.2024.02.28.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the code for "dateHeader()" (in "RTSPCommon.cpp") to avoid using "strftime()",
+      because that can produce a localized date string that violates the RTSP specification
+      (which uses section 3.3.1 of RFC 2068 (the HTTP/1.1 specification) to define the "Date:"
+      header).  (Thanks to Lauri Nurmi for reporting the problem, and providing a patch.)
 ----
 tag v2024.02.28-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
@@ -9462,6 +9827,27 @@ Date:   Wed Feb 28 00:00:00 2024 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2024.03.08
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Fri Mar 8 00:00:00 2024 +0000
+
+live555 2024.03.08
+
+commit 097aac8d6af17c6263c2ed56bbfcabee39b76319
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Fri Mar 8 00:00:00 2024 +0000
+
+    unpack live.2024.03.08.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Changed "ServerTLSState::setup()" (in "TLSState.cpp") to call
+      "SSL_CTX_use_certificate_chain_file()" instead of "SSL_CTX_use_certificate_file()",
+      to allow the server operator to specify a chain of certificates, rather than just one.
+      (Thanks to Raphael Schlarb for this suggestion.)
+----
 tag v2024.03.08-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Fri Mar 8 00:00:00 2024 +0000
@@ -9475,6 +9861,29 @@ Date:   Fri Mar 8 00:00:00 2024 +0000
     unpack live.2024.03.08.tar.gz from jog.id.distfiles.macports.org
     
     Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2024.04.14
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sun Apr 14 00:00:00 2024 +0000
+
+live555 2024.04.14
+
+commit 4de4a914bcea85cadefb967a86ea9e1f4ee00d0a
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sun Apr 14 00:00:00 2024 +0000
+
+    unpack live.2024.04.14.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Added constant strings and ints to each library that allow you to get the library version
+      at runtime, rather than just at compile time.  For example, for the "liveMedia" library,
+      these are:
+            extern char const* const liveMediaLibraryVersionStr;
+            extern int const liveMediaLibraryVersionInt;
+      (Thanks to Paul Westlund for this suggestion.)
 ----
 tag v2024.04.14-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
@@ -9490,6 +9899,27 @@ Date:   Sun Apr 14 00:00:00 2024 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2024.04.19
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Fri Apr 19 00:00:00 2024 +0000
+
+live555 2024.04.19
+
+commit 2dbb2b618b5b193eed0c11e98808ed5b63403fb1
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Fri Apr 19 00:00:00 2024 +0000
+
+    unpack live.2024.04.19.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated "MPEG2TransportStreamFramer" to ignore big jumps (2x or more) in the estimate
+      for the duration of each Transport packet.  This is likely caused by an unexpected
+      jump in the PCR (not indicated by "discontinuity_indicator").
+      (This is in response to a report from Andy Hawkins.)
+----
 tag v2024.04.19-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Fri Apr 19 00:00:00 2024 +0000
@@ -9503,6 +9933,25 @@ Date:   Fri Apr 19 00:00:00 2024 +0000
     unpack live.2024.04.19.tar.gz from uni-hamburg.de
     
     Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2024.05.05
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sun May 5 00:00:00 2024 +0000
+
+live555 2024.05.05
+
+commit ab5090aba9decb5a2444962fbe66cb7c5253c353
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sun May 5 00:00:00 2024 +0000
+
+    unpack live.2024.05.05.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated "QuickTimeFileSink" to add support for recording H.265 video streams.
+      (This is not fully working yet; it appears to have some bugs.)
 ----
 tag v2024.05.05-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
@@ -9518,6 +9967,25 @@ Date:   Sun May 5 00:00:00 2024 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2024.05.15
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Wed May 15 00:00:00 2024 +0000
+
+live555 2024.05.15
+
+commit e4bcac4b9d68d76c5619ae97d2db062340d6e0f8
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Wed May 15 00:00:00 2024 +0000
+
+    unpack live.2024.05.15.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Added a new config file "config.raspberrypi" that is known to work for
+      building the code on/for a Raspberry Pi 5.
+----
 tag v2024.05.15-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Wed May 15 00:00:00 2024 +0000
@@ -9531,6 +9999,25 @@ Date:   Wed May 15 00:00:00 2024 +0000
     unpack live.2024.05.15.tar.gz from uni-hamburg.de
     
     Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2024.05.30
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu May 30 00:00:00 2024 +0000
+
+live555 2024.05.30
+
+commit ec5f7e68193bb650a78326b554c7a932745a59c6
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu May 30 00:00:00 2024 +0000
+
+    unpack live.2024.05.30.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a mistake that caused the config file "config.raspberrypi" to not appear in
+      the distribution.  (It's there now.)
 ----
 tag v2024.05.30-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
@@ -9546,6 +10033,27 @@ Date:   Thu May 30 00:00:00 2024 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2024.06.26
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Wed Jun 26 00:00:00 2024 +0000
+
+live555 2024.06.26
+
+commit bd552ce97d734cff0b6641f24f1dc0fc58096c18
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Wed Jun 26 00:00:00 2024 +0000
+
+    unpack live.2024.06.26.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the "OnDemandServerMediaSubsession" implementation to output an error message
+      if the "sink->startPlaying()" call failed (e.g., due to its source not being
+      compatible with the sink).  This makes some common errors (e.g, a proper 'framer' not
+      being used) easier to detect.
+----
 tag v2024.06.26-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Wed Jun 26 00:00:00 2024 +0000
@@ -9559,6 +10067,25 @@ Date:   Wed Jun 26 00:00:00 2024 +0000
     unpack live.2024.06.26.tar.gz from localgetter
     
     Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2024.08.01
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Aug 1 00:00:00 2024 +0000
+
+live555 2024.08.01
+
+commit 272e7a8ea0b0786a77de6ef8fcca5e362c35f2c9
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Aug 1 00:00:00 2024 +0000
+
+    unpack live.2024.08.01.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated "ServerMediaSession::generateSDPDescription()" to treat "time_t" as (long long).
+      (Thanks to Godmar for reporting this.)
 ----
 tag v2024.08.01-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
@@ -9574,6 +10101,26 @@ Date:   Thu Aug 1 00:00:00 2024 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2024.09.20
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Fri Sep 20 00:00:00 2024 +0000
+
+live555 2024.09.20
+
+commit 1ffaee24f2c029aa0a1f4996c6d2d2f63a04b64f
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Fri Sep 20 00:00:00 2024 +0000
+
+    unpack live.2024.09.20.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Ensure that, when streaming SRTP, any change to the server's ROC (rollover counter)
+      gets sent to the RTSP client (in the SDP description), if it joins an ongoing stream.
+      (Thanks to Yahia Benmoussa for reporting this issue.)
+----
 tag v2024.09.20-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Fri Sep 20 00:00:00 2024 +0000
@@ -9587,6 +10134,25 @@ Date:   Fri Sep 20 00:00:00 2024 +0000
     unpack live.2024.09.20.tar.gz from localgetter
     
     Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2024.09.24
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Tue Sep 24 00:00:00 2024 +0000
+
+live555 2024.09.24
+
+commit 18dda2a5815b5dceb4bc84e1cbd7e525ab3b2e98
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Tue Sep 24 00:00:00 2024 +0000
+
+    unpack live.2024.09.24.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Removed an experimental version of "testOnDemandRTSPServer.cpp" (for streaming via SRTP)
+      that had acceidentally been left in the previous release.
 ----
 tag v2024.09.24-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
@@ -9602,6 +10168,25 @@ Date:   Tue Sep 24 00:00:00 2024 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2024.09.25
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Wed Sep 25 00:00:00 2024 +0000
+
+live555 2024.09.25
+
+commit b628c8fe0ae687b5958061b109475c09e9bb06bf
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Wed Sep 25 00:00:00 2024 +0000
+
+    unpack live.2024.09.25.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed another bug in SRTP streaming from a "reuseFirstSource" stream: Make sure we use
+      the same keying material for each client.
+----
 tag v2024.09.25-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Wed Sep 25 00:00:00 2024 +0000
@@ -9615,6 +10200,25 @@ Date:   Wed Sep 25 00:00:00 2024 +0000
     unpack live.2024.09.25.tar.gz from localgetter
     
     Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2024.09.29
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sun Sep 29 00:00:00 2024 +0000
+
+live555 2024.09.29
+
+commit 052b22b647e7b2b509ec3cd34738d1da287e6685
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sun Sep 29 00:00:00 2024 +0000
+
+    unpack live.2024.09.29.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a bug in "ProxyServerMediaSession.cpp" that could cause an 'access after free' error
+      if the proxy server's "-V" option were used.  (Thanks to Andrey Radchenko for reporting this.)
 ----
 tag v2024.09.29-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
@@ -9630,6 +10234,26 @@ Date:   Sun Sep 29 00:00:00 2024 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2024.10.09
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Wed Oct 9 00:00:00 2024 +0000
+
+live555 2024.10.09
+
+commit 1111471daaeb989efec0c6bec34075c746b8eae6
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Wed Oct 9 00:00:00 2024 +0000
+
+    unpack live.2024.10.09.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a RTSP server bug in the implementation of RTP-over-TCP streaming that could cause
+      a "RTSPClientConnection" object to be accessed after it had been deleted.
+      (Thanks to Sangjun Park for reporting this issue.)
+----
 tag v2024.10.09-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Wed Oct 9 00:00:00 2024 +0000
@@ -9643,6 +10267,25 @@ Date:   Wed Oct 9 00:00:00 2024 +0000
     unpack live.2024.10.09.tar.gz from localgetter
     
     Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2024.10.10
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Oct 10 00:00:00 2024 +0000
+
+live555 2024.10.10
+
+commit f0830d5957895b12b1446f1c1ce53fbe2e5b394e
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Oct 10 00:00:00 2024 +0000
+
+    unpack live.2024.10.10.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a stack-use-after-return bug in the RTSP server implementation.
+      (Thanks to Sangjun Park for reporting this.)
 ----
 tag v2024.10.10-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
@@ -9658,6 +10301,25 @@ Date:   Thu Oct 10 00:00:00 2024 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2024.10.11
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Fri Oct 11 00:00:00 2024 +0000
+
+live555 2024.10.11
+
+commit affc8a581d2b830fa478176e4f0e88cf9d021aca
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Fri Oct 11 00:00:00 2024 +0000
+
+    unpack live.2024.10.11.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed another RTSP server bug in the implementation of RTP-over-TCP streaming.
+      (Thanks again to Sangjun Park.)
+----
 tag v2024.10.11-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Fri Oct 11 00:00:00 2024 +0000
@@ -9671,6 +10333,26 @@ Date:   Fri Oct 11 00:00:00 2024 +0000
     unpack live.2024.10.11.tar.gz from localgetter
     
     Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2024.10.24
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Oct 24 00:00:00 2024 +0000
+
+live555 2024.10.24
+
+commit 412b5eec62cd27376f27add686c3d4b9fc0f1b0f
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Oct 24 00:00:00 2024 +0000
+
+    unpack live.2024.10.24.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Another change to the code for streaming SRTP to a new client from an ongoing stream:
+      If the ROC changes, then generate a new SDP description, but not a new stream source or
+      RTP sink.  (Thanks to Jean-Claude Saget for reporting this issue.)
 ----
 tag v2024.10.24-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
@@ -9686,6 +10368,25 @@ Date:   Thu Oct 24 00:00:00 2024 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2024.10.29
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Tue Oct 29 00:00:00 2024 +0000
+
+live555 2024.10.29
+
+commit 95043d548148a882e991ea7356dc2043f1682765
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Tue Oct 29 00:00:00 2024 +0000
+
+    unpack live.2024.10.29.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - A fix to the previous release fixing code for streaming SRTP to a new client from an ongoing stream.
+      (Thanks again to Jean-Claude Saget.)
+----
 tag v2024.10.29-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Tue Oct 29 00:00:00 2024 +0000
@@ -9699,6 +10400,26 @@ Date:   Tue Oct 29 00:00:00 2024 +0000
     unpack live.2024.10.29.tar.gz from localgetter
     
     Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2024.10.30
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Wed Oct 30 00:00:00 2024 +0000
+
+live555 2024.10.30
+
+commit 30a1187cd7c51f64c51d32125c64303cc88671a7
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Wed Oct 30 00:00:00 2024 +0000
+
+    unpack live.2024.10.30.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Another fix to the code for SRTP streaming: Make sure that the RTCP instance's
+      cryptographic context gets updated whenever the RTP sink's cryptographic context changes.
+      (Thanks again to Jean-Claude Saget.)
 ----
 tag v2024.10.30-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
@@ -9714,6 +10435,25 @@ Date:   Wed Oct 30 00:00:00 2024 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2024.10.31
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Oct 31 00:00:00 2024 +0000
+
+live555 2024.10.31
+
+commit 95aff12d36377c00b405604d426137746528fa40
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Oct 31 00:00:00 2024 +0000
+
+    unpack live.2024.10.31.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Yet another fix to the (excrutiatingly tricky) SRTP/ROC-handling code.
+      (Thanks to Jean-Baptiste Renou.)
+----
 tag v2024.10.31-tree
 Tagger: live555-unofficial-archive <invalid@example.com>
 Date:   Thu Oct 31 00:00:00 2024 +0000
@@ -9727,6 +10467,26 @@ Date:   Thu Oct 31 00:00:00 2024 +0000
     unpack live.2024.10.31.tar.gz from localgetter
     
     Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2024.11.28
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Nov 28 00:00:00 2024 +0000
+
+live555 2024.11.28
+
+commit 87584272667f30d44a6848855922bcfe5b8930ec
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Nov 28 00:00:00 2024 +0000
+
+    unpack live.2024.11.28.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the signature of "doEventLoop()" to match that of "triggerEvent()", by using
+      "std::atomic_char" as the 'watch variable' type (if NO_STD_LIB is not defined)
+    - Performed the annual update of the copyright years near the start of each file
 ----
 tag v2024.11.28-tree
 Tagger: live555-unofficial-archive <invalid@example.com>

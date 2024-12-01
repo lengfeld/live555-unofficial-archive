@@ -4,7 +4,7 @@ import os
 import sys
 import fnmatch
 from os.path import join
-from subprocess import run
+from subprocess import run, PIPE
 from enum import Enum
 
 # NOTE: All paths are hard coded. It must be executed in the top level
@@ -357,17 +357,90 @@ def gen_list_or_table(page_type):
 def create_git_tags():
     srcs_tarballs = read_srcs_tarballs()
     tarballs_srcs = reverse_dict(srcs_tarballs)
+    changelog = parse_changelog("changelog.txt")  # :: list<(version, text)>
 
+    # Convert chanelog list to dict
+    changelog_dict = {}
+    for version, text in changelog:
+        changelog_dict[version] = text
+
+    previous_version = None
     for tarball in sorted(tarballs_srcs):
         srcs = tarballs_srcs[tarball]
         # Assumption: All tarballs are equal
         src = choose_preferred_src(tarball, srcs)
 
-        version = get_version_from_filename(tarball)
+        current_version = get_version_from_filename(tarball)
 
-        p = run(["scripts/unpack.sh", version, src])
+        if previous_version is None:
+            previous_version_as_str = "NONE"
+        else:
+            previous_version_as_str = previous_version
+
+        do_commits = "no"
+        if current_version >= "2022.12.01":
+            # NOTE: string compare works!
+            do_commits = "yes"
+            if current_version == "2022.12.01":
+                # Special case: There is a previous version, a tarball, but no
+                # previous commit object. The version "2022.12.01" is the first
+                # version in the commit history that this scripts builts.
+                previous_version_as_str = "NONE"
+        else:
+            previous_version_as_str = "NONE"
+
+        changelog_text = "\n".join(changelog_dict[current_version])
+
+        p = run(["scripts/unpack.sh", previous_version_as_str, current_version, src, "yes", do_commits, changelog_text])
         if p.returncode != 0:
             raise Exception("Command failed")
+
+        previous_version = current_version
+
+    return 0
+
+
+def check_git_tags():
+    srcs_tarballs = read_srcs_tarballs()
+    tarballs_srcs = reverse_dict(srcs_tarballs)
+
+    p = run(["git", "tag"], cwd="live555-unofficial-git-archive/", stdout=PIPE)
+    if p.returncode != 0:
+        raise Exception("Command failed")
+
+    tags_with_tree = set()
+    tags_without_tree = set()
+    for line in p.stdout.split(b"\n"):
+        if len(line) == 0:
+            continue
+        if not line.startswith(b"v"):
+            raise Exception("Invalid value: %s" % (line,))
+        version = line
+        if version.endswith(b"-tree"):
+            tags_with_tree.add(version[1:-5])
+        else:
+            tags_without_tree.add(version[1:])
+
+    tags_with_and_without_tree = tags_without_tree.intersection(tags_with_tree)
+    if len(tags_with_and_without_tree) == 0:
+        raise Exception("safey check")
+
+    def get_tree_sha1(rev):
+        p = run(["git", "rev-parse", b"%s^{tree}" % (rev,)], cwd="live555-unofficial-git-archive/", stdout=PIPE)
+        if p.returncode != 0:
+            raise Exception("Command failed")
+        sha1 = p.stdout.rstrip(b"\n")
+        return sha1
+
+    for version in tags_with_and_without_tree:
+        # Check: The tree objects of the two commits and tags must be the same!
+        git_tag_with_tree_sha1 = get_tree_sha1(b"v%s-tree" % (version,))
+        git_tag_without_tree_sha1 = get_tree_sha1(b"v%s" % (version,))
+
+        # print(version, git_tag_with_tree_sha1, git_tag_without_tree_sha1)
+
+        if git_tag_with_tree_sha1 != git_tag_without_tree_sha1:
+            raise Exception("Issue in version %s" % (version,))
 
     return 0
 
@@ -410,6 +483,8 @@ def main():
         return link_tarballs()
     elif cmd == "tag":
         return create_git_tags()
+    elif cmd == "check_git_tags":
+        return check_git_tags()
     elif cmd == "list":
         return gen_list_or_table(PageType.LIST)
     elif cmd == "table":
