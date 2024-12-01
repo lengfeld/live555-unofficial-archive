@@ -1,3 +1,7 @@
+2024.11.28:
+- Updated the signature of "doEventLoop()" to match that of "triggerEvent()", by using
+  "std::atomic_char" as the 'watch variable' type (if NO_STD_LIB is not defined)
+- Performed the annual update of the copyright years near the start of each file
 2024.10.31:
 - Yet another fix to the (excrutiatingly tricky) SRTP/ROC-handling code.
   (Thanks to Jean-Baptiste Renou.)
