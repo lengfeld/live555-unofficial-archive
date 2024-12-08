@@ -72,8 +72,6 @@ Get grid of `pub/archives` but include checksums!
 
 Define and implement public "API" for tarball mirror.
 
-Include the list of sources on the gh-pages website.
-
 Add custom pandoc template to make the pages stylestyle the same.
 
 Looking at https://code.google.com/archive/p/live555sourcecontrol/source/default/commits
@@ -106,3 +104,6 @@ no references to the srcs anywhere. And a table for the final link between
 tarballs and the prefer src for backwards compatibility.
 
 Add RSS feed for new archives
+
+Allow to regenerate the whole 'live555-unofficial-git-archive' git repo. For
+now everything can be generated execpt the 'main-readme' branch.
