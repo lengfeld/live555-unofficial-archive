@@ -243,14 +243,23 @@ class PageType(Enum):
     TABLE = "table"
 
 
+# Since the tarball version 2022-12-01, there are "vYYYY-MM-DD" tags. Before
+# that version, there are only "vYYYY-MM-DD-tree" tags!
+def get_canoncial_tag_name_for_tarball(version):
+    if do_commit_for_tarball(version):
+        return "v%s" % (version,)
+    else:
+        return "v%s-tree" % (version,)
+
+
 # NOTE: May return None
 def gen_github_compare_if_possible(version_before, version):
     assert version is not None
     if version_before is None:
         return None
 
-    git_tag_name = "v%s-tree" % (version,)
-    git_tag_name_before = "v%s-tree" % (version_before,)
+    git_tag_name = get_canoncial_tag_name_for_tarball(version)
+    git_tag_name_before = get_canoncial_tag_name_for_tarball(version_before)
 
     git_compare_link = "https://github.com/lengfeld/live555-unofficial-git-archive/compare/%s..%s" % \
                        (git_tag_name_before, git_tag_name)
@@ -262,7 +271,9 @@ def print_entry_for_tarball(page_type, version, tarball_filename, srcs, text, ve
     src = choose_preferred_src(tarball_filename, srcs)
     tarball_link = "https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/%s/%s" \
                    % (src, tarball_filename)
-    git_tag_name = "v%s-tree" % (version,)
+
+    git_tag_name = get_canoncial_tag_name_for_tarball(version)
+
     git_tag_link = "https://github.com/lengfeld/live555-unofficial-git-archive/tree/%s" \
                    % (git_tag_name,)
     tarball_size = os.path.getsize("pub-tmp/archives/" + tarball_filename)
@@ -354,12 +365,24 @@ def gen_list_or_table(page_type):
     return 0
 
 
+# Since the last tarball in 2022, namely 2022.12.01, the project also provides
+# a git commit history. Why 2022.12.01? This was the first tarball that I
+# myself have downloaded and mirrored from live555.com. So I can ensure that
+# since 2022-12-01 the history is contiguous (=the history is without missing
+# tarballs).
+def do_commit_for_tarball(tarball):
+    # NOTE: string compare/sorting works for this tarball/version pattern.
+    if tarball >= "2022.12.01":
+        return True
+    return False
+
+
 def create_git_tags():
     srcs_tarballs = read_srcs_tarballs()
     tarballs_srcs = reverse_dict(srcs_tarballs)
     changelog = parse_changelog("changelog.txt")  # :: list<(version, text)>
 
-    # Convert chanelog list to dict
+    # Convert changelog list to dict
     changelog_dict = {}
     for version, text in changelog:
         changelog_dict[version] = text
@@ -378,16 +401,14 @@ def create_git_tags():
             previous_version_as_str = previous_version
 
         do_commits = "no"
-        if current_version >= "2022.12.01":
-            # NOTE: string compare works!
+        previous_version_as_str = "NONE"
+        if do_commit_for_tarball(current_version):
             do_commits = "yes"
             if current_version == "2022.12.01":
                 # Special case: There is a previous version, a tarball, but no
                 # previous commit object. The version "2022.12.01" is the first
-                # version in the commit history that this scripts builts.
+                # version in the commit history that this scripts builds.
                 previous_version_as_str = "NONE"
-        else:
-            previous_version_as_str = "NONE"
 
         changelog_text = "\n".join(changelog_dict[current_version])
 

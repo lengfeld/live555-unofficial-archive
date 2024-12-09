@@ -6,17 +6,24 @@ the source tarballs released on the server
 [live555.com/liveMedia/public/](http://live555.com/liveMedia/public/).
 
 
-## How to use it?
+## How to use the archive?
 
 All collected tarballs are listed briefly in the [tarball table](table.html).
 For more information for a specific tarball, e.g. including checksums and the
 changelog, see the [tarball list](list.html). Both sites contain download
 links to the tarballs.
 
+
+## How to use the git repository?
+
 If you want to work with the code directly in a git repository, please
 have a look at
 [live555-unofficial-git-archive](https://github.com/lengfeld/live555-unofficial-git-archive).
-It's a repository that contains all collected live555 tarballs.
+It's a repository that contains all collected live555 tarballs as git tags and
+the tarballs since 2023 as a git commit history.
+
+
+### Using a git tag with the `-tree` suffix
 
 Example usage:
 
@@ -31,6 +38,28 @@ Example usage:
 _Note_: The tags have the suffix `-tree`. The git tags point to commit objects
 without a history. They only contain the file contents of the tarballs. So `git
 log` does not work!
+
+
+### Using the git commit history and tags without the `-tree` suffix
+
+Since the live555 release `2022-12-01` the tarballs are also committed,
+tagged and linked in a commit history. So `git log` does work!
+
+Example usage:
+
+    $ git clone https://github.com/lengfeld/live555-unofficial-git-archive.git
+    $ cd live555-unofficial-git-archive
+    $ git switch -c main origin/main
+    $ git log
+
+The last command shows the history of the live555 releases, including the
+changelog in the commit message, until the release `2022-12-01`. This makes it
+very easy to see the code changes between the different releases.
+
+Example usage of an tag:
+
+    $ git tag  # Get a list of all tags
+    $ git switch --detach v2024.05.15
 
 
 ## Frequently Ask Questions
@@ -73,8 +102,8 @@ parties, like this project, to provide the old tarballs. Since the published
 tarballs are not signed by the original author, you can only rely on trust.
 
 I can assure that the tarballs I collected should be fine and authentic.
-Nevertheless you have to trust me for this. For the other tarballs, that are
-collected from third parties archives, like gentoo, you have to trust them.
+Nevertheless you have to trust me for this. For the other tarballs that are
+collected from third parties' archives, like gentoo, you have to trust them.
 
 But the code is open source. Inspecting the code is always possible.
 
@@ -86,7 +115,7 @@ Yes, it's legal. The original author released the live555 source code under the
 This makes it free software and redistributing the source code is allowed.
 See also the FAQ entry: [What is the copyright on the source code, and how is it licensed? What are my obligations under this license?](http://www.live555.com/liveMedia/faq.html#copyright-and-license)
 
-And the original author also explicitly stats that other websites may keep
+And the original author also explicitly states that other websites may keep
 older archives and redistribute them.
 
 > I'm not 'hiding' older versions; I'm just not putting them on our web site.
@@ -101,10 +130,10 @@ See [[Live-devel] older source archives](http://lists.live555.com/pipermail/live
 
 The expected audience of this website are
 
-* security researches and
+* security researchers and
 * open source package maintainers
 
-Security researches should be able to inspect the source code of older live555
+Security researchers should be able to inspect the source code of older live555
 releases, e.g. when they investigate an insecure hardware device that ships an
 out-of-date version of live555 and other software.
 
@@ -122,7 +151,7 @@ Not yet. For now the links to the live555 tarballs are direct links into the
 git repository on github. I don't consider these links as stable. They may
 change in the future.
 
-Nevertheless being a mirror is definitely planed and reasonable. There will be
+Nevertheless, being a mirror is definitely planned and reasonable. There will be
 a single directory that contains all tarballs and has stable links. So it can
 be used like other distributions or software project source code archives.
 
@@ -134,9 +163,9 @@ If you need this feature now, please send me an
 
 The project is hosted on github in the repository
 [live555-unofficial-archive](https://github.com/lengfeld/live555-unofficial-archive/).
-If you like to contribute, open a PR or create an issue. Especially new sources
-of historical tarballs are welcome. The goal of this project is to have the
-most complete set of source code archives for live555.
+If you like to contribute, open a PR or create an issue. New sources of
+historical tarballs are especially welcomed. The goal of this project is to
+have the most complete set of source code archives for live555.
 
 If you have questions, just send me a [mail](mailto:stefan+live@lengfeld.xyz)
 or open a [github issue](https://github.com/lengfeld/live555-unofficial-archive/issues/new).
@@ -168,3 +197,6 @@ This website is created and maintained by
 * name: Stefan Lengfeld
 * address: Germany, 53721 Siegburg
 * e-mail: [stefan+live@lengfeld.xyz](mailto:stefan+live@lengfeld.xyz)
+
+The source code of this wobsite and all tools for mirroring can be found at
+[github.com/lengfeld/live555-unofficial-archive](https://github.com/lengfeld/live555-unofficial-archive).
