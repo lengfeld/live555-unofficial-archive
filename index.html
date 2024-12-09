@@ -170,8 +170,21 @@
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#how-to-use-it" id="toc-how-to-use-it">How to use
-it?</a></li>
+<li><a href="#how-to-use-the-archive"
+id="toc-how-to-use-the-archive">How to use the archive?</a></li>
+<li><a href="#how-to-use-the-git-repository"
+id="toc-how-to-use-the-git-repository">How to use the git
+repository?</a>
+<ul>
+<li><a href="#using-a-git-tag-with-the--tree-suffix"
+id="toc-using-a-git-tag-with-the--tree-suffix">Using a git tag with the
+<code>-tree</code> suffix</a></li>
+<li><a
+href="#using-the-git-commit-history-and-tags-without-the--tree-suffix"
+id="toc-using-the-git-commit-history-and-tags-without-the--tree-suffix">Using
+the git commit history and tags without the <code>-tree</code>
+suffix</a></li>
+</ul></li>
 <li><a href="#frequently-ask-questions"
 id="toc-frequently-ask-questions">Frequently Ask Questions</a>
 <ul>
@@ -201,16 +214,21 @@ Questions</a></li>
 of the <a href="http://live555.com/liveMedia/">LIVE555 Streaming Media
 libraries</a>. It collects the source tarballs released on the server <a
 href="http://live555.com/liveMedia/public/">live555.com/liveMedia/public/</a>.</p>
-<h2 id="how-to-use-it">How to use it?</h2>
+<h2 id="how-to-use-the-archive">How to use the archive?</h2>
 <p>All collected tarballs are listed briefly in the <a
 href="table.html">tarball table</a>. For more information for a specific
 tarball, e.g. including checksums and the changelog, see the <a
 href="list.html">tarball list</a>. Both sites contain download links to
 the tarballs.</p>
+<h2 id="how-to-use-the-git-repository">How to use the git
+repository?</h2>
 <p>If you want to work with the code directly in a git repository,
 please have a look at <a
 href="https://github.com/lengfeld/live555-unofficial-git-archive">live555-unofficial-git-archive</a>.
-It’s a repository that contains all collected live555 tarballs.</p>
+It’s a repository that contains all collected live555 tarballs as git
+tags and the tarballs since 2023 as a git commit history.</p>
+<h3 id="using-a-git-tag-with-the--tree-suffix">Using a git tag with the
+<code>-tree</code> suffix</h3>
 <p>Example usage:</p>
 <pre><code>$ git clone https://github.com/lengfeld/live555-unofficial-git-archive.git
 $ cd live555-unofficial-git-archive
@@ -223,6 +241,25 @@ $ git switch --detach v2024.04.19-tree</code></pre>
 tags point to commit objects without a history. They only contain the
 file contents of the tarballs. So <code>git log</code> does not
 work!</p>
+<h3
+id="using-the-git-commit-history-and-tags-without-the--tree-suffix">Using
+the git commit history and tags without the <code>-tree</code>
+suffix</h3>
+<p>Since the live555 release <code>2022-12-01</code> the tarballs are
+also committed, tagged and linked in a commit history. So
+<code>git log</code> does work!</p>
+<p>Example usage:</p>
+<pre><code>$ git clone https://github.com/lengfeld/live555-unofficial-git-archive.git
+$ cd live555-unofficial-git-archive
+$ git switch -c main origin/main
+$ git log</code></pre>
+<p>The last command shows the history of the live555 releases, including
+the changelog in the commit message, until the release
+<code>2022-12-01</code>. This makes it very easy to see the code changes
+between the different releases.</p>
+<p>Example usage of an tag:</p>
+<pre><code>$ git tag  # Get a list of all tags
+$ git switch --detach v2024.05.15</code></pre>
 <h2 id="frequently-ask-questions">Frequently Ask Questions</h2>
 <h3 id="why-was-this-project-created">Why was this project created?</h3>
 <p>The original author of the libraries does not maintain historical
@@ -259,7 +296,7 @@ Since the published tarballs are not signed by the original author, you
 can only rely on trust.</p>
 <p>I can assure that the tarballs I collected should be fine and
 authentic. Nevertheless you have to trust me for this. For the other
-tarballs, that are collected from third parties archives, like gentoo,
+tarballs that are collected from third parties’ archives, like gentoo,
 you have to trust them.</p>
 <p>But the code is open source. Inspecting the code is always
 possible.</p>
@@ -273,8 +310,8 @@ and redistributing the source code is allowed. See also the FAQ entry:
 href="http://www.live555.com/liveMedia/faq.html#copyright-and-license">What
 is the copyright on the source code, and how is it licensed? What are my
 obligations under this license?</a></p>
-<p>And the original author also explicitly stats that other websites may
-keep older archives and redistribute them.</p>
+<p>And the original author also explicitly states that other websites
+may keep older archives and redistribute them.</p>
 <blockquote>
 <p>I’m not ‘hiding’ older versions; I’m just not putting them on our web
 site. (Because this is ope source, other people, if they wish, may keep
@@ -287,10 +324,10 @@ older source archives</a>.</p>
 expected audience of the mirror?</h3>
 <p>The expected audience of this website are</p>
 <ul>
-<li>security researches and</li>
+<li>security researchers and</li>
 <li>open source package maintainers</li>
 </ul>
-<p>Security researches should be able to inspect the source code of
+<p>Security researchers should be able to inspect the source code of
 older live555 releases, e.g. when they investigate an insecure hardware
 device that ships an out-of-date version of live555 and other
 software.</p>
@@ -306,7 +343,7 @@ a tarball mirror?</h3>
 <p>Not yet. For now the links to the live555 tarballs are direct links
 into the git repository on github. I don’t consider these links as
 stable. They may change in the future.</p>
-<p>Nevertheless being a mirror is definitely planed and reasonable.
+<p>Nevertheless, being a mirror is definitely planned and reasonable.
 There will be a single directory that contains all tarballs and has
 stable links. So it can be used like other distributions or software
 project source code archives.</p>
@@ -315,8 +352,8 @@ href="mailto:stefan+live@lengfeld.xyz">email</a>.</p>
 <h2 id="contributions-and-questions">Contributions and Questions</h2>
 <p>The project is hosted on github in the repository <a
 href="https://github.com/lengfeld/live555-unofficial-archive/">live555-unofficial-archive</a>.
-If you like to contribute, open a PR or create an issue. Especially new
-sources of historical tarballs are welcome. The goal of this project is
+If you like to contribute, open a PR or create an issue. New sources of
+historical tarballs are especially welcomed. The goal of this project is
 to have the most complete set of source code archives for live555.</p>
 <p>If you have questions, just send me a <a
 href="mailto:stefan+live@lengfeld.xyz">mail</a> or open a <a
@@ -353,5 +390,8 @@ href="https://github.com/rayl/live555">github.com/rayl/live555</a></li>
 <li>e-mail: <a
 href="mailto:stefan+live@lengfeld.xyz">stefan+live@lengfeld.xyz</a></li>
 </ul>
+<p>The source code of this wobsite and all tools for mirroring can be
+found at <a
+href="https://github.com/lengfeld/live555-unofficial-archive">github.com/lengfeld/live555-unofficial-archive</a>.</p>
 </body>
 </html>
