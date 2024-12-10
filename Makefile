@@ -2,6 +2,7 @@
 TARGETS += checks/git.show.tags checks/git.ls-tree.tags checks/git.ls-remote
 TARGETS += checks/git.log.main checks/git.log.main-readme
 TARGETS += checks/links.all
+TARGETS += checks/preferred.src
 
 all: $(TARGETS)
 
@@ -25,6 +26,9 @@ checks/git.log.main-readme:
 
 checks/links.all:
 	(cd pub/archives && ls -l live* | cut -c 38- ) | sort > $@
+
+checks/preferred.src:
+	./build.py dump_preferred_src > $@
 
 .PHONY: checks
 checks:

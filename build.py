@@ -229,6 +229,18 @@ def link_tarballs():
     return 0
 
 
+def dump_preferred_src():
+    srcs_tarballs = read_srcs_tarballs()
+    tarballs_srcs = reverse_dict(srcs_tarballs)
+
+    for tarball in sorted(tarballs_srcs):
+        srcs = tarballs_srcs[tarball]
+        src = choose_preferred_src(tarball, srcs)
+        print(tarball, src, sep="\t")
+
+    return 0
+
+
 def get_checksum_for_tarball(tarball_filename, checksum_file):
     with open(checksum_file) as f:
         for line in f:
@@ -502,6 +514,8 @@ def main():
         return check_tarballs_for_versions_in_changelog()
     elif cmd == "link":
         return link_tarballs()
+    elif cmd == "dump_preferred_src":
+        return dump_preferred_src()
     elif cmd == "tag":
         return create_git_tags()
     elif cmd == "check_git_tags":
