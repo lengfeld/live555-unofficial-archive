@@ -107,5 +107,3 @@ Add RSS feed for new archives
 
 Allow to regenerate the whole 'live555-unofficial-git-archive' git repo. For
 now everything can be generated execpt the 'main-readme' branch.
-
-Apply license to scripts

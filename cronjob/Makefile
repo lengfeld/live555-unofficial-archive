@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+# SPDX-FileCopyrightText: 2024 Stefan Lengfeld <stefan@lengfeld.xyz>
 
 all:
 	@echo Nothing to do yet

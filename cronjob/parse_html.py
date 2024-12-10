@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+# SPDX-License-Identifier: MIT
+# SPDX-FileCopyrightText: 2024 Stefan Lengfeld <stefan@lengfeld.xyz>
 
 import unittest
 from html.parser import HTMLParser

@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+# SPDX-FileCopyrightText: 2024 Stefan Lengfeld <stefan@lengfeld.xyz>
 
 TARGETS += checks/git.show.tags checks/git.ls-tree.tags checks/git.ls-remote
 TARGETS += checks/git.log.main checks/git.log.main-readme
