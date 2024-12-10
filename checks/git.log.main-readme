@@ -1,3 +1,11 @@
+commit b6d93525dc9ddee168188a24c1d55ec2ab718055
+tree f79064170e63be4939895eb812270f6b788bd1c0
+parent eb6fa5fbd030795489dbc8e93d098e642274eb80
+author Stefan Lengfeld <stefan@lengfeld.xyz> 1733737605 +0100
+committer Stefan Lengfeld <stefan@lengfeld.xyz> 1733737680 +0100
+
+    add note about commit history
+
 commit eb6fa5fbd030795489dbc8e93d098e642274eb80
 tree 2783d9f032f5da396db39a0912f49e584bee8412
 parent c51e761fb21ce0dee5680f4475b690b99dc3220c
