@@ -184,10 +184,12 @@ The following project adds tarballs as git commits. It uses a github action for 
 
 * [github.com/live555-mirror/live555-mirror/](https://github.com/live555-mirror/live555-mirror/)
 
-The following project added the tarballs including the changelog text as git
-commits, but updates have stalled:
+The following projects added the tarballs as git commits, but updates have
+stalled:
 
 * [github.com/rayl/live555](https://github.com/rayl/live555)
+  (including the changelog as the commit message)
+* [github.com/greenjava/live555](https://github.com/greenjava/live555)
 
 
 ## Imprint
