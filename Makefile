@@ -66,6 +66,13 @@ create-pub: pub
 create-tags:
 	./build.py tag
 
+# TODO Combine/create target to recreate the whole
+# 'live555-unofficial-git-archive' repo
+.PHONY: create-branch-readme-main
+create-branch-readme-main:
+	cd live555-unofficial-git-archive && \
+		../scripts/gen-branch-main-readme.sh
+
 .PHONY: clean-checks
 clean-checks:
 	rm -rf checks
