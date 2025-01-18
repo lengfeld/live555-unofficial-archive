@@ -415,7 +415,6 @@ def create_git_tags():
             previous_version_as_str = previous_version
 
         do_commits = "no"
-        previous_version_as_str = "NONE"
         if do_commit_for_tarball(current_version):
             do_commits = "yes"
             if current_version == "2022.12.01":
