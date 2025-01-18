@@ -80,7 +80,7 @@ fi
 # Use "--force" to ignore global git config on ignore files
 (cd tmp && git add --force .)
 
-# Create a commit object without a parent for this tre
+# Create a commit object without a parent for this tree
 date=$(echo $current_version | sed 's/\./-/g')T00:00:00+00
 (cd tmp && GIT_COMMITTER_NAME=live555-unofficial-archive \
 	GIT_COMMITTER_EMAIL=invalid@example.com \
