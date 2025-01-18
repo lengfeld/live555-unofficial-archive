@@ -1,3 +1,7 @@
+2025.01.17:
+- In the "SRTPCryptographicContext" constructor, make sure that "fSendingROC" is initialized,
+  to fix a potential 'reference when uninitialized' error.
+  (Thanks to Christian Haas for reporting this.)
 2024.11.28:
 - Updated the signature of "doEventLoop()" to match that of "triggerEvent()", by using
   "std::atomic_char" as the 'watch variable' type (if NO_STD_LIB is not defined)

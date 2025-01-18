@@ -10502,3 +10502,37 @@ Date:   Thu Nov 28 00:00:00 2024 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2025.01.17
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Fri Jan 17 00:00:00 2025 +0000
+
+live555 2025.01.17
+
+commit 8c4d1177ddf94ea4f24c9881aed82a52de14a66a
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Fri Jan 17 00:00:00 2025 +0000
+
+    unpack live.2025.01.17.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - In the "SRTPCryptographicContext" constructor, make sure that "fSendingROC" is initialized,
+      to fix a potential 'reference when uninitialized' error.
+      (Thanks to Christian Haas for reporting this.)
+----
+tag v2025.01.17-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Fri Jan 17 00:00:00 2025 +0000
+
+live555 2025.01.17 from localgetter
+
+commit 35d17bdb417aaa2604bbd4ff096b4e2121ddb00c
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Fri Jan 17 00:00:00 2025 +0000
+
+    unpack live.2025.01.17.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
