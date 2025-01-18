@@ -40,16 +40,17 @@ tagname=v$current_version
 GIT_DIR=$REPO_DIR git rev-parse --verify refs/tags/$tagname-tree >/dev/null 2>&1 && true
 if [ $? -eq 0 ] ; then
 	do_trees="no"
+	echo Info: Tag \'$tagname-tree\' exists already!
 fi
 
 GIT_DIR=$REPO_DIR git rev-parse --verify refs/tags/$tagname >/dev/null 2>&1 && true
 if [ $? -eq 0 ] ; then
 	do_commits="no"
+	echo Info: Tag \'$tagname\' exists already!
 fi
 
 if [ "$do_commits" = "no" -a "$do_trees" = "no" ]; then
-	# TODO This message is misleading
-	echo Tags \'$tagname\' and \'$tagname-tree\' exists already!
+	echo Info: Scripts end. Nothing to do for version $current_version!
 	exit 0
 fi
 
