@@ -3,7 +3,6 @@
 # SPDX-FileCopyrightText: 2024 Stefan Lengfeld <stefan@lengfeld.xyz>
 
 set -e
-set -x
 
 REPO_DIR=live555-unofficial-git-archive/.git/
 
