@@ -28,8 +28,6 @@ do_trees=$4
 do_commits=$5
 changelog_text="$6"
 
-echo $changelog_text
-
 archive_name="live.$current_version.tar.gz"
 archive_path="srcs/$src/$archive_name"
 archive_filename=$(basename $archive_name)
