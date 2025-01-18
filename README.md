@@ -81,8 +81,13 @@ See also the mailing list messages. Add to documentation
 http://lists.live555.com/pipermail/live-devel/2011-November/014127.html
 
 Also look at https://github.com/live555-mirror/live555-mirror
+- DONE: added as prior art
+- TODO: integrated into srcs and checks
 
-Also look at https://github.com/rgaufman/live555
+Maybe add as prior art
+* https://github.com/rgaufman/live555
+* https://github.com/verkada/live555
+But it has changes on top the original source code
 
 Optimize webpage for the "mirror" term for SEO.
 * There is no keyword information whether archive or mirror is the better
@@ -107,3 +112,5 @@ Add RSS feed for new archives
 
 Allow to regenerate the whole 'live555-unofficial-git-archive' git repo. For
 now everything can be generated execpt the 'main-readme' branch.
+
+Add scripts to update other srcs, without redownloading all files existing files.
