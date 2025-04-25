@@ -45,7 +45,7 @@ How to add new tarballs from 'localgetter':
     $ git diff
 
     # add all new stuff and commit
-    $ git add pub/archives/ srcs/localgetter/*.tar.gz
+    $ git add pub/ srcs/localgetter/*.tar.gz checks/ changelog.txt
 
     # Commit the final result
     $ git commit -a -m "add new tarball"

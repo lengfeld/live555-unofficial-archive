@@ -1,3 +1,17 @@
+commit dc9ec2bdb4054fd8762964636d778012e6e99cf8
+tree 7ebe11528a4755eb4936451cc41ca050643ad298
+parent 8c4d1177ddf94ea4f24c9881aed82a52de14a66a
+author Live Networks, Inc <invalid@example.com> 1745452800 +0000
+committer live555-unofficial-archive <invalid@example.com> 1745452800 +0000
+
+    unpack live.2025.04.24.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the "rtcp_from_spec" code to use the same (LGPL) license as the rest of the code.
+
 commit 8c4d1177ddf94ea4f24c9881aed82a52de14a66a
 tree f496c0755567ee17deb19f4af0fd82c275211397
 parent 87584272667f30d44a6848855922bcfe5b8930ec

@@ -10536,3 +10536,35 @@ Date:   Fri Jan 17 00:00:00 2025 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2025.04.24
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Apr 24 00:00:00 2025 +0000
+
+live555 2025.04.24
+
+commit dc9ec2bdb4054fd8762964636d778012e6e99cf8
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Apr 24 00:00:00 2025 +0000
+
+    unpack live.2025.04.24.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the "rtcp_from_spec" code to use the same (LGPL) license as the rest of the code.
+----
+tag v2025.04.24-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Apr 24 00:00:00 2025 +0000
+
+live555 2025.04.24 from localgetter
+
+commit 2f85ee3e8852faea3963449157120ee792b9379a
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Apr 24 00:00:00 2025 +0000
+
+    unpack live.2025.04.24.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----

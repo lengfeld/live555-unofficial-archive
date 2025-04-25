@@ -49,6 +49,11 @@ def normalize_version(line):
     if line == "2003:03;11":
         line = "2003.03.11"
 
+    # And another special case. The changelog date does not match the tarball
+    # date. Use the tarball name/date as the canocial name.
+    if line == "2025.04.25":
+        line = "2025.04.24"
+
     # Check
     if not (fnmatch.fnmatch(line, '????.??.??[a-b]') or fnmatch.fnmatch(line, '????.??.??')):
         raise Exception("Version number is not normal: %s" % (line,))
