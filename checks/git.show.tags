@@ -10568,3 +10568,37 @@ Date:   Thu Apr 24 00:00:00 2025 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2025.05.08
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu May 8 00:00:00 2025 +0000
+
+live555 2025.05.08
+
+commit 5fbff92fd0b2748aafc275614453612d439d97ac
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu May 8 00:00:00 2025 +0000
+
+    unpack live.2025.05.08.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - In the "BufferedPacket" destructor (in "MultiFramedRTPSource.cpp"), explicitly replace
+      tail recursion with iteration, in case the compiler isn't smart enough to do this.
+      (Thanks to Eric Beuque for the report.)
+----
+tag v2025.05.08-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu May 8 00:00:00 2025 +0000
+
+live555 2025.05.08 from localgetter
+
+commit 4174a41729e1b97cde65b483874893745753527a
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu May 8 00:00:00 2025 +0000
+
+    unpack live.2025.05.08.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----

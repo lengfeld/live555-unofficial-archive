@@ -1,3 +1,7 @@
+2025.05.08:
+- In the "BufferedPacket" destructor (in "MultiFramedRTPSource.cpp"), explicitly replace
+  tail recursion with iteration, in case the compiler isn't smart enough to do this.
+  (Thanks to Eric Beuque for the report.)
 2025.04.25:
 - Updated the "rtcp_from_spec" code to use the same (LGPL) license as the rest of the code.
 2025.01.17:
