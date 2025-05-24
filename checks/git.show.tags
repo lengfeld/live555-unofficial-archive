@@ -10602,3 +10602,37 @@ Date:   Thu May 8 00:00:00 2025 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2025.05.24
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sat May 24 00:00:00 2025 +0000
+
+live555 2025.05.24
+
+commit 2bd91fac6722831067ee65123ec54f141f266897
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sat May 24 00:00:00 2025 +0000
+
+    unpack live.2025.05.24.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the "Makefile.tail" templates to fix a minor bug in dependencies if
+      Makefiles are generated for the "linux-with-shared-libraries" configuration, and then
+      make is run in parallel.  (Thanks to Sergei Trofimovich for the report.)
+----
+tag v2025.05.24-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sat May 24 00:00:00 2025 +0000
+
+live555 2025.05.24 from localgetter
+
+commit 85a7ff48ec4330523b69f839b18e29b9206fd22c
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sat May 24 00:00:00 2025 +0000
+
+    unpack live.2025.05.24.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----

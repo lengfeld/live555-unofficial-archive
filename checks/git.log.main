@@ -1,3 +1,19 @@
+commit 2bd91fac6722831067ee65123ec54f141f266897
+tree 280ad034ed6c2190c303e7ea9ee2c3637ea8265b
+parent 5fbff92fd0b2748aafc275614453612d439d97ac
+author Live Networks, Inc <invalid@example.com> 1748044800 +0000
+committer live555-unofficial-archive <invalid@example.com> 1748044800 +0000
+
+    unpack live.2025.05.24.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the "Makefile.tail" templates to fix a minor bug in dependencies if
+      Makefiles are generated for the "linux-with-shared-libraries" configuration, and then
+      make is run in parallel.  (Thanks to Sergei Trofimovich for the report.)
+
 commit 5fbff92fd0b2748aafc275614453612d439d97ac
 tree 3836087dd1002fb81979ae9eb7e79d7a70a65acc
 parent dc9ec2bdb4054fd8762964636d778012e6e99cf8

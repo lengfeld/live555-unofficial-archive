@@ -1,3 +1,7 @@
+2025.05.24:
+- Updated the "Makefile.tail" templates to fix a minor bug in dependencies if
+  Makefiles are generated for the "linux-with-shared-libraries" configuration, and then
+  make is run in parallel.  (Thanks to Sergei Trofimovich for the report.)
 2025.05.08:
 - In the "BufferedPacket" destructor (in "MultiFramedRTPSource.cpp"), explicitly replace
   tail recursion with iteration, in case the compiler isn't smart enough to do this.
