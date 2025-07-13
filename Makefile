@@ -17,7 +17,7 @@ checks/git.ls-tree.tags:
 		for tag in $$(git tag); do git ls-tree --name-only -r $$tag; done) | sort | uniq > $@
 
 checks/git.ls-remote:
-	git ls-remote live555-unofficial-git-archive/ > $@
+	git ls-remote --symref live555-unofficial-git-archive/ HEAD refs/heads/* refs/tags/* > $@
 
 # TODO maybe use 'raw' also for other checks
 checks/git.log.main:

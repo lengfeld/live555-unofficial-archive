@@ -1,9 +1,8 @@
+ref: refs/heads/main-readme	HEAD
 b6d93525dc9ddee168188a24c1d55ec2ab718055	HEAD
 de2a7fc36f0b858047f5e4de626efc812372e03a	refs/heads/main
 593beec7e43bbcaab61099108d5cf7b48753da1b	refs/heads/main-old
 b6d93525dc9ddee168188a24c1d55ec2ab718055	refs/heads/main-readme
-2bd91fac6722831067ee65123ec54f141f266897	refs/remotes/origin/main
-b6d93525dc9ddee168188a24c1d55ec2ab718055	refs/remotes/origin/main-readme
 1452e90957a465a5fe76f269764d4a6fc41729f7	refs/tags/v2002.10.11-tree
 75fca6a5979d6462792a8f6d1f88eec2419fe746	refs/tags/v2002.10.11-tree^{}
 c9b10b9ea84053aab2917a533338356a3b2610fa	refs/tags/v2002.10.19-tree
