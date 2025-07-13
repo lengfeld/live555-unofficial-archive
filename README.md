@@ -62,6 +62,8 @@ The instructions are
 
     $ rm -rf live555-unofficial-git-archive
     $ git init live555-unofficial-git-archive
+    $ (cd live555-unofficial-git-archive && \
+        git remote add origin git@github.com:lengfeld/live555-unofficial-git-archive.git)
     $ make create-branch-readme-main
     $ make create-tags
 
