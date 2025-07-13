@@ -20,3 +20,6 @@ just shifted by one day.
 
 2024-08-30: Thanks again to the sender of the mail and the maintainer of this
 archive. Nice work!
+
+2025-07-31: No new tarball updates on this site. Latest tarball is
+`live.2024.08.01.tar.gz`.
