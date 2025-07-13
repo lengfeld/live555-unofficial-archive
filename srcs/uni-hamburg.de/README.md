@@ -10,6 +10,9 @@ with the commands
     $ mv live.2016.06.23.tar.gz dir && mv dir/live555-latest.tar.gz live.2016.06.23.tar.gz && rmdir dir
     $ md5sum *.tar.gz > files.md5
     $ rm -rf src.rrz.uni-hamburg.de/
+    $ git diff
+    $ git add *.tar.gz files.md5
+    $ git commit -m "add new tarballs from uni-hamburg.de"
 
 If found this mirror in the git repo https://github.com/museoa/live555-backups
 
