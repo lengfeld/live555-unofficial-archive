@@ -178,7 +178,9 @@ the following sister projects that also provide an up to date tarball backup:
 
 * [github.com/museoa/live555-backups](https://github.com/museoa/live555-backups)
 * [src.rrz.uni-hamburg.de/files/src/live555/](https://src.rrz.uni-hamburg.de/files/src/live555/)
-* http://wex5mlqtzj6mxjwkcugoadlzgwh5qvfuympen2iolo5lep762ramjsqd.onion
+* `http://wex5mlqtzj6mxjwkcugoadlzgwh5qvfuympen2iolo5lep762ramjsqd.onion`
+  (Thanks to the maintainer of this project. It's the most extensive and
+  historical archive I have found. It contains tarballs as early as 2002!)
 
 The following project adds tarballs as git commits. It uses a github action for automation:
 
