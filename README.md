@@ -56,6 +56,21 @@ How to add new tarballs from 'localgetter':
     $ make publish DRY_RUN=
 
 
+## How to rebuild the git repo `live555-unofficial-git-archive`
+
+The instructions are
+
+    $ rm -rf live555-unofficial-git-archive
+    $ git init live555-unofficial-git-archive
+    $ make create-branch-readme-main
+    $ make create-tags
+
+And check that the repo has the same state/info as before:
+
+    $ rm checks/git.ls-remote
+    $ make checks/git.ls-remote
+
+
 ## TODOs
 
 Search the wayback machine for tarballs and add them.
