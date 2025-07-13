@@ -1,3 +1,8 @@
+2025.07.10:
+- Updated the "ClientTLSState" code to allow for the possibility of performing extra checking
+  (e.g. on the server certificate) during the setup of a TLS connection.
+  See the "TLSState.hh" header file for details.
+  (Thanks to Yahia Benmoussa and Jonatahn Brady for this suggestion.)
 2025.05.24:
 - Updated the "Makefile.tail" templates to fix a minor bug in dependencies if
   Makefiles are generated for the "linux-with-shared-libraries" configuration, and then

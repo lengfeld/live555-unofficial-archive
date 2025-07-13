@@ -10636,3 +10636,38 @@ Date:   Sat May 24 00:00:00 2025 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2025.07.10
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Jul 10 00:00:00 2025 +0000
+
+live555 2025.07.10
+
+commit de2a7fc36f0b858047f5e4de626efc812372e03a
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Jul 10 00:00:00 2025 +0000
+
+    unpack live.2025.07.10.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the "ClientTLSState" code to allow for the possibility of performing extra checking
+      (e.g. on the server certificate) during the setup of a TLS connection.
+      See the "TLSState.hh" header file for details.
+      (Thanks to Yahia Benmoussa and Jonatahn Brady for this suggestion.)
+----
+tag v2025.07.10-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Jul 10 00:00:00 2025 +0000
+
+live555 2025.07.10 from localgetter
+
+commit 5152366b9396a73714d4a0e149b3fdb995cbbe8d
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Jul 10 00:00:00 2025 +0000
+
+    unpack live.2025.07.10.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----

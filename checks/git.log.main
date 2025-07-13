@@ -1,3 +1,20 @@
+commit de2a7fc36f0b858047f5e4de626efc812372e03a
+tree 7e18a68fc7aa67ce4f5058c36d20a999196953cb
+parent 2bd91fac6722831067ee65123ec54f141f266897
+author Live Networks, Inc <invalid@example.com> 1752105600 +0000
+committer live555-unofficial-archive <invalid@example.com> 1752105600 +0000
+
+    unpack live.2025.07.10.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the "ClientTLSState" code to allow for the possibility of performing extra checking
+      (e.g. on the server certificate) during the setup of a TLS connection.
+      See the "TLSState.hh" header file for details.
+      (Thanks to Yahia Benmoussa and Jonatahn Brady for this suggestion.)
+
 commit 2bd91fac6722831067ee65123ec54f141f266897
 tree 280ad034ed6c2190c303e7ea9ee2c3637ea8265b
 parent 5fbff92fd0b2748aafc275614453612d439d97ac
