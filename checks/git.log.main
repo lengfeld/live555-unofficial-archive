@@ -1,3 +1,20 @@
+commit 8107086a50bde68c22e7c80f4e1ecb583d2b5edd
+tree da1d33865af0ec925239e40aa957511fd62303e9
+parent de2a7fc36f0b858047f5e4de626efc812372e03a
+author Live Networks, Inc <invalid@example.com> 1752883200 +0000
+committer live555-unofficial-archive <invalid@example.com> 1752883200 +0000
+
+    unpack live.2025.07.19.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed the server handling of incoming TLS connections to close the connection if
+      the call to "ServerTLSState::accept()" fails with an error (so that the server doesn't
+      go into an infinite loop trying to keep handling the connection).
+      (Thanks to Yahia Benmoussa for reporting this.)
+
 commit de2a7fc36f0b858047f5e4de626efc812372e03a
 tree 7e18a68fc7aa67ce4f5058c36d20a999196953cb
 parent 2bd91fac6722831067ee65123ec54f141f266897

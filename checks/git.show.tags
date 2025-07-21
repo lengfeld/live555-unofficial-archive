@@ -10671,3 +10671,38 @@ Date:   Thu Jul 10 00:00:00 2025 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2025.07.19
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sat Jul 19 00:00:00 2025 +0000
+
+live555 2025.07.19
+
+commit 8107086a50bde68c22e7c80f4e1ecb583d2b5edd
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sat Jul 19 00:00:00 2025 +0000
+
+    unpack live.2025.07.19.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed the server handling of incoming TLS connections to close the connection if
+      the call to "ServerTLSState::accept()" fails with an error (so that the server doesn't
+      go into an infinite loop trying to keep handling the connection).
+      (Thanks to Yahia Benmoussa for reporting this.)
+----
+tag v2025.07.19-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sat Jul 19 00:00:00 2025 +0000
+
+live555 2025.07.19 from localgetter
+
+commit bb960ec93153491d79afe2fd278ac2cbd2833238
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sat Jul 19 00:00:00 2025 +0000
+
+    unpack live.2025.07.19.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----

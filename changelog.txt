@@ -1,3 +1,8 @@
+2025.07.19:
+- Fixed the server handling of incoming TLS connections to close the connection if
+  the call to "ServerTLSState::accept()" fails with an error (so that the server doesn't
+  go into an infinite loop trying to keep handling the connection).
+  (Thanks to Yahia Benmoussa for reporting this.)
 2025.07.10:
 - Updated the "ClientTLSState" code to allow for the possibility of performing extra checking
   (e.g. on the server certificate) during the setup of a TLS connection.
