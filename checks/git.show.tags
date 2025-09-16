@@ -10706,3 +10706,36 @@ Date:   Sat Jul 19 00:00:00 2025 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2025.09.16
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Tue Sep 16 00:00:00 2025 +0000
+
+live555 2025.09.16
+
+commit 8e23ae54deaced9e030fb8c963d46c406722b49b
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Tue Sep 16 00:00:00 2025 +0000
+
+    unpack live.2025.09.16.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed an issue in the "decodeURL()" function in "RTSPCommon.cpp" that was supposedly
+      causing a crash when run in Windows.  (Thanks to Eric Beuque for the report.)
+----
+tag v2025.09.16-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Tue Sep 16 00:00:00 2025 +0000
+
+live555 2025.09.16 from localgetter
+
+commit 42f09014586b6c0918f90940396a6584e2382d54
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Tue Sep 16 00:00:00 2025 +0000
+
+    unpack live.2025.09.16.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
