@@ -1,3 +1,17 @@
+commit af3049cec7c916d96cf8214c6f9ae77710f667db
+tree d35979e585e180a212a2eb1eedb71cb0ea53542b
+parent 8e23ae54deaced9e030fb8c963d46c406722b49b
+author Live Networks, Inc <invalid@example.com> 1758067200 +0000
+committer live555-unofficial-archive <invalid@example.com> 1758067200 +0000
+
+    unpack live.2025.09.17.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - The previous release was not quite correct.  This fixes it.
+
 commit 8e23ae54deaced9e030fb8c963d46c406722b49b
 tree 9d0420711b4915d9bca35c7498df30ca3f5cafc9
 parent 8107086a50bde68c22e7c80f4e1ecb583d2b5edd

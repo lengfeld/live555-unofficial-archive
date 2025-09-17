@@ -1,3 +1,5 @@
+2025.09.17:
+- The previous release was not quite correct.  This fixes it.
 2025.09.16:
 - Fixed an issue in the "decodeURL()" function in "RTSPCommon.cpp" that was supposedly
   causing a crash when run in Windows.  (Thanks to Eric Beuque for the report.)
