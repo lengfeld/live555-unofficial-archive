@@ -1,3 +1,8 @@
+2025.10.13:
+- Made "RTSPServer::authenticationOK()" a virtual function (as requested by William Pfeffer).
+  Because of this, the virtual function "specialClientAccessCheck()" is no longer needed,
+  and has now been removed.  (The virtual function "specialClientUserAccessCheck()" remains,
+  however.)
 2025.09.17:
 - The previous release was not quite correct.  This fixes it.
 2025.09.16:

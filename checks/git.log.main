@@ -1,3 +1,20 @@
+commit 0c1780cb300dab3cab8362423535f3f732de4586
+tree 5a7d76c4b2fefbbaee8cb599bee5a62d7a2cf832
+parent af3049cec7c916d96cf8214c6f9ae77710f667db
+author Live Networks, Inc <invalid@example.com> 1760313600 +0000
+committer live555-unofficial-archive <invalid@example.com> 1760313600 +0000
+
+    unpack live.2025.10.13.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Made "RTSPServer::authenticationOK()" a virtual function (as requested by William Pfeffer).
+      Because of this, the virtual function "specialClientAccessCheck()" is no longer needed,
+      and has now been removed.  (The virtual function "specialClientUserAccessCheck()" remains,
+      however.)
+
 commit af3049cec7c916d96cf8214c6f9ae77710f667db
 tree d35979e585e180a212a2eb1eedb71cb0ea53542b
 parent 8e23ae54deaced9e030fb8c963d46c406722b49b
