@@ -10806,3 +10806,35 @@ Date:   Mon Oct 13 00:00:00 2025 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2025.11.06
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Nov 6 00:00:00 2025 +0000
+
+live555 2025.11.06
+
+commit ae86cd4fee58d37df86c1561ee687286bcd2be0b
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Nov 6 00:00:00 2025 +0000
+
+    unpack live.2025.11.06.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the README file that is included with each distribution.
+----
+tag v2025.11.06-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Nov 6 00:00:00 2025 +0000
+
+live555 2025.11.06 from localgetter
+
+commit 256caef87d73eb16c443ae7ca9fe62e11402b436
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Nov 6 00:00:00 2025 +0000
+
+    unpack live.2025.11.06.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
