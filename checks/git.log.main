@@ -1,3 +1,17 @@
+commit e2c1b925048495ecc696edc1cbd8dd9db4cfd584
+tree 7d3d17d47b98c12968e59b0e5af3b51ea00b7e60
+parent ae86cd4fee58d37df86c1561ee687286bcd2be0b
+author Live Networks, Inc <invalid@example.com> 1766707200 +0000
+committer live555-unofficial-archive <invalid@example.com> 1766707200 +0000
+
+    unpack live.2025.12.26.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Performed the annual update of the copyright years near the start of each file.
+
 commit ae86cd4fee58d37df86c1561ee687286bcd2be0b
 tree db99894a88f18075d07478847b2deadb33742416
 parent 0c1780cb300dab3cab8362423535f3f732de4586

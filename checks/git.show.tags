@@ -10838,3 +10838,35 @@ Date:   Thu Nov 6 00:00:00 2025 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2025.12.26
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Fri Dec 26 00:00:00 2025 +0000
+
+live555 2025.12.26
+
+commit e2c1b925048495ecc696edc1cbd8dd9db4cfd584
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Fri Dec 26 00:00:00 2025 +0000
+
+    unpack live.2025.12.26.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Performed the annual update of the copyright years near the start of each file.
+----
+tag v2025.12.26-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Fri Dec 26 00:00:00 2025 +0000
+
+live555 2025.12.26 from localgetter
+
+commit ff34d536f13ed9d734194a9ff34aace295ba19c3
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Fri Dec 26 00:00:00 2025 +0000
+
+    unpack live.2025.12.26.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
