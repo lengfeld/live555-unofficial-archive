@@ -1,3 +1,18 @@
+commit 7b14b6917ee4eaec84baa5a4da13dd411918a761
+tree 63e37f04604feeafe2c886a11e314275626bcdcd
+parent e2c1b925048495ecc696edc1cbd8dd9db4cfd584
+author Live Networks, Inc <invalid@example.com> 1768176000 +0000
+committer live555-unofficial-archive <invalid@example.com> 1768176000 +0000
+
+    unpack live.2026.01.12.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed "testProgs/testOnDemandRTSPServer.cpp"; a 'test' version had accidentally been
+      left in the previous distribution.  (Thanks to Martin Czernow for noting this.)
+
 commit e2c1b925048495ecc696edc1cbd8dd9db4cfd584
 tree 7d3d17d47b98c12968e59b0e5af3b51ea00b7e60
 parent ae86cd4fee58d37df86c1561ee687286bcd2be0b

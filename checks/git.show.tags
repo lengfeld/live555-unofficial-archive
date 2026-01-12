@@ -10870,3 +10870,36 @@ Date:   Fri Dec 26 00:00:00 2025 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2026.01.12
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Jan 12 00:00:00 2026 +0000
+
+live555 2026.01.12
+
+commit 7b14b6917ee4eaec84baa5a4da13dd411918a761
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Jan 12 00:00:00 2026 +0000
+
+    unpack live.2026.01.12.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed "testProgs/testOnDemandRTSPServer.cpp"; a 'test' version had accidentally been
+      left in the previous distribution.  (Thanks to Martin Czernow for noting this.)
+----
+tag v2026.01.12-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Jan 12 00:00:00 2026 +0000
+
+live555 2026.01.12 from localgetter
+
+commit bc0990e482bbc89c2636cc1edc91d297aa5add4b
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Jan 12 00:00:00 2026 +0000
+
+    unpack live.2026.01.12.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----

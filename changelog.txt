@@ -1,3 +1,6 @@
+2026.01.12:
+- Fixed "testProgs/testOnDemandRTSPServer.cpp"; a 'test' version had accidentally been
+  left in the previous distribution.  (Thanks to Martin Czernow for noting this.)
 2025.12.26:
 - Performed the annual update of the copyright years near the start of each file.
 2025.11.06:
