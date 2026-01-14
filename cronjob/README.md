@@ -10,7 +10,7 @@ Just run
 
 Add the following line to our crontab
 
-    32 * * * * cd ~/git/live555-unofficial-archive/cronjob/data/ && ../watcher.py get http://live555.com/liveMedia/public/
+    32 * * * * cd ~/git/live555-unofficial-archive/cronjob/data/ && ../watcher.py get https://download.live555.com/
 
 to run the script every hour.
 

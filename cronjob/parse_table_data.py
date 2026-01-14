@@ -25,7 +25,7 @@ FileInfo = namedtuple('FileInfo', 'name lastModified size description')
 # TableData :: title, rows, headers
 # FileInfos :: List<FileInfo>
 def parse_table_data(table_data):
-    if table_data.title != "Index of /liveMedia/public":
+    if table_data.title != "Index of /":
         raise ConvertError(ConvertErrorReason.TITLE_DOES_NOT_MATCH)
 
     # NOTE: The last two empty header cells are not in the frist row.
