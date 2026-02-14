@@ -18,3 +18,8 @@ Update 2024-08-05: The mirror site
     http://www.mirrorservice.org/sites/distfiles.macports.org/live555/
 
 contains the same files. Found by googleing.
+
+Update 2026-02-14:
+
+The URL http://jog.id.distfiles.macports.org/macports/distfiles/live555/
+returns 404 now.
