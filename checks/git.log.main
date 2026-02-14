@@ -1,3 +1,19 @@
+commit 144bad3a61ba7eea5e66cf6299af7c5dd2a2ede4
+tree 88e515e03d3bcd05c7e4ec5f7e8cb7ace0a1f62e
+parent 7b14b6917ee4eaec84baa5a4da13dd411918a761
+author Live Networks, Inc <invalid@example.com> 1770940800 +0000
+committer live555-unofficial-archive <invalid@example.com> 1770940800 +0000
+
+    unpack live.2026.02.13.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the RTSP server's parsing of incoming request strings to (1) reject initial '\0'
+      characters in the input, and (2) reject a "CSeq" parameter that is not a numeric string.
+      (Thanks to Daniyal Pirwani for reporting this.)
+
 commit 7b14b6917ee4eaec84baa5a4da13dd411918a761
 tree 63e37f04604feeafe2c886a11e314275626bcdcd
 parent e2c1b925048495ecc696edc1cbd8dd9db4cfd584

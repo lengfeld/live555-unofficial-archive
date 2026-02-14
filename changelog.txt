@@ -1,3 +1,7 @@
+2026-02-13:
+- Updated the RTSP server's parsing of incoming request strings to (1) reject initial '\0'
+  characters in the input, and (2) reject a "CSeq" parameter that is not a numeric string.
+  (Thanks to Daniyal Pirwani for reporting this.)
 2026.01.12:
 - Fixed "testProgs/testOnDemandRTSPServer.cpp"; a 'test' version had accidentally been
   left in the previous distribution.  (Thanks to Martin Czernow for noting this.)
