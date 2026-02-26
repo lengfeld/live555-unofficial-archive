@@ -10937,3 +10937,37 @@ Date:   Fri Feb 13 00:00:00 2026 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2026.02.26
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Feb 26 00:00:00 2026 +0000
+
+live555 2026.02.26
+
+commit 8021267ea1c94e6a63b192071056c0f57404e9e1
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Feb 26 00:00:00 2026 +0000
+
+    unpack live.2026.02.26.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated "setupDatagramSocket()" and "setupStreamSocket()" (in the "groupsock" library)
+      to add the ability to (optionally) call "setSockopt(... SO_BINDTODEVICE ...)"
+      on the new socket.  (Thanks to Russell Greene for the suggestion.)
+----
+tag v2026.02.26-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Feb 26 00:00:00 2026 +0000
+
+live555 2026.02.26 from localgetter
+
+commit b1e851ff6fb1b66008d3d677e49196e613ffe521
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Feb 26 00:00:00 2026 +0000
+
+    unpack live.2026.02.26.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
