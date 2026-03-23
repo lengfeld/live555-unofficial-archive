@@ -10971,3 +10971,38 @@ Date:   Thu Feb 26 00:00:00 2026 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2026.03.23
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Mar 23 00:00:00 2026 +0000
+
+live555 2026.03.23
+
+commit 60738f7fd15181e79106d810888a5925af360f14
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Mar 23 00:00:00 2026 +0000
+
+    unpack live.2026.03.23.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a bug in the RTSP server code that caused it to improperly handle non-interleaved
+      "SETUP"s that were sent for a session where interleaving (i.e., RTP/RTCP-over-TCP) had
+      already been "SETUP".  (This could cause a 'use-after-free' error; thanks to Tianyang Liu
+      for reporting this.)
+----
+tag v2026.03.23-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Mar 23 00:00:00 2026 +0000
+
+live555 2026.03.23 from localgetter
+
+commit d6d837cae604cf7ace4303a5bbb45e74994ddd30
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Mar 23 00:00:00 2026 +0000
+
+    unpack live.2026.03.23.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----

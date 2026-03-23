@@ -1,3 +1,20 @@
+commit 60738f7fd15181e79106d810888a5925af360f14
+tree 459354bbf973636231280cac6a6ef24b94ee9db3
+parent 8021267ea1c94e6a63b192071056c0f57404e9e1
+author Live Networks, Inc <invalid@example.com> 1774224000 +0000
+committer live555-unofficial-archive <invalid@example.com> 1774224000 +0000
+
+    unpack live.2026.03.23.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a bug in the RTSP server code that caused it to improperly handle non-interleaved
+      "SETUP"s that were sent for a session where interleaving (i.e., RTP/RTCP-over-TCP) had
+      already been "SETUP".  (This could cause a 'use-after-free' error; thanks to Tianyang Liu
+      for reporting this.)
+
 commit 8021267ea1c94e6a63b192071056c0f57404e9e1
 tree eca1a737d9d54bb01857bc23213d80d44206e07d
 parent 144bad3a61ba7eea5e66cf6299af7c5dd2a2ede4
