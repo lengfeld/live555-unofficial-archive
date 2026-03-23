@@ -6,6 +6,41 @@
 </head>
 <body>
 <h1>live555 unofficial archive - list</h1>
+<h2 id='2026.03.23'>2026.03.23</h2>
+<ul>
+<li>size: 676 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/localgetter/live.2026.03.23.tar.gz'>live.2026.03.23.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2026.03.23'>v2026.03.23</a></li>
+<li>git diff link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/compare/v2026.02.26..v2026.03.23'>v2026.02.26..v2026.03.23</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Fixed a bug in the RTSP server code that caused it to improperly handle non-interleaved
+  "SETUP"s that were sent for a session where interleaving (i.e., RTP/RTCP-over-TCP) had
+  already been "SETUP".  (This could cause a 'use-after-free' error; thanks to Tianyang Liu
+  for reporting this.)</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: b1e91285cfc13b1a9834b66d365b04e5</li>
+<li>sha256: badb8ca20af208511eecd021fd2233da6646134c4333b8566dded37b0db40b8e</li>
+<li>sha512: 8372dc0e90a5070600bc50b8d9372c52976056446dc2f8a088613d88f12a520bac571a00deff96f018445ca935c4b094408b2ec6e53855aea93cf5eac9c97320</li>
+</ul>
+<h2 id='2026.02.26'>2026.02.26</h2>
+<ul>
+<li>size: 676 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/localgetter/live.2026.02.26.tar.gz'>live.2026.02.26.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2026.02.26'>v2026.02.26</a></li>
+<li>git diff link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/compare/v2026.02.13..v2026.02.26'>v2026.02.13..v2026.02.26</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Updated "setupDatagramSocket()" and "setupStreamSocket()" (in the "groupsock" library)
+  to add the ability to (optionally) call "setSockopt(... SO_BINDTODEVICE ...)"
+  on the new socket.  (Thanks to Russell Greene for the suggestion.)</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 7a091f1c4f56c45ec4c6c3005b49973b</li>
+<li>sha256: ef865566b75bf02f19696bfa8c7db01ffe8c629e321b64162b26554dead2f545</li>
+<li>sha512: 3912b2049cea27b02e24e92344cc17bde36a1af13e4b42533cc0d87c41cbbcd384c4732cbccba34f467779a31ccf55c90e837cded5a5b6fe8aca01538b10e89f</li>
+</ul>
 <h2 id='2026.02.13'>2026.02.13</h2>
 <ul>
 <li>size: 676 K</li>
