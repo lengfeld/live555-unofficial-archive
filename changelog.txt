@@ -1,3 +1,10 @@
+2026-04-01:
+- Updated the way that the RTSP server generates successive RTSP 'session ids' to make it
+  less likely that an attacker could guess a session id.
+  (Thanks to 'APEvul Cyber' for reporting this.)
+- Updated the RTSP server implementation to make it possible for a client to request both
+  interleaved (i.e., RTP/RTCP-over-TCP) and non-interleaved (i.e., RTP/RTCP-over-UDP) delivery
+  within the same session.
 2026-03-23:
 - Fixed a bug in the RTSP server code that caused it to improperly handle non-interleaved
   "SETUP"s that were sent for a session where interleaving (i.e., RTP/RTCP-over-TCP) had

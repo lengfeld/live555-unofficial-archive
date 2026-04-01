@@ -1,3 +1,22 @@
+commit 2ce863d871394ff3f64cec74d4abf5eb8e04a85c
+tree 54c86439936d6d8ff5450e3f313c56158b1fe1df
+parent 60738f7fd15181e79106d810888a5925af360f14
+author Live Networks, Inc <invalid@example.com> 1775001600 +0000
+committer live555-unofficial-archive <invalid@example.com> 1775001600 +0000
+
+    unpack live.2026.04.01.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the way that the RTSP server generates successive RTSP 'session ids' to make it
+      less likely that an attacker could guess a session id.
+      (Thanks to 'APEvul Cyber' for reporting this.)
+    - Updated the RTSP server implementation to make it possible for a client to request both
+      interleaved (i.e., RTP/RTCP-over-TCP) and non-interleaved (i.e., RTP/RTCP-over-UDP) delivery
+      within the same session.
+
 commit 60738f7fd15181e79106d810888a5925af360f14
 tree 459354bbf973636231280cac6a6ef24b94ee9db3
 parent 8021267ea1c94e6a63b192071056c0f57404e9e1
