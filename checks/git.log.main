@@ -1,3 +1,23 @@
+commit c26cca44286de7b75e17123b598f36890dd19ea8
+tree 494198fbac4a775fdc0b38e500b9a615b816465a
+parent 2ce863d871394ff3f64cec74d4abf5eb8e04a85c
+author Live Networks, Inc <invalid@example.com> 1776816000 +0000
+committer live555-unofficial-archive <invalid@example.com> 1776816000 +0000
+
+    unpack live.2026.04.22.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Added extra checking to the handling of the RTSP server's "PLAY", "PAUSE", "TEARDOWN", and
+      "SET_PARAMETER" commands, to ensure that, if the session is authenticated, then a proper
+      authentication check is done before these commands are handled.  This protects against the
+      use of a 'stolen' RTSP session id to send these commands.  (Note, however, that if the
+      session is not authenticated (i.e., no username,password is needed), then no such protection
+      is possible.)
+      (Thanks to CUI Jiyuan for reporting this issue.)
+
 commit 2ce863d871394ff3f64cec74d4abf5eb8e04a85c
 tree 54c86439936d6d8ff5450e3f313c56158b1fe1df
 parent 60738f7fd15181e79106d810888a5925af360f14

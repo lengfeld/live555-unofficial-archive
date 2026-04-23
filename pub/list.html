@@ -6,6 +6,27 @@
 </head>
 <body>
 <h1>live555 unofficial archive - list</h1>
+<h2 id='2026.04.22'>2026.04.22</h2>
+<ul>
+<li>size: 676 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/localgetter/live.2026.04.22.tar.gz'>live.2026.04.22.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2026.04.22'>v2026.04.22</a></li>
+<li>git diff link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/compare/v2026.04.01..v2026.04.22'>v2026.04.01..v2026.04.22</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Added extra checking to the handling of the RTSP server's "PLAY", "PAUSE", "TEARDOWN", and
+  "SET_PARAMETER" commands, to ensure that, if the session is authenticated, then a proper
+  authentication check is done before these commands are handled.  This protects against the
+  use of a 'stolen' RTSP session id to send these commands.  (Note, however, that if the
+  session is not authenticated (i.e., no username,password is needed), then no such protection
+  is possible.)
+  (Thanks to CUI Jiyuan for reporting this issue.)</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 86736114c7b5f1bbcf46dc61246f8e0b</li>
+<li>sha256: 1ffd626ce2e2473196e55a473b7b5ba056326eeabf8fd5622cea6b123d8b6370</li>
+<li>sha512: 2978781a14cf9c4063b9e29f37b52eb81daf06aa8b6ddb811e58c014642e65825e8e1fccda7a8cb3ca4c13d7de8dcf28ddf85e3ba52c9e29dc85501a73d88d5a</li>
+</ul>
 <h2 id='2026.04.01'>2026.04.01</h2>
 <ul>
 <li>size: 676 K</li>
