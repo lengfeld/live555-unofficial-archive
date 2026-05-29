@@ -1,3 +1,40 @@
+commit 4ee2965f44bc8bfd588d6013cf0bd9bca2c655bf
+tree 950e108ba354c68eb2b88ba5ef5938a42c3a3ed3
+parent c0ef7b3a994877fb130ebdee0541e8466dd0ce1a
+author Live Networks, Inc <invalid@example.com> 1780012800 +0000
+committer live555-unofficial-archive <invalid@example.com> 1780012800 +0000
+
+    unpack live.2026.05.29.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Added an (integer) index to identify each server's 'client connection', and changed
+      the "fClientConnections" table to be indexed by this id.
+    - In the "RTSPServer" implementation, removed the "fOurClientConnection" member variable.
+      This had been left over from when the RTSP "SETUP" command had been implemented as a single,
+      synchronous function.  Now that "SETUP" is implemented using multiple functions, possibly
+      asynchronously (depending upon how "lookpServerMediaSession()" is implemented), this member
+      variable was potentially dangerous if more than one "SETUP" is performed concurrently on
+      the same client connection, or on separate client connections.
+      (Thanks to Dirk Mueller for reporting this issue.)
+
+commit c0ef7b3a994877fb130ebdee0541e8466dd0ce1a
+tree 99751d46c81992c57553d72be926d672856b6d54
+parent c26cca44286de7b75e17123b598f36890dd19ea8
+author Live Networks, Inc <invalid@example.com> 1779926400 +0000
+committer live555-unofficial-archive <invalid@example.com> 1779926400 +0000
+
+    unpack live.2026.05.28.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a typo (in the handling of "SET_PARAMETER") that was accidentally introduced in the
+      previous release.  (Thanks to Dirk Mueller for reporting this.)
+
 commit c26cca44286de7b75e17123b598f36890dd19ea8
 tree 494198fbac4a775fdc0b38e500b9a615b816465a
 parent 2ce863d871394ff3f64cec74d4abf5eb8e04a85c

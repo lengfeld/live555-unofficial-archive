@@ -131,6 +131,7 @@ liveMedia/AMRAudioRTPSource.cpp.save
 liveMedia/AMRAudioSource.cpp
 liveMedia/AudioInputDevice.cpp
 liveMedia/AudioRTPSink.cpp
+liveMedia/authenticationOK
 liveMedia/AVIFileSink.cpp
 liveMedia/bad.ts
 liveMedia/bad.txt

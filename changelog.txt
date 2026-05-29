@@ -1,3 +1,16 @@
+2026-05-29:
+- Added an (integer) index to identify each server's 'client connection', and changed
+  the "fClientConnections" table to be indexed by this id.
+- In the "RTSPServer" implementation, removed the "fOurClientConnection" member variable.
+  This had been left over from when the RTSP "SETUP" command had been implemented as a single,
+  synchronous function.  Now that "SETUP" is implemented using multiple functions, possibly
+  asynchronously (depending upon how "lookpServerMediaSession()" is implemented), this member
+  variable was potentially dangerous if more than one "SETUP" is performed concurrently on
+  the same client connection, or on separate client connections.
+  (Thanks to Dirk Mueller for reporting this issue.)
+2026-05-28:
+- Fixed a typo (in the handling of "SET_PARAMETER") that was accidentally introduced in the
+  previous release.  (Thanks to Dirk Mueller for reporting this.)
 2026-04-22:
 - Added extra checking to the handling of the RTSP server's "PLAY", "PAUSE", "TEARDOWN", and
   "SET_PARAMETER" commands, to ensure that, if the session is authenticated, then a proper

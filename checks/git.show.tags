@@ -11081,3 +11081,76 @@ Date:   Wed Apr 22 00:00:00 2026 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2026.05.28
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu May 28 00:00:00 2026 +0000
+
+live555 2026.05.28
+
+commit c0ef7b3a994877fb130ebdee0541e8466dd0ce1a
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu May 28 00:00:00 2026 +0000
+
+    unpack live.2026.05.28.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a typo (in the handling of "SET_PARAMETER") that was accidentally introduced in the
+      previous release.  (Thanks to Dirk Mueller for reporting this.)
+----
+tag v2026.05.28-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu May 28 00:00:00 2026 +0000
+
+live555 2026.05.28 from localgetter
+
+commit 848833303f7fe4af3ffbb13bdd5e84e308ae5e64
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu May 28 00:00:00 2026 +0000
+
+    unpack live.2026.05.28.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2026.05.29
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Fri May 29 00:00:00 2026 +0000
+
+live555 2026.05.29
+
+commit 4ee2965f44bc8bfd588d6013cf0bd9bca2c655bf
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Fri May 29 00:00:00 2026 +0000
+
+    unpack live.2026.05.29.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Added an (integer) index to identify each server's 'client connection', and changed
+      the "fClientConnections" table to be indexed by this id.
+    - In the "RTSPServer" implementation, removed the "fOurClientConnection" member variable.
+      This had been left over from when the RTSP "SETUP" command had been implemented as a single,
+      synchronous function.  Now that "SETUP" is implemented using multiple functions, possibly
+      asynchronously (depending upon how "lookpServerMediaSession()" is implemented), this member
+      variable was potentially dangerous if more than one "SETUP" is performed concurrently on
+      the same client connection, or on separate client connections.
+      (Thanks to Dirk Mueller for reporting this issue.)
+----
+tag v2026.05.29-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Fri May 29 00:00:00 2026 +0000
+
+live555 2026.05.29 from localgetter
+
+commit 5546e1571c51802dee6deae82a5bce5afa8c704d
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Fri May 29 00:00:00 2026 +0000
+
+    unpack live.2026.05.29.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
