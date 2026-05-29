@@ -6,6 +6,45 @@
 </head>
 <body>
 <h1>live555 unofficial archive - list</h1>
+<h2 id='2026.05.29'>2026.05.29</h2>
+<ul>
+<li>size: 677 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/localgetter/live.2026.05.29.tar.gz'>live.2026.05.29.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2026.05.29'>v2026.05.29</a></li>
+<li>git diff link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/compare/v2026.05.28..v2026.05.29'>v2026.05.28..v2026.05.29</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Added an (integer) index to identify each server's 'client connection', and changed
+  the "fClientConnections" table to be indexed by this id.
+- In the "RTSPServer" implementation, removed the "fOurClientConnection" member variable.
+  This had been left over from when the RTSP "SETUP" command had been implemented as a single,
+  synchronous function.  Now that "SETUP" is implemented using multiple functions, possibly
+  asynchronously (depending upon how "lookpServerMediaSession()" is implemented), this member
+  variable was potentially dangerous if more than one "SETUP" is performed concurrently on
+  the same client connection, or on separate client connections.
+  (Thanks to Dirk Mueller for reporting this issue.)</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 1cbdee28db861f12623951f472ba6ee2</li>
+<li>sha256: 6cda576ba057ce51499bd89552cec3ad4cc56123d7c26045250fc23fb052d6b8</li>
+<li>sha512: 7ecdc457055727b444027d2536eaaae6c0cfa8cac9655706a37d97547c79383e6e5b6ff5242439a5f0e122716cfdf3beb4ee2e0d75fd632f63160a3f7a58d178</li>
+</ul>
+<h2 id='2026.05.28'>2026.05.28</h2>
+<ul>
+<li>size: 676 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/localgetter/live.2026.05.28.tar.gz'>live.2026.05.28.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2026.05.28'>v2026.05.28</a></li>
+<li>git diff link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/compare/v2026.04.22..v2026.05.28'>v2026.04.22..v2026.05.28</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Fixed a typo (in the handling of "SET_PARAMETER") that was accidentally introduced in the
+  previous release.  (Thanks to Dirk Mueller for reporting this.)</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 48110f053c807f93a2ecae65a7a1b6b4</li>
+<li>sha256: 9ea78251faa3ffb6d7e82f2e7979b8bc422a624cc0562bf0ea2a52990c3ee88d</li>
+<li>sha512: b3657af31944d0617e68073ef00cc51c72a5e89c15ee652250810c465221bc4df3f08fa3fb5ef4b981154a977323cef19b17d99a8cd99932f001c90cd0428193</li>
+</ul>
 <h2 id='2026.04.22'>2026.04.22</h2>
 <ul>
 <li>size: 676 K</li>
