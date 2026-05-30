@@ -11154,3 +11154,36 @@ Date:   Fri May 29 00:00:00 2026 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2026.05.30
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sat May 30 00:00:00 2026 +0000
+
+live555 2026.05.30
+
+commit efa2704a417f9aac851aa06a5c0898ef8a500abf
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sat May 30 00:00:00 2026 +0000
+
+    unpack live.2026.05.30.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the "RTSPServer" implementation some more to make it more robust if
+      subclassed code reimplements "lookpServerMediaSession()" as an asynchronous operation.
+----
+tag v2026.05.30-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sat May 30 00:00:00 2026 +0000
+
+live555 2026.05.30 from localgetter
+
+commit 3280f4914471570bcfd5825b49a974ae09f6f344
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sat May 30 00:00:00 2026 +0000
+
+    unpack live.2026.05.30.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----

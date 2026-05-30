@@ -1,3 +1,18 @@
+commit efa2704a417f9aac851aa06a5c0898ef8a500abf
+tree b2ac365d032440bb58873351fdbba07242a93abc
+parent 4ee2965f44bc8bfd588d6013cf0bd9bca2c655bf
+author Live Networks, Inc <invalid@example.com> 1780099200 +0000
+committer live555-unofficial-archive <invalid@example.com> 1780099200 +0000
+
+    unpack live.2026.05.30.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the "RTSPServer" implementation some more to make it more robust if
+      subclassed code reimplements "lookpServerMediaSession()" as an asynchronous operation.
+
 commit 4ee2965f44bc8bfd588d6013cf0bd9bca2c655bf
 tree 950e108ba354c68eb2b88ba5ef5938a42c3a3ed3
 parent c0ef7b3a994877fb130ebdee0541e8466dd0ce1a

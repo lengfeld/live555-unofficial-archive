@@ -1,3 +1,6 @@
+2026-05-30:
+- Updated the "RTSPServer" implementation some more to make it more robust if
+  subclassed code reimplements "lookpServerMediaSession()" as an asynchronous operation.
 2026-05-29:
 - Added an (integer) index to identify each server's 'client connection', and changed
   the "fClientConnections" table to be indexed by this id.
