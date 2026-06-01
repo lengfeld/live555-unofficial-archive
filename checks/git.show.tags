@@ -11187,3 +11187,37 @@ Date:   Sat May 30 00:00:00 2026 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2026.06.01
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Jun 1 00:00:00 2026 +0000
+
+live555 2026.06.01
+
+commit 932cf49eeb5881578212cb78717c1dfea77071bc
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Jun 1 00:00:00 2026 +0000
+
+    unpack live.2026.06.01.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the "RTSPServer" implementation of the "SETUP" command to make it more robust if
+      subclassed code reimplements "lookupServerMediaSession()" as an asynchronous operation.
+      (Thanks to Dirk Mueller for reporting this issue.)
+----
+tag v2026.06.01-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Jun 1 00:00:00 2026 +0000
+
+live555 2026.06.01 from localgetter
+
+commit 384ecd7f77aa6e52acb2b81167348663e2c9b294
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Jun 1 00:00:00 2026 +0000
+
+    unpack live.2026.06.01.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----

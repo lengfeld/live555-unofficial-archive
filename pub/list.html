@@ -6,6 +6,23 @@
 </head>
 <body>
 <h1>live555 unofficial archive - list</h1>
+<h2 id='2026.06.01'>2026.06.01</h2>
+<ul>
+<li>size: 677 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/localgetter/live.2026.06.01.tar.gz'>live.2026.06.01.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2026.06.01'>v2026.06.01</a></li>
+<li>git diff link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/compare/v2026.05.30..v2026.06.01'>v2026.05.30..v2026.06.01</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Updated the "RTSPServer" implementation of the "SETUP" command to make it more robust if
+  subclassed code reimplements "lookupServerMediaSession()" as an asynchronous operation.
+  (Thanks to Dirk Mueller for reporting this issue.)</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 608d450d2c5627b7d7287dd0bcd63a34</li>
+<li>sha256: d95338592c28a15dce572285f0bdc7f4fe009baa2652af1a5296f22560206d2a</li>
+<li>sha512: a78996bda271fc1aaa06093277a71a19ca3764171eb36ccd3498143590a02259c94a10a1fefcb4f5f8c80f2ae40a5ad2cf1c4a0c31d415a58f09356b0dc2d572</li>
+</ul>
 <h2 id='2026.05.30'>2026.05.30</h2>
 <ul>
 <li>size: 677 K</li>
@@ -15,7 +32,7 @@
 </ul>
 <h3>Changelog</h3>
 <pre>- Updated the "RTSPServer" implementation some more to make it more robust if
-  subclassed code reimplements "lookpServerMediaSession()" as an asynchronous operation.</pre>
+  subclassed code reimplements "lookupServerMediaSession()" as an asynchronous operation.</pre>
 <h3>Checksums</h3>
 <ul>
 <li>md5: 019ebef6d88a27cca6e80aeca9d125e0</li>
@@ -35,7 +52,7 @@
 - In the "RTSPServer" implementation, removed the "fOurClientConnection" member variable.
   This had been left over from when the RTSP "SETUP" command had been implemented as a single,
   synchronous function.  Now that "SETUP" is implemented using multiple functions, possibly
-  asynchronously (depending upon how "lookpServerMediaSession()" is implemented), this member
+  asynchronously (depending upon how "lookupServerMediaSession()" is implemented), this member
   variable was potentially dangerous if more than one "SETUP" is performed concurrently on
   the same client connection, or on separate client connections.
   (Thanks to Dirk Mueller for reporting this issue.)</pre>
