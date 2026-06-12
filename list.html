@@ -6,6 +6,32 @@
 </head>
 <body>
 <h1>live555 unofficial archive - list</h1>
+<h2 id='2026.06.12'>2026.06.12</h2>
+<ul>
+<li>size: 677 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/localgetter/live.2026.06.12.tar.gz'>live.2026.06.12.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2026.06.12'>v2026.06.12</a></li>
+<li>git diff link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/compare/v2026.06.01..v2026.06.12'>v2026.06.01..v2026.06.12</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Fixed "MatroskaFileParser" to properly handle parsed strings and binary values whose
+  size would be too large for a 32-bit integer.
+  (Thanks to Yiyi Wang, Tsinghua University, for reporting this issue.)
+- Updated "MatroskaFileParser" to check for erroneous files that have more than one track number
+  for the same track.  (This could have caused the same "MatroskaTrack" structure to be inserted
+  into a hash table more than once, possibly leading to a use-after-free error.)
+  (Thanks to Yiyi Wang, Tsinghua University, for reporting this issue.)
+- Updated "OggFileParser" to protect against erroneous files that have "number_page_segments"
+  set to 0.  (Thanks to Yiyi Wang, Tsinghua University, for reporting this issue.)
+- Made the parsing of MP3 audio files more robust to protect against malformed MP3 data.
+  (Thanks to "aukes.com" for reporting this.)
+- Minor change to "testProgs/testRTSPClient.cpp" to make compiling on Mac OS X happier.</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 879bdb103c66cbf9dc2e038376ad55a7</li>
+<li>sha256: ee0e1387747d5fea46f4652249e13020714635fff1f507917122df86b58bd1cd</li>
+<li>sha512: bc0bcbb4e9d891ecf633df3a39550cad5e8bb3a87d9f9c79b947dca8c0625304c797393f8de21c1a0d9838340fcde866e17259294ebfc36d9e0c2e191ae4c1aa</li>
+</ul>
 <h2 id='2026.06.01'>2026.06.01</h2>
 <ul>
 <li>size: 677 K</li>
