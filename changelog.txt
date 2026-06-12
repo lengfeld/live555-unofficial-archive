@@ -1,3 +1,16 @@
+2026-06-12:
+- Fixed "MatroskaFileParser" to properly handle parsed strings and binary values whose
+  size would be too large for a 32-bit integer.
+  (Thanks to Yiyi Wang, Tsinghua University, for reporting this issue.)
+- Updated "MatroskaFileParser" to check for erroneous files that have more than one track number
+  for the same track.  (This could have caused the same "MatroskaTrack" structure to be inserted
+  into a hash table more than once, possibly leading to a use-after-free error.)
+  (Thanks to Yiyi Wang, Tsinghua University, for reporting this issue.)
+- Updated "OggFileParser" to protect against erroneous files that have "number_page_segments"
+  set to 0.  (Thanks to Yiyi Wang, Tsinghua University, for reporting this issue.)
+- Made the parsing of MP3 audio files more robust to protect against malformed MP3 data.
+  (Thanks to "aukes.com" for reporting this.)
+- Minor change to "testProgs/testRTSPClient.cpp" to make compiling on Mac OS X happier.
 2026-06-01:
 - Updated the "RTSPServer" implementation of the "SETUP" command to make it more robust if
   subclassed code reimplements "lookupServerMediaSession()" as an asynchronous operation.

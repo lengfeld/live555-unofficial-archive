@@ -1,3 +1,28 @@
+commit 6c71336070ffad2b90e3e01b27004064ec3a4bf8
+tree 6367fcde3fa74fab7f43bb9bb75dfd62724972fd
+parent 932cf49eeb5881578212cb78717c1dfea77071bc
+author Live Networks, Inc <invalid@example.com> 1781222400 +0000
+committer live555-unofficial-archive <invalid@example.com> 1781222400 +0000
+
+    unpack live.2026.06.12.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed "MatroskaFileParser" to properly handle parsed strings and binary values whose
+      size would be too large for a 32-bit integer.
+      (Thanks to Yiyi Wang, Tsinghua University, for reporting this issue.)
+    - Updated "MatroskaFileParser" to check for erroneous files that have more than one track number
+      for the same track.  (This could have caused the same "MatroskaTrack" structure to be inserted
+      into a hash table more than once, possibly leading to a use-after-free error.)
+      (Thanks to Yiyi Wang, Tsinghua University, for reporting this issue.)
+    - Updated "OggFileParser" to protect against erroneous files that have "number_page_segments"
+      set to 0.  (Thanks to Yiyi Wang, Tsinghua University, for reporting this issue.)
+    - Made the parsing of MP3 audio files more robust to protect against malformed MP3 data.
+      (Thanks to "aukes.com" for reporting this.)
+    - Minor change to "testProgs/testRTSPClient.cpp" to make compiling on Mac OS X happier.
+
 commit 932cf49eeb5881578212cb78717c1dfea77071bc
 tree bb200c4fd77e5b43005a3f73d0cd61de6eefac24
 parent efa2704a417f9aac851aa06a5c0898ef8a500abf
