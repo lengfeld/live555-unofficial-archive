@@ -1,3 +1,20 @@
+commit 92d2620fd100dbc986f3be06507e52e673bc1990
+tree f2457601ae416d5d7163fcbe663bfa5e1551c1b0
+parent 6c71336070ffad2b90e3e01b27004064ec3a4bf8
+author Live Networks, Inc <invalid@example.com> 1782259200 +0000
+committer live555-unofficial-archive <invalid@example.com> 1782259200 +0000
+
+    unpack live.2026.06.24.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Added "-std=c++20" to the "CPLUSPLUS_FLAGS" line in each "config.*" file, so that
+      "std::atomic_flag::test" will compile with compilers that support the "-std=c++20" flag.
+      (For those compilers that don't support this, you'll need to define "NO_STD_LIB".,
+      as noted in the FAQ)  (Thanks to Thomas Devoogdt.)
+
 commit 6c71336070ffad2b90e3e01b27004064ec3a4bf8
 tree 6367fcde3fa74fab7f43bb9bb75dfd62724972fd
 parent 932cf49eeb5881578212cb78717c1dfea77071bc

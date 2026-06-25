@@ -1,4 +1,9 @@
-2026-06-12:
+2026.06.24:
+- Added "-std=c++20" to the "CPLUSPLUS_FLAGS" line in each "config.*" file, so that
+  "std::atomic_flag::test" will compile with compilers that support the "-std=c++20" flag.
+  (For those compilers that don't support this, you'll need to define "NO_STD_LIB".,
+  as noted in the FAQ)  (Thanks to Thomas Devoogdt.)
+2026.06.12:
 - Fixed "MatroskaFileParser" to properly handle parsed strings and binary values whose
   size would be too large for a 32-bit integer.
   (Thanks to Yiyi Wang, Tsinghua University, for reporting this issue.)
@@ -11,14 +16,14 @@
 - Made the parsing of MP3 audio files more robust to protect against malformed MP3 data.
   (Thanks to "aukes.com" for reporting this.)
 - Minor change to "testProgs/testRTSPClient.cpp" to make compiling on Mac OS X happier.
-2026-06-01:
+2026.06.01:
 - Updated the "RTSPServer" implementation of the "SETUP" command to make it more robust if
   subclassed code reimplements "lookupServerMediaSession()" as an asynchronous operation.
   (Thanks to Dirk Mueller for reporting this issue.)
-2026-05-30:
+2026.05.30:
 - Updated the "RTSPServer" implementation some more to make it more robust if
   subclassed code reimplements "lookupServerMediaSession()" as an asynchronous operation.
-2026-05-29:
+2026.05.29:
 - Added an (integer) index to identify each server's 'client connection', and changed
   the "fClientConnections" table to be indexed by this id.
 - In the "RTSPServer" implementation, removed the "fOurClientConnection" member variable.
@@ -28,10 +33,10 @@
   variable was potentially dangerous if more than one "SETUP" is performed concurrently on
   the same client connection, or on separate client connections.
   (Thanks to Dirk Mueller for reporting this issue.)
-2026-05-28:
+2026.05.28:
 - Fixed a typo (in the handling of "SET_PARAMETER") that was accidentally introduced in the
   previous release.  (Thanks to Dirk Mueller for reporting this.)
-2026-04-22:
+2026.04.22:
 - Added extra checking to the handling of the RTSP server's "PLAY", "PAUSE", "TEARDOWN", and
   "SET_PARAMETER" commands, to ensure that, if the session is authenticated, then a proper
   authentication check is done before these commands are handled.  This protects against the
@@ -39,23 +44,23 @@
   session is not authenticated (i.e., no username,password is needed), then no such protection
   is possible.)
   (Thanks to CUI Jiyuan for reporting this issue.)
-2026-04-01:
+2026.04.01:
 - Updated the way that the RTSP server generates successive RTSP 'session ids' to make it
   less likely that an attacker could guess a session id.
   (Thanks to 'APEvul Cyber' for reporting this.)
 - Updated the RTSP server implementation to make it possible for a client to request both
   interleaved (i.e., RTP/RTCP-over-TCP) and non-interleaved (i.e., RTP/RTCP-over-UDP) delivery
   within the same session.
-2026-03-23:
+2026.03.23:
 - Fixed a bug in the RTSP server code that caused it to improperly handle non-interleaved
   "SETUP"s that were sent for a session where interleaving (i.e., RTP/RTCP-over-TCP) had
   already been "SETUP".  (This could cause a 'use-after-free' error; thanks to Tianyang Liu
   for reporting this.)
-2026-02-26:
+2026.02.26:
 - Updated "setupDatagramSocket()" and "setupStreamSocket()" (in the "groupsock" library)
   to add the ability to (optionally) call "setSockopt(... SO_BINDTODEVICE ...)"
   on the new socket.  (Thanks to Russell Greene for the suggestion.)
-2026-02-13:
+2026.02.13:
 - Updated the RTSP server's parsing of incoming request strings to (1) reject initial '\0'
   characters in the input, and (2) reject a "CSeq" parameter that is not a numeric string.
   (Thanks to Daniyal Pirwani for reporting this.)

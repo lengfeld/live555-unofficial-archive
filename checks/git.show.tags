@@ -11264,3 +11264,38 @@ Date:   Fri Jun 12 00:00:00 2026 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2026.06.24
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Wed Jun 24 00:00:00 2026 +0000
+
+live555 2026.06.24
+
+commit 92d2620fd100dbc986f3be06507e52e673bc1990
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Wed Jun 24 00:00:00 2026 +0000
+
+    unpack live.2026.06.24.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Added "-std=c++20" to the "CPLUSPLUS_FLAGS" line in each "config.*" file, so that
+      "std::atomic_flag::test" will compile with compilers that support the "-std=c++20" flag.
+      (For those compilers that don't support this, you'll need to define "NO_STD_LIB".,
+      as noted in the FAQ)  (Thanks to Thomas Devoogdt.)
+----
+tag v2026.06.24-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Wed Jun 24 00:00:00 2026 +0000
+
+live555 2026.06.24 from localgetter
+
+commit c900feea69332100b0005193b7adc1eb6c34ed9b
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Wed Jun 24 00:00:00 2026 +0000
+
+    unpack live.2026.06.24.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
