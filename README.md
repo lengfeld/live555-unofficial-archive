@@ -131,3 +131,7 @@ Allow to regenerate the whole 'live555-unofficial-git-archive' git repo. For
 now everything can be generated execpt the 'main-readme' branch.
 
 Add scripts to update other srcs, without redownloading all files existing files.
+
+Adding https://github.com/live555-mirror/live555-mirror/ as a regular comparison.
+* They include regular archive updates with a github action.
+* And I have seen people using them. Referenced by git commit id.
