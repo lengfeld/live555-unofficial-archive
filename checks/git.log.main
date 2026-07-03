@@ -1,3 +1,34 @@
+commit 93fcf71a176bebd295780807ab9fe8abcd48ffe3
+tree 7f55afbbab22c05dea4c20d4b952896016b51c26
+parent 33648a0ecee65a466eeb333d6f47d18f067e4f69
+author Live Networks, Inc <invalid@example.com> 1782950400 +0000
+committer live555-unofficial-archive <invalid@example.com> 1782950400 +0000
+
+    unpack live.2026.07.02.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a typo in "RTSPCommon.cpp": "smtpe" -> "smpte".
+      (Thanks to Zhou Qingyang for reporting this.)
+
+commit 33648a0ecee65a466eeb333d6f47d18f067e4f69
+tree 1dbe74281d119a4c1eb8424b22f60ddbd5f04ce3
+parent 92d2620fd100dbc986f3be06507e52e673bc1990
+author Live Networks, Inc <invalid@example.com> 1782691200 +0000
+committer live555-unofficial-archive <invalid@example.com> 1782691200 +0000
+
+    unpack live.2026.06.29.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the RTSP server implementation to return a "Unsupported Transport" error if
+      a "SETUP" request does not include a "Transport:" header.
+      (Thanks to Bocheng Cao for reporting this.)
+
 commit 92d2620fd100dbc986f3be06507e52e673bc1990
 tree f2457601ae416d5d7163fcbe663bfa5e1551c1b0
 parent 6c71336070ffad2b90e3e01b27004064ec3a4bf8

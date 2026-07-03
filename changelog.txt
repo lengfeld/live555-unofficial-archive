@@ -1,3 +1,10 @@
+2026.07.02:
+- Fixed a typo in "RTSPCommon.cpp": "smtpe" -> "smpte".
+  (Thanks to Zhou Qingyang for reporting this.)
+2026.06.29:
+- Updated the RTSP server implementation to return a "Unsupported Transport" error if
+  a "SETUP" request does not include a "Transport:" header.
+  (Thanks to Bocheng Cao for reporting this.)
 2026.06.24:
 - Added "-std=c++20" to the "CPLUSPLUS_FLAGS" line in each "config.*" file, so that
   "std::atomic_flag::test" will compile with compilers that support the "-std=c++20" flag.

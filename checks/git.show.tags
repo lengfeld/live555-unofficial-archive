@@ -11299,3 +11299,70 @@ Date:   Wed Jun 24 00:00:00 2026 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2026.06.29
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Jun 29 00:00:00 2026 +0000
+
+live555 2026.06.29
+
+commit 33648a0ecee65a466eeb333d6f47d18f067e4f69
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Jun 29 00:00:00 2026 +0000
+
+    unpack live.2026.06.29.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the RTSP server implementation to return a "Unsupported Transport" error if
+      a "SETUP" request does not include a "Transport:" header.
+      (Thanks to Bocheng Cao for reporting this.)
+----
+tag v2026.06.29-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Jun 29 00:00:00 2026 +0000
+
+live555 2026.06.29 from localgetter
+
+commit 9e09fd0f540c34f6e91ba4f0103a1d907410c486
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Jun 29 00:00:00 2026 +0000
+
+    unpack live.2026.06.29.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2026.07.02
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Jul 2 00:00:00 2026 +0000
+
+live555 2026.07.02
+
+commit 93fcf71a176bebd295780807ab9fe8abcd48ffe3
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Jul 2 00:00:00 2026 +0000
+
+    unpack live.2026.07.02.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a typo in "RTSPCommon.cpp": "smtpe" -> "smpte".
+      (Thanks to Zhou Qingyang for reporting this.)
+----
+tag v2026.07.02-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Jul 2 00:00:00 2026 +0000
+
+live555 2026.07.02 from localgetter
+
+commit eff687c22ad8b3e4390488d24b21d9e450a030a9
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Jul 2 00:00:00 2026 +0000
+
+    unpack live.2026.07.02.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
