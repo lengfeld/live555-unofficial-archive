@@ -6,6 +6,24 @@
 </head>
 <body>
 <h1>live555 unofficial archive - list</h1>
+<h2 id='2026.07.04'>2026.07.04</h2>
+<ul>
+<li>size: 677 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/localgetter/live.2026.07.04.tar.gz'>live.2026.07.04.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2026.07.04'>v2026.07.04</a></li>
+<li>git diff link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/compare/v2026.07.02..v2026.07.04'>v2026.07.02..v2026.07.04</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- In "RTSPServer.cpp", move the test for an existing 'stream token' (i.e., whether we're trying
+  to "SETUP" the same stream from the same client more than once) to just before the call
+  to "getStreamParameters()", so that the existing 'stream token' doesn't accidentally get
+  used after being deleted.  (Thanks to Zhou Qingyang for reporting this.)</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 4a0802e0d6d4b6fcffe070e48b82f930</li>
+<li>sha256: b89b425ec6fedaa4dc0b478ba9146a431b265f5352cb17fc44c14402c512e378</li>
+<li>sha512: 6df0c1270fe1d4e6e1d60a1ea1995221e6d41096568ca5dd872cc1a255a35789bccde19d92f12e334498e750036bf5afbfffd1da850a379aad4519b9a39ec5ef</li>
+</ul>
 <h2 id='2026.07.02'>2026.07.02</h2>
 <ul>
 <li>size: 677 K</li>
