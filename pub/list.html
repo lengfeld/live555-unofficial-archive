@@ -6,6 +6,41 @@
 </head>
 <body>
 <h1>live555 unofficial archive - list</h1>
+<h2 id='2026.07.06'>2026.07.06</h2>
+<ul>
+<li>size: 677 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/localgetter/live.2026.07.06.tar.gz'>live.2026.07.06.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2026.07.06'>v2026.07.06</a></li>
+<li>git diff link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/compare/v2026.07.04..v2026.07.06'>v2026.07.04..v2026.07.06</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- When adding protection against the use of 'stolen' RTSP session ids (in version 2026.04.22),
+  we forgot to do so for every "SETUP" command.  This release fixes that.
+  (Thanks to Zhou Qingyang for reporting this.)</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: e671318e2afe42afcfc784538e0f0e09</li>
+<li>sha256: 1f2cfd356a4baf6539bd76110b67e5058fd99d44ee983d6fff73e4756ecf817e</li>
+<li>sha512: 14107981c698263882b8442f21850b5a81f40f62d79e30dac31c12f4f97d1c35ef599aa2f73e4a72eccb831efa76109b9742efa9e2f0e458e0401353db5ea810</li>
+</ul>
+<h2 id='2026.07.04'>2026.07.04</h2>
+<ul>
+<li>size: 677 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/localgetter/live.2026.07.04.tar.gz'>live.2026.07.04.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2026.07.04'>v2026.07.04</a></li>
+<li>git diff link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/compare/v2026.07.02..v2026.07.04'>v2026.07.02..v2026.07.04</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- In "RTSPServer.cpp", move the test for an existing 'stream token' (i.e., whether we're trying
+  to "SETUP" the same stream from the same client more than once) to just before the call
+  to "getStreamParameters()", so that the existing 'stream token' doesn't accidentally get
+  used after being deleted.  (Thanks to Zhou Qingyang for reporting this.)</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 4a0802e0d6d4b6fcffe070e48b82f930</li>
+<li>sha256: b89b425ec6fedaa4dc0b478ba9146a431b265f5352cb17fc44c14402c512e378</li>
+<li>sha512: 6df0c1270fe1d4e6e1d60a1ea1995221e6d41096568ca5dd872cc1a255a35789bccde19d92f12e334498e750036bf5afbfffd1da850a379aad4519b9a39ec5ef</li>
+</ul>
 <h2 id='2026.07.02'>2026.07.02</h2>
 <ul>
 <li>size: 677 K</li>

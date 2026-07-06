@@ -1,3 +1,36 @@
+commit 552a2f3d1c199044f18bb307f2b602a0d06b331a
+tree 289537ad653a085171662e6b1a67e89e843065bd
+parent 4bad1f022b7f8eb66b085c197adede05b40ad805
+author Live Networks, Inc <invalid@example.com> 1783296000 +0000
+committer live555-unofficial-archive <invalid@example.com> 1783296000 +0000
+
+    unpack live.2026.07.06.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - When adding protection against the use of 'stolen' RTSP session ids (in version 2026.04.22),
+      we forgot to do so for every "SETUP" command.  This release fixes that.
+      (Thanks to Zhou Qingyang for reporting this.)
+
+commit 4bad1f022b7f8eb66b085c197adede05b40ad805
+tree 0fe5c17a70c5293111ebea5172b183f7e2d9d74c
+parent 93fcf71a176bebd295780807ab9fe8abcd48ffe3
+author Live Networks, Inc <invalid@example.com> 1783123200 +0000
+committer live555-unofficial-archive <invalid@example.com> 1783123200 +0000
+
+    unpack live.2026.07.04.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - In "RTSPServer.cpp", move the test for an existing 'stream token' (i.e., whether we're trying
+      to "SETUP" the same stream from the same client more than once) to just before the call
+      to "getStreamParameters()", so that the existing 'stream token' doesn't accidentally get
+      used after being deleted.  (Thanks to Zhou Qingyang for reporting this.)
+
 commit 93fcf71a176bebd295780807ab9fe8abcd48ffe3
 tree 7f55afbbab22c05dea4c20d4b952896016b51c26
 parent 33648a0ecee65a466eeb333d6f47d18f067e4f69

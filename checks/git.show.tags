@@ -11366,3 +11366,72 @@ Date:   Thu Jul 2 00:00:00 2026 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2026.07.04
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sat Jul 4 00:00:00 2026 +0000
+
+live555 2026.07.04
+
+commit 4bad1f022b7f8eb66b085c197adede05b40ad805
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sat Jul 4 00:00:00 2026 +0000
+
+    unpack live.2026.07.04.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - In "RTSPServer.cpp", move the test for an existing 'stream token' (i.e., whether we're trying
+      to "SETUP" the same stream from the same client more than once) to just before the call
+      to "getStreamParameters()", so that the existing 'stream token' doesn't accidentally get
+      used after being deleted.  (Thanks to Zhou Qingyang for reporting this.)
+----
+tag v2026.07.04-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sat Jul 4 00:00:00 2026 +0000
+
+live555 2026.07.04 from localgetter
+
+commit 18079833ccc4c40aec8a7ba72994caa278d197d5
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sat Jul 4 00:00:00 2026 +0000
+
+    unpack live.2026.07.04.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2026.07.06
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Jul 6 00:00:00 2026 +0000
+
+live555 2026.07.06
+
+commit 552a2f3d1c199044f18bb307f2b602a0d06b331a
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Jul 6 00:00:00 2026 +0000
+
+    unpack live.2026.07.06.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - When adding protection against the use of 'stolen' RTSP session ids (in version 2026.04.22),
+      we forgot to do so for every "SETUP" command.  This release fixes that.
+      (Thanks to Zhou Qingyang for reporting this.)
+----
+tag v2026.07.06-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Jul 6 00:00:00 2026 +0000
+
+live555 2026.07.06 from localgetter
+
+commit a7a01ea96ba9e607f9a0e96de0c8d9eb1810552e
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Jul 6 00:00:00 2026 +0000
+
+    unpack live.2026.07.06.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----

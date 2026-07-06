@@ -1,3 +1,12 @@
+2026.07.06:
+- When adding protection against the use of 'stolen' RTSP session ids (in version 2026.04.22),
+  we forgot to do so for every "SETUP" command.  This release fixes that.
+  (Thanks to Zhou Qingyang for reporting this.)
+2026.07.04:
+- In "RTSPServer.cpp", move the test for an existing 'stream token' (i.e., whether we're trying
+  to "SETUP" the same stream from the same client more than once) to just before the call
+  to "getStreamParameters()", so that the existing 'stream token' doesn't accidentally get
+  used after being deleted.  (Thanks to Zhou Qingyang for reporting this.)
 2026.07.02:
 - Fixed a typo in "RTSPCommon.cpp": "smtpe" -> "smpte".
   (Thanks to Zhou Qingyang for reporting this.)
