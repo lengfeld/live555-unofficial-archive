@@ -1,3 +1,19 @@
+commit 4c71320c59c4d099706be32e3216afc1abe56df3
+tree 338c09359daeebf9ff06eb31a570c3fd23da35ac
+parent 552a2f3d1c199044f18bb307f2b602a0d06b331a
+author Live Networks, Inc <invalid@example.com> 1783468800 +0000
+committer live555-unofficial-archive <invalid@example.com> 1783468800 +0000
+
+    unpack live.2026.07.08.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the RTSP server's handling of 'RTSP-over-HTTP' tunneling to ensure that each
+      "RTSPClientConnection" can have only one 'session cookie' in use at each time.
+      (This fixes a bug noted by Zhou Qingyang.)
+
 commit 552a2f3d1c199044f18bb307f2b602a0d06b331a
 tree 289537ad653a085171662e6b1a67e89e843065bd
 parent 4bad1f022b7f8eb66b085c197adede05b40ad805

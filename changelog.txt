@@ -1,3 +1,7 @@
+2026.07.08:
+- Updated the RTSP server's handling of 'RTSP-over-HTTP' tunneling to ensure that each
+  "RTSPClientConnection" can have only one 'session cookie' in use at each time.
+  (This fixes a bug noted by Zhou Qingyang.)
 2026.07.06:
 - When adding protection against the use of 'stolen' RTSP session ids (in version 2026.04.22),
   we forgot to do so for every "SETUP" command.  This release fixes that.
