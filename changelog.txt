@@ -1,3 +1,8 @@
+2026.07.23:
+- Fixed a memory leak that could occur when parsing a SDP description that contains two or more
+  "a=range" lines.  (Thanks to Jason Kao for reporting this.)
+- Updated the "parseTransportHeader()" function (in the "RTSPServer" implementation) to
+  reject several kinds of invalid "Transport:" headers (noted by Zhou Qingyang).
 2026.07.08:
 - Updated the RTSP server's handling of 'RTSP-over-HTTP' tunneling to ensure that each
   "RTSPClientConnection" can have only one 'session cookie' in use at each time.

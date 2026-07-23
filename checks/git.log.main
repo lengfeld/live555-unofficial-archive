@@ -1,3 +1,20 @@
+commit aa9d29c687f643ad20f5a507cd1bcc70bb70bc2f
+tree f7c3ee84e323a5a21a2c962094c44dac428ef459
+parent 4c71320c59c4d099706be32e3216afc1abe56df3
+author Live Networks, Inc <invalid@example.com> 1784764800 +0000
+committer live555-unofficial-archive <invalid@example.com> 1784764800 +0000
+
+    unpack live.2026.07.23.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a memory leak that could occur when parsing a SDP description that contains two or more
+      "a=range" lines.  (Thanks to Jason Kao for reporting this.)
+    - Updated the "parseTransportHeader()" function (in the "RTSPServer" implementation) to
+      reject several kinds of invalid "Transport:" headers (noted by Zhou Qingyang).
+
 commit 4c71320c59c4d099706be32e3216afc1abe56df3
 tree 338c09359daeebf9ff06eb31a570c3fd23da35ac
 parent 552a2f3d1c199044f18bb307f2b602a0d06b331a
