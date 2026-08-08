@@ -1,3 +1,18 @@
+commit 4cdadd07dd21c1156ae04219915b4bff0276efc5
+tree 632e775504acd719a7ab1a941cf09cc52a2fa53a
+parent aa9d29c687f643ad20f5a507cd1bcc70bb70bc2f
+author Live Networks, Inc <invalid@example.com> 1786060800 +0000
+committer live555-unofficial-archive <invalid@example.com> 1786060800 +0000
+
+    unpack live.2026.08.07.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed old code in "GroupsockHelper.cpp" that was using hardcoded numeric error numbers
+      (intended to work around bugs in Linux that might not exist anymore) with textual error names.
+
 commit aa9d29c687f643ad20f5a507cd1bcc70bb70bc2f
 tree f7c3ee84e323a5a21a2c962094c44dac428ef459
 parent 4c71320c59c4d099706be32e3216afc1abe56df3

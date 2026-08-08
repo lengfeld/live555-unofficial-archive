@@ -1,3 +1,6 @@
+2026.08.07:
+- Fixed old code in "GroupsockHelper.cpp" that was using hardcoded numeric error numbers
+  (intended to work around bugs in Linux that might not exist anymore) with textual error names.
 2026.07.23:
 - Fixed a memory leak that could occur when parsing a SDP description that contains two or more
   "a=range" lines.  (Thanks to Jason Kao for reporting this.)
