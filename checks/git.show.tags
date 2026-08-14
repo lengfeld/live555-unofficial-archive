@@ -11537,3 +11537,36 @@ Date:   Fri Aug 7 00:00:00 2026 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2026.08.14
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Fri Aug 14 00:00:00 2026 +0000
+
+live555 2026.08.14
+
+commit a00042c861529485ff9c2c572749865805334c23
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Fri Aug 14 00:00:00 2026 +0000
+
+    unpack live.2026.08.14.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a bug that could cause a problem with subclassed variants of H.264 or H.265 RTP sinks.
+      (Thanks to Will Odwyer for reporting this.)
+----
+tag v2026.08.14-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Fri Aug 14 00:00:00 2026 +0000
+
+live555 2026.08.14 from localgetter
+
+commit 7515908ddf906dde65d6f65931897d46a3ebe54c
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Fri Aug 14 00:00:00 2026 +0000
+
+    unpack live.2026.08.14.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----

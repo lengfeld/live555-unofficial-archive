@@ -1,3 +1,6 @@
+2026.08.14:
+- Fixed a bug that could cause a problem with subclassed variants of H.264 or H.265 RTP sinks.
+  (Thanks to Will Odwyer for reporting this.)
 2026.08.07:
 - Fixed old code in "GroupsockHelper.cpp" that was using hardcoded numeric error numbers
   (intended to work around bugs in Linux that might not exist anymore) with textual error names.

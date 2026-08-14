@@ -1,3 +1,18 @@
+commit a00042c861529485ff9c2c572749865805334c23
+tree 911c5912b82097562ef13d0f5d1a21fb7686a7dd
+parent 4cdadd07dd21c1156ae04219915b4bff0276efc5
+author Live Networks, Inc <invalid@example.com> 1786665600 +0000
+committer live555-unofficial-archive <invalid@example.com> 1786665600 +0000
+
+    unpack live.2026.08.14.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a bug that could cause a problem with subclassed variants of H.264 or H.265 RTP sinks.
+      (Thanks to Will Odwyer for reporting this.)
+
 commit 4cdadd07dd21c1156ae04219915b4bff0276efc5
 tree 632e775504acd719a7ab1a941cf09cc52a2fa53a
 parent aa9d29c687f643ad20f5a507cd1bcc70bb70bc2f
