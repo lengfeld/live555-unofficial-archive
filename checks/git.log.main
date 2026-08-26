@@ -1,3 +1,18 @@
+commit 03015a0ae5ab3a1c53106eb938213d0d05e16f1e
+tree ab0615dbb34a01c40abe6d9c9d27c1f8c3356a85
+parent a00042c861529485ff9c2c572749865805334c23
+author Live Networks, Inc <invalid@example.com> 1787616000 +0000
+committer live555-unofficial-archive <invalid@example.com> 1787616000 +0000
+
+    unpack live.2026.08.25.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a bug in "VorbisAudioRTPSource" that could have caused a malicious SDP description to
+      crash a RTP client.  (Thanks to 'Tristan' for reporting this.)
+
 commit a00042c861529485ff9c2c572749865805334c23
 tree 911c5912b82097562ef13d0f5d1a21fb7686a7dd
 parent 4cdadd07dd21c1156ae04219915b4bff0276efc5

@@ -1,3 +1,6 @@
+2026.08.25:
+- Fixed a bug in "VorbisAudioRTPSource" that could have caused a malicious SDP description to
+  crash a RTP client.  (Thanks to 'Tristan' for reporting this.)
 2026.08.14:
 - Fixed a bug that could cause a problem with subclassed variants of H.264 or H.265 RTP sinks.
   (Thanks to Will Odwyer for reporting this.)
