@@ -1,3 +1,18 @@
+commit 9699e063c5f098d4a54c74bf4a2dd02d4f650caf
+tree f48f2679a5bc3b8142bf105f85e729d4a81d73d2
+parent 03015a0ae5ab3a1c53106eb938213d0d05e16f1e
+author Live Networks, Inc <invalid@example.com> 1789948800 +0000
+committer live555-unofficial-archive <invalid@example.com> 1789948800 +0000
+
+    unpack live.2026.09.21.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a bug in "JPEGVideoRTPSource" that could have caused a malicious server to overflow
+      a buffer.  (Thanks to Alexandru-Ionut Jipa for reporting this.)
+
 commit 03015a0ae5ab3a1c53106eb938213d0d05e16f1e
 tree ab0615dbb34a01c40abe6d9c9d27c1f8c3356a85
 parent a00042c861529485ff9c2c572749865805334c23

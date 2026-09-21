@@ -11603,3 +11603,36 @@ Date:   Tue Aug 25 00:00:00 2026 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2026.09.21
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Sep 21 00:00:00 2026 +0000
+
+live555 2026.09.21
+
+commit 9699e063c5f098d4a54c74bf4a2dd02d4f650caf
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Sep 21 00:00:00 2026 +0000
+
+    unpack live.2026.09.21.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a bug in "JPEGVideoRTPSource" that could have caused a malicious server to overflow
+      a buffer.  (Thanks to Alexandru-Ionut Jipa for reporting this.)
+----
+tag v2026.09.21-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Mon Sep 21 00:00:00 2026 +0000
+
+live555 2026.09.21 from localgetter
+
+commit 642db9967cbff3dca3ae9ea1c0843ed072643300
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Mon Sep 21 00:00:00 2026 +0000
+
+    unpack live.2026.09.21.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
