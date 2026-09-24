@@ -1,3 +1,8 @@
+2026.09.23:
+- When "RTSPClient" gets a "303" (REDIRECT) response, then we now reset our Authenticator before
+  resending the command.  Thanks to Juan Pablo Lopez Yacubian for reporting this.
+- Added some bulletproofing to the "SDPAttribute" constructor (in "MediaSession.cpp") and the
+  "RTSPClient" code to address potential issues noted by Alexandru-Ionut Jipa.
 2026.09.21:
 - Fixed a bug in "JPEGVideoRTPSource" that could have caused a malicious server to overflow
   a buffer.  (Thanks to Alexandru-Ionut Jipa for reporting this.)
