@@ -1,3 +1,19 @@
+commit 86f828e511ddbde8d93b8e5b61762dbd2b170624
+tree cc25bc311bce377640d21d3f1fa60424e1938fc9
+parent b1bcfe0a679cc3e3ab1bed4c408443d7eb140b0b
+author Live Networks, Inc <invalid@example.com> 1791849600 +0000
+committer live555-unofficial-archive <invalid@example.com> 1791849600 +0000
+
+    unpack live.2026.10.13.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the "H263plusVideoRTPSource" code to protect against a malicious series of
+      incoming packets possibly overflowing a buffer.
+      (Thanks to Eun0us/Espilon for reporting this.)
+
 commit b1bcfe0a679cc3e3ab1bed4c408443d7eb140b0b
 tree e669d17fdcee0601d6eb4d4dd0bca98350b73c7c
 parent 9699e063c5f098d4a54c74bf4a2dd02d4f650caf

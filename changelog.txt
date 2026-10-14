@@ -1,3 +1,7 @@
+2026.10.13:
+- Updated the "H263plusVideoRTPSource" code to protect against a malicious series of
+  incoming packets possibly overflowing a buffer.
+  (Thanks to Eun0us/Espilon for reporting this.)
 2026.09.23:
 - When "RTSPClient" gets a "303" (REDIRECT) response, then we now reset our Authenticator before
   resending the command.  Thanks to Juan Pablo Lopez Yacubian for reporting this.

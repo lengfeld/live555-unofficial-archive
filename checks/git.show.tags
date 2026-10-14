@@ -11671,3 +11671,37 @@ Date:   Wed Sep 23 00:00:00 2026 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2026.10.13
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Tue Oct 13 00:00:00 2026 +0000
+
+live555 2026.10.13
+
+commit 86f828e511ddbde8d93b8e5b61762dbd2b170624
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Tue Oct 13 00:00:00 2026 +0000
+
+    unpack live.2026.10.13.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the "H263plusVideoRTPSource" code to protect against a malicious series of
+      incoming packets possibly overflowing a buffer.
+      (Thanks to Eun0us/Espilon for reporting this.)
+----
+tag v2026.10.13-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Tue Oct 13 00:00:00 2026 +0000
+
+live555 2026.10.13 from localgetter
+
+commit d00664721aa163efd652dafa7047e57990059a6a
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Tue Oct 13 00:00:00 2026 +0000
+
+    unpack live.2026.10.13.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
