@@ -1,3 +1,10 @@
+2026.10.17:
+- Updated the code in "MatroskaFile::createRTPSinkForTrackNumber()" to address a CVE
+  (CVE-2025-65406) that had apparently been reported against some rando's GitHub copy of
+  our code, instead of being reported to us.
+- Cleaned up the code in "BasicTaskScheduler::SingleStep()" that prints out the socket
+  numbers that were used in a "select()" call - if it unexpectedly fails - because someone
+  apparently filed a silly CVE about this.
 2026.10.13:
 - Updated the "H263plusVideoRTPSource" code to protect against a malicious series of
   incoming packets possibly overflowing a buffer.

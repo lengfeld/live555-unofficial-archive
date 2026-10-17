@@ -1,3 +1,22 @@
+commit 2a2f3d4a0d573d82498cf927d5e836d356452f73
+tree 62cf41e38b5dfab0ca52376cf371e8bed936f6c4
+parent 86f828e511ddbde8d93b8e5b61762dbd2b170624
+author Live Networks, Inc <invalid@example.com> 1792195200 +0000
+committer live555-unofficial-archive <invalid@example.com> 1792195200 +0000
+
+    unpack live.2026.10.17.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the code in "MatroskaFile::createRTPSinkForTrackNumber()" to address a CVE
+      (CVE-2025-65406) that had apparently been reported against some rando's GitHub copy of
+      our code, instead of being reported to us.
+    - Cleaned up the code in "BasicTaskScheduler::SingleStep()" that prints out the socket
+      numbers that were used in a "select()" call - if it unexpectedly fails - because someone
+      apparently filed a silly CVE about this.
+
 commit 86f828e511ddbde8d93b8e5b61762dbd2b170624
 tree cc25bc311bce377640d21d3f1fa60424e1938fc9
 parent b1bcfe0a679cc3e3ab1bed4c408443d7eb140b0b

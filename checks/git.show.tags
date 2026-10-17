@@ -11705,3 +11705,40 @@ Date:   Tue Oct 13 00:00:00 2026 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2026.10.17
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sat Oct 17 00:00:00 2026 +0000
+
+live555 2026.10.17
+
+commit 2a2f3d4a0d573d82498cf927d5e836d356452f73
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sat Oct 17 00:00:00 2026 +0000
+
+    unpack live.2026.10.17.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Updated the code in "MatroskaFile::createRTPSinkForTrackNumber()" to address a CVE
+      (CVE-2025-65406) that had apparently been reported against some rando's GitHub copy of
+      our code, instead of being reported to us.
+    - Cleaned up the code in "BasicTaskScheduler::SingleStep()" that prints out the socket
+      numbers that were used in a "select()" call - if it unexpectedly fails - because someone
+      apparently filed a silly CVE about this.
+----
+tag v2026.10.17-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sat Oct 17 00:00:00 2026 +0000
+
+live555 2026.10.17 from localgetter
+
+commit 87f9f64ab62abbddab2f2915b5cc127af85c9129
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sat Oct 17 00:00:00 2026 +0000
+
+    unpack live.2026.10.17.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
