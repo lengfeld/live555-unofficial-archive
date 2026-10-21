@@ -11742,3 +11742,37 @@ Date:   Sat Oct 17 00:00:00 2026 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2026.10.21
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Wed Oct 21 00:00:00 2026 +0000
+
+live555 2026.10.21
+
+commit cb3981b2ee34e9ddb732efb79eb649ef057d8795
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Wed Oct 21 00:00:00 2026 +0000
+
+    unpack live.2026.10.21.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a bug that could possibly allow a malicious client to cause a RTSP server to crash
+      when streaming from an AC-3 audio file.
+      (Thanks to Abdullah Al Ishtiaq for reporting this issue.)
+----
+tag v2026.10.21-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Wed Oct 21 00:00:00 2026 +0000
+
+live555 2026.10.21 from localgetter
+
+commit 27b50bdfc844513b8ad6b9befa60312467abe55c
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Wed Oct 21 00:00:00 2026 +0000
+
+    unpack live.2026.10.21.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----

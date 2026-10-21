@@ -1,3 +1,7 @@
+2026.10.21:
+- Fixed a bug that could possibly allow a malicious client to cause a RTSP server to crash
+  when streaming from an AC-3 audio file.
+  (Thanks to Abdullah Al Ishtiaq for reporting this issue.)
 2026.10.17:
 - Updated the code in "MatroskaFile::createRTPSinkForTrackNumber()" to address a CVE
   (CVE-2025-65406) that had apparently been reported against some rando's GitHub copy of

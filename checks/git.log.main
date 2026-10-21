@@ -1,3 +1,19 @@
+commit cb3981b2ee34e9ddb732efb79eb649ef057d8795
+tree 0ffcb8320b8d25e645b4cb62c8d349f3215dfc98
+parent 2a2f3d4a0d573d82498cf927d5e836d356452f73
+author Live Networks, Inc <invalid@example.com> 1792540800 +0000
+committer live555-unofficial-archive <invalid@example.com> 1792540800 +0000
+
+    unpack live.2026.10.21.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a bug that could possibly allow a malicious client to cause a RTSP server to crash
+      when streaming from an AC-3 audio file.
+      (Thanks to Abdullah Al Ishtiaq for reporting this issue.)
+
 commit 2a2f3d4a0d573d82498cf927d5e836d356452f73
 tree 62cf41e38b5dfab0ca52376cf371e8bed936f6c4
 parent 86f828e511ddbde8d93b8e5b61762dbd2b170624
