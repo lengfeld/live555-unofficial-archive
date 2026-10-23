@@ -6,6 +6,42 @@
 </head>
 <body>
 <h1>live555 unofficial archive - list</h1>
+<h2 id='2026.10.23'>2026.10.23</h2>
+<ul>
+<li>size: 678 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/localgetter/live.2026.10.23.tar.gz'>live.2026.10.23.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2026.10.23'>v2026.10.23</a></li>
+<li>git diff link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/compare/v2026.10.22..v2026.10.23'>v2026.10.22..v2026.10.23</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- The bug fix in version 2026.10.21 was not complete.  This should fix it for real.</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: f517d29aaa8c5a8526cacf0c2e147176</li>
+<li>sha256: edb5cc03ab575127d1ac880d12171da8188fad795cfc2fa7767917975a3785af</li>
+<li>sha512: 708a23ab5add48af33f9886cb3f2ae911ff7f880129a16b93da332232da97a8f6229060dad973b2d8b1ea3fdfc36292080f96d94bf35c6b59f1a845370e5a1b9</li>
+</ul>
+<h2 id='2026.10.22'>2026.10.22</h2>
+<ul>
+<li>size: 677 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/localgetter/live.2026.10.22.tar.gz'>live.2026.10.22.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2026.10.22'>v2026.10.22</a></li>
+<li>git diff link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/compare/v2026.10.21..v2026.10.22'>v2026.10.21..v2026.10.22</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Fixed a bug that had accidentally been introduced in version 2026.07.23: We now correctly
+  parse the "RTP/SAVP" and "RTP/SAVP/TCP" profile strings.
+- When a RTSP server is asked to stream RTP/RTSP-over-TCP, we don't record the TCP socket
+  number to use when we're processing the "SETUP" command.  Instead, we have to wait until
+  we're processing the "PLAY" command, because the "PLAY" command might be using a different
+  TCP connection (and thus a different socket number).
+  (Thanks to Abdullah Al Ishtiaq for reporting this issue.)</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 7eda5ecaa96b00fedece9f5892c74f48</li>
+<li>sha256: 248b3968bb095ad93fd592ee35f438748b0064a98bba3740a6467ff2a7f4bec3</li>
+<li>sha512: 4768509732073f37cdd89bdbc6553f75b59f2066d5543117a073a5d5cfd50259c12d53aca9da82ed07ead0d53eccd7b487dca9c467bb0ec984798b8a4d03e5d6</li>
+</ul>
 <h2 id='2026.10.21'>2026.10.21</h2>
 <ul>
 <li>size: 677 K</li>

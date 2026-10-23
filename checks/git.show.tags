@@ -11776,3 +11776,73 @@ Date:   Wed Oct 21 00:00:00 2026 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2026.10.22
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Oct 22 00:00:00 2026 +0000
+
+live555 2026.10.22
+
+commit 9bf39e997ca0c27b8170074a19e2f452c99d268f
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Oct 22 00:00:00 2026 +0000
+
+    unpack live.2026.10.22.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed a bug that had accidentally been introduced in version 2026.07.23: We now correctly
+      parse the "RTP/SAVP" and "RTP/SAVP/TCP" profile strings.
+    - When a RTSP server is asked to stream RTP/RTSP-over-TCP, we don't record the TCP socket
+      number to use when we're processing the "SETUP" command.  Instead, we have to wait until
+      we're processing the "PLAY" command, because the "PLAY" command might be using a different
+      TCP connection (and thus a different socket number).
+      (Thanks to Abdullah Al Ishtiaq for reporting this issue.)
+----
+tag v2026.10.22-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Oct 22 00:00:00 2026 +0000
+
+live555 2026.10.22 from localgetter
+
+commit 7004ec86b411c9681459a09959e010f01265c8ed
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Oct 22 00:00:00 2026 +0000
+
+    unpack live.2026.10.22.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
+tag v2026.10.23
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Fri Oct 23 00:00:00 2026 +0000
+
+live555 2026.10.23
+
+commit bdebc75c6878e4ad258a46a0afd848fdb0b70457
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Fri Oct 23 00:00:00 2026 +0000
+
+    unpack live.2026.10.23.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - The bug fix in version 2026.10.21 was not complete.  This should fix it for real.
+----
+tag v2026.10.23-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Fri Oct 23 00:00:00 2026 +0000
+
+live555 2026.10.23 from localgetter
+
+commit 5cedfb2b95212baa98c2b3fde9b3b0be6f6a3ede
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Fri Oct 23 00:00:00 2026 +0000
+
+    unpack live.2026.10.23.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----

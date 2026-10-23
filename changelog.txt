@@ -1,3 +1,13 @@
+2026.10.23:
+- The bug fix in version 2026.10.21 was not complete.  This should fix it for real.
+2026.10.22:
+- Fixed a bug that had accidentally been introduced in version 2026.07.23: We now correctly
+  parse the "RTP/SAVP" and "RTP/SAVP/TCP" profile strings.
+- When a RTSP server is asked to stream RTP/RTSP-over-TCP, we don't record the TCP socket
+  number to use when we're processing the "SETUP" command.  Instead, we have to wait until
+  we're processing the "PLAY" command, because the "PLAY" command might be using a different
+  TCP connection (and thus a different socket number).
+  (Thanks to Abdullah Al Ishtiaq for reporting this issue.)
 2026.10.21:
 - Fixed a bug that could possibly allow a malicious client to cause a RTSP server to crash
   when streaming from an AC-3 audio file.
