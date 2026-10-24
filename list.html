@@ -6,6 +6,28 @@
 </head>
 <body>
 <h1>live555 unofficial archive - list</h1>
+<h2 id='2026.10.24'>2026.10.24</h2>
+<ul>
+<li>size: 682 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/localgetter/live.2026.10.24.tar.gz'>live.2026.10.24.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2026.10.24'>v2026.10.24</a></li>
+<li>git diff link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/compare/v2026.10.23..v2026.10.24'>v2026.10.23..v2026.10.24</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- In "RTPInterface::handleRead()", if we're reading from a TCP socket, call "getpeername()"
+  to set our "fromAddress", because the "recvfrom()" call won't set it.
+  (Thanks to Esteban Mandjukowski for this suggestion.)
+- Added a check to "AC3AudioStreamParser" for a buffer overflow that probably won't happen,
+  but to be safe...  (Thanks to Dirk Mueller for reporting this.)
+- Began replacing some calls to "sprintf()" (that were perfectly safe, but caused some
+  compilers to emit warning messages) with calls to "snprintf()".
+  (There are still a lot more of these to do.)</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: daded673171a5184b65b69d36ef0b7b3</li>
+<li>sha256: 5d6244604b364251d0c0b0fc87a849488958802245b1473eaaf55eaaef5a838b</li>
+<li>sha512: a1e1bb7be550fc35d44f93a41ff113a28e1b218e5d7e6e3346bf8063d23088d1b0bac31890d3176329a94b1a1c63f7cf88c8c4abe322843c620c9f6fee5e4ae1</li>
+</ul>
 <h2 id='2026.10.23'>2026.10.23</h2>
 <ul>
 <li>size: 678 K</li>
