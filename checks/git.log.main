@@ -1,3 +1,24 @@
+commit 06bd0ec4cef66235ee4cf20a53df7111637fa43a
+tree 300cc83497d8724aff3b6e761285cf1728d2cb5b
+parent bdebc75c6878e4ad258a46a0afd848fdb0b70457
+author Live Networks, Inc <invalid@example.com> 1792800000 +0000
+committer live555-unofficial-archive <invalid@example.com> 1792800000 +0000
+
+    unpack live.2026.10.24.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - In "RTPInterface::handleRead()", if we're reading from a TCP socket, call "getpeername()"
+      to set our "fromAddress", because the "recvfrom()" call won't set it.
+      (Thanks to Esteban Mandjukowski for this suggestion.)
+    - Added a check to "AC3AudioStreamParser" for a buffer overflow that probably won't happen,
+      but to be safe...  (Thanks to Dirk Mueller for reporting this.)
+    - Began replacing some calls to "sprintf()" (that were perfectly safe, but caused some
+      compilers to emit warning messages) with calls to "snprintf()".
+      (There are still a lot more of these to do.)
+
 commit bdebc75c6878e4ad258a46a0afd848fdb0b70457
 tree 080e3028e897ba48fcc5d74892408c086f04d8b7
 parent 9bf39e997ca0c27b8170074a19e2f452c99d268f

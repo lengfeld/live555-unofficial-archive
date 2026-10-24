@@ -11846,3 +11846,42 @@ Date:   Fri Oct 23 00:00:00 2026 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2026.10.24
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sat Oct 24 00:00:00 2026 +0000
+
+live555 2026.10.24
+
+commit 06bd0ec4cef66235ee4cf20a53df7111637fa43a
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sat Oct 24 00:00:00 2026 +0000
+
+    unpack live.2026.10.24.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - In "RTPInterface::handleRead()", if we're reading from a TCP socket, call "getpeername()"
+      to set our "fromAddress", because the "recvfrom()" call won't set it.
+      (Thanks to Esteban Mandjukowski for this suggestion.)
+    - Added a check to "AC3AudioStreamParser" for a buffer overflow that probably won't happen,
+      but to be safe...  (Thanks to Dirk Mueller for reporting this.)
+    - Began replacing some calls to "sprintf()" (that were perfectly safe, but caused some
+      compilers to emit warning messages) with calls to "snprintf()".
+      (There are still a lot more of these to do.)
+----
+tag v2026.10.24-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sat Oct 24 00:00:00 2026 +0000
+
+live555 2026.10.24 from localgetter
+
+commit ed6197b8b27f7cc82d085fe68313b33a17d09e94
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sat Oct 24 00:00:00 2026 +0000
+
+    unpack live.2026.10.24.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
