@@ -11885,3 +11885,35 @@ Date:   Sat Oct 24 00:00:00 2026 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2026.10.29
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Oct 29 00:00:00 2026 +0000
+
+live555 2026.10.29
+
+commit 7b254e7dcf7c6878f19d644c791887ba9b1dc721
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Oct 29 00:00:00 2026 +0000
+
+    unpack live.2026.10.29.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Mostly cosmetic changes, and replaced more calls to "sprintf()" with calls to "snprintf()".
+----
+tag v2026.10.29-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Thu Oct 29 00:00:00 2026 +0000
+
+live555 2026.10.29 from localgetter
+
+commit 7fd01951cd2ad2207ba6c0f486c0c0b97e7789c0
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Thu Oct 29 00:00:00 2026 +0000
+
+    unpack live.2026.10.29.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----

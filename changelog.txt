@@ -1,3 +1,5 @@
+2026.10.29:
+- Mostly cosmetic changes, and replaced more calls to "sprintf()" with calls to "snprintf()".
 2026.10.24:
 - In "RTPInterface::handleRead()", if we're reading from a TCP socket, call "getpeername()"
   to set our "fromAddress", because the "recvfrom()" call won't set it.

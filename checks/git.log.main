@@ -1,3 +1,17 @@
+commit 7b254e7dcf7c6878f19d644c791887ba9b1dc721
+tree fea8ae6500d0f90c6379aee6ad1f66584263703b
+parent 06bd0ec4cef66235ee4cf20a53df7111637fa43a
+author Live Networks, Inc <invalid@example.com> 1793232000 +0000
+committer live555-unofficial-archive <invalid@example.com> 1793232000 +0000
+
+    unpack live.2026.10.29.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Mostly cosmetic changes, and replaced more calls to "sprintf()" with calls to "snprintf()".
+
 commit 06bd0ec4cef66235ee4cf20a53df7111637fa43a
 tree 300cc83497d8724aff3b6e761285cf1728d2cb5b
 parent bdebc75c6878e4ad258a46a0afd848fdb0b70457
