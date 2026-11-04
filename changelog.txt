@@ -1,3 +1,6 @@
+2026.11.04:
+- Fixed the RTSP server's "parseTransportHeader()" function to (once again) correctly
+  recognize "RTP/AVP/UDP" (as an alternative to "RTP/AVP") in clients' "Transport:" headers.
 2026.10.29:
 - Mostly cosmetic changes, and replaced more calls to "sprintf()" with calls to "snprintf()".
 2026.10.24:

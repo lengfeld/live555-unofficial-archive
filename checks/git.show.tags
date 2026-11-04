@@ -11917,3 +11917,36 @@ Date:   Thu Oct 29 00:00:00 2026 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2026.11.04
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Wed Nov 4 00:00:00 2026 +0000
+
+live555 2026.11.04
+
+commit a792dc5e92d9b6f622de07f570826923103a1552
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Wed Nov 4 00:00:00 2026 +0000
+
+    unpack live.2026.11.04.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Fixed the RTSP server's "parseTransportHeader()" function to (once again) correctly
+      recognize "RTP/AVP/UDP" (as an alternative to "RTP/AVP") in clients' "Transport:" headers.
+----
+tag v2026.11.04-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Wed Nov 4 00:00:00 2026 +0000
+
+live555 2026.11.04 from localgetter
+
+commit 317ec299df6f3af8c4c11e0239fc4982fb5cfbaa
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Wed Nov 4 00:00:00 2026 +0000
+
+    unpack live.2026.11.04.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
