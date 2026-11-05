@@ -6,6 +6,43 @@
 </head>
 <body>
 <h1>live555 unofficial archive - list</h1>
+<h2 id='2026.11.05'>2026.11.05</h2>
+<ul>
+<li>size: 678 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/localgetter/live.2026.11.05.tar.gz'>live.2026.11.05.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2026.11.05'>v2026.11.05</a></li>
+<li>git diff link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/compare/v2026.11.04..v2026.11.05'>v2026.11.04..v2026.11.05</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Updated the 'authentication' fix that we made in version 2026.09.23: We no longer "reset()"
+  the "Authenticator" if we get a "303" (REDIRECT) response, because the new server might
+  still want to do Digest authentication (with the same username+password as the original server).
+  Instead, once we receive a request for Digest authentication, we no longer allow Basic
+  authentication (for this "RTSPClient") - either for the same server, or for any server
+  that we get redirected to.
+  (Thanks to Jean-Baptiste Renou for reporting the problem with the original fix.)</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: 904cf4630de41f3005b236ceb2728bbf</li>
+<li>sha256: a9001fed451a2e5bc429f1f4cb4efd3eb9840ca429891f7e64f743a5a44b7333</li>
+<li>sha512: 2132bfdcadc559f320a7265e11956d28c38c04e9520dfee9162a82f12080766b379e74f9ed3f2a29d96eb2fc75722b982a8a2c43fc47f7e47277675fc661b938</li>
+</ul>
+<h2 id='2026.11.04'>2026.11.04</h2>
+<ul>
+<li>size: 682 K</li>
+<li>tarball: <a href='https://github.com/lengfeld/live555-unofficial-archive/raw/main/srcs/localgetter/live.2026.11.04.tar.gz'>live.2026.11.04.tar.gz</a></li>
+<li>git tag link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/tree/v2026.11.04'>v2026.11.04</a></li>
+<li>git diff link: <a href='https://github.com/lengfeld/live555-unofficial-git-archive/compare/v2026.10.29..v2026.11.04'>v2026.10.29..v2026.11.04</a></li>
+</ul>
+<h3>Changelog</h3>
+<pre>- Fixed the RTSP server's "parseTransportHeader()" function to (once again) correctly
+  recognize "RTP/AVP/UDP" (as an alternative to "RTP/AVP") in clients' "Transport:" headers.</pre>
+<h3>Checksums</h3>
+<ul>
+<li>md5: cbd412f7b9ab91abd25bf2831ec33840</li>
+<li>sha256: 67c8b5f51edd04f7580f2a8a7778c125290955991c38d1d54afea49f4762a5e7</li>
+<li>sha512: 05fa5053ffea5fe6fa4b0ccabd89b0563c961dd2f6d4f0956124d892c7bf648a2705d778144f23bb670fcc6296108b905f56f5ade202278146a1b922621a9a13</li>
+</ul>
 <h2 id='2026.10.29'>2026.10.29</h2>
 <ul>
 <li>size: 682 K</li>
