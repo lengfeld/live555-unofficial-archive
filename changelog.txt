@@ -1,3 +1,8 @@
+2026.11.08:
+- In "MultiFramedRTPSource" (for handling RTP reception), handle the case where a
+  malformed RTP special header could cause no data to get delivered, and get us into an
+  infinite loop.  We now reject (the rest of) the packet in this case.
+  (Thanks to Dickson Wu for reporting this issue.)
 2026.11.05:
 - Updated the 'authentication' fix that we made in version 2026.09.23: We no longer "reset()"
   the "Authenticator" if we get a "303" (REDIRECT) response, because the new server might

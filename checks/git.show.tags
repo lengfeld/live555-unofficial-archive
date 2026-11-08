@@ -11988,3 +11988,38 @@ Date:   Thu Nov 5 00:00:00 2026 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2026.11.08
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sun Nov 8 00:00:00 2026 +0000
+
+live555 2026.11.08
+
+commit 7f00358b4936f815c37ec7d569f011fc93413082
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sun Nov 8 00:00:00 2026 +0000
+
+    unpack live.2026.11.08.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - In "MultiFramedRTPSource" (for handling RTP reception), handle the case where a
+      malformed RTP special header could cause no data to get delivered, and get us into an
+      infinite loop.  We now reject (the rest of) the packet in this case.
+      (Thanks to Dickson Wu for reporting this issue.)
+----
+tag v2026.11.08-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sun Nov 8 00:00:00 2026 +0000
+
+live555 2026.11.08 from localgetter
+
+commit 2faf7bdb369b4c8d556423a622efbd48c249c6ea
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sun Nov 8 00:00:00 2026 +0000
+
+    unpack live.2026.11.08.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----
