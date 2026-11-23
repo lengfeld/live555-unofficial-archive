@@ -95,7 +95,7 @@ def get(url):
     for filename in changed_files:
         print(get_file_info_for_filename(filename))
 
-    IGNORE_FILES = ["doxygen/"]
+    IGNORE_FILES = ["doxygen/", "liveMedia_versionInt..>"]
 
     # Filter out some files
     changed_files = [n for n in changed_files if n not in IGNORE_FILES]
