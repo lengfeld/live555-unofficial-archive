@@ -131,7 +131,7 @@ class TestParseHtml(unittest.TestCase):
 
     def testParseRealWorldData(self):
         table_data = parse_html(self.content_example)
-        self.assertEqual("Index of /liveMedia/public", table_data.title)
+        self.assertEqual("Index of /", table_data.title)
         # NOTE: The last two header titles are not in the first row.
         # They are in the second row
         #    <tr><th colspan="5"><hr></th></tr>

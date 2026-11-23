@@ -50,14 +50,14 @@ class TestParseTableData(unittest.TestCase):
         self.assertEqual(context.exception.reason, ConvertErrorReason.TITLE_DOES_NOT_MATCH)
 
     def testTableHeadersToNotMatch(self):
-        table_data = TableData("Index of /liveMedia/public", ["", "Name", "Last modified", "Size", "WRONG", "", ""], [])
+        table_data = TableData("Index of /", ["", "Name", "Last modified", "Size", "WRONG", "", ""], [])
         with self.assertRaises(ConvertError) as context:
                 parse_table_data(table_data)
         self.assertEqual(context.exception.reason, ConvertErrorReason.TABLE_HEADERS_DO_NOT_MATCH)
 
     def testOneFileInfo(self):
         rows = [["", "live555-latest-sha1.txt", "2023-03-30 08:47", "41", ""]]
-        table_data = TableData("Index of /liveMedia/public", ["", "Name", "Last modified", "Size", "Description", "", ""], rows)
+        table_data = TableData("Index of /", ["", "Name", "Last modified", "Size", "Description", "", ""], rows)
         file_infos = parse_table_data(table_data)
         self.assertEqual(file_infos, [FileInfo(name='live555-latest-sha1.txt', lastModified='2023-03-30 08:47', size='41', description='')])
 
