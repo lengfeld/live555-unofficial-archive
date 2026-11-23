@@ -12023,3 +12023,38 @@ Date:   Sun Nov 8 00:00:00 2026 +0000
     
     Copyright (c), Live Networks, Inc.  All rights reserved
 ----
+tag v2026.11.22
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sun Nov 22 00:00:00 2026 +0000
+
+live555 2026.11.22
+
+commit 17a4a39d9d2bdbbca965f5bef571ebb77a25cf63
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sun Nov 22 00:00:00 2026 +0000
+
+    unpack live.2026.11.22.tar.gz
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved.
+    
+    Changelog:
+    
+    - Made "OnDemandServerMediaSubsession" a little more bulletproof against some potential
+      memory leaks.
+    - Replaced more calls to "sprintf()" with calls to "snprintf()".
+    - Performed the annual update of the copyright years near the start of each file.
+----
+tag v2026.11.22-tree
+Tagger: live555-unofficial-archive <invalid@example.com>
+Date:   Sun Nov 22 00:00:00 2026 +0000
+
+live555 2026.11.22 from localgetter
+
+commit f4268e652a2a665b833deccc0c9e0431ead9db63
+Author: Live Networks, Inc <invalid@example.com>
+Date:   Sun Nov 22 00:00:00 2026 +0000
+
+    unpack live.2026.11.22.tar.gz from localgetter
+    
+    Copyright (c), Live Networks, Inc.  All rights reserved
+----

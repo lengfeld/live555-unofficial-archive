@@ -1,3 +1,8 @@
+2026.11.22:
+- Made "OnDemandServerMediaSubsession" a little more bulletproof against some potential
+  memory leaks.
+- Replaced more calls to "sprintf()" with calls to "snprintf()".
+- Performed the annual update of the copyright years near the start of each file.
 2026.11.08:
 - In "MultiFramedRTPSource" (for handling RTP reception), handle the case where a
   malformed RTP special header could cause no data to get delivered, and get us into an

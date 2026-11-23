@@ -14,6 +14,7 @@ BasicUsageEnvironment/include/BasicHashTable.hh
 BasicUsageEnvironment/include/BasicUsageEnvironment0.hh
 BasicUsageEnvironment/include/BasicUsageEnvironment.hh
 BasicUsageEnvironment/include/BasicUsageEnvironment_version.hh
+BasicUsageEnvironment/include/BasicUsageEnvironment_versionInt.txt
 BasicUsageEnvironment/include/DelayQueue.hh
 BasicUsageEnvironment/include/HandlerSet.hh
 BasicUsageEnvironment/include/Lock.hh
@@ -91,6 +92,7 @@ groupsock/include/GroupEId.hh
 groupsock/include/GroupsockHelper.hh
 groupsock/include/Groupsock.hh
 groupsock/include/groupsock_version.hh
+groupsock/include/groupsock_versionInt.txt
 groupsock/include/IOHandlers.hh
 groupsock/include/NetAddress.hh
 groupsock/include/NetCommon.h
@@ -295,6 +297,7 @@ liveMedia/include/JPEGVideoSource.hh
 liveMedia/include/liveMedia.hh
 liveMedia/include/liveMedia.hh.orig
 liveMedia/include/liveMedia_version.hh
+liveMedia/include/liveMedia_versionInt.txt
 liveMedia/include/Locale.hh
 liveMedia/include/MatroskaFile.hh
 liveMedia/include/MatroskaFile.hh.orig
@@ -800,6 +803,7 @@ UsageEnvironment/include/strDup.hh
 UsageEnvironment/include/#UsageEnvironment.hh#
 UsageEnvironment/include/UsageEnvironment.hh
 UsageEnvironment/include/UsageEnvironment_version.hh
+UsageEnvironment/include/UsageEnvironment_versionInt.txt
 UsageEnvironment/Makefile.head
 UsageEnvironment/Makefile.tail
 UsageEnvironment/strDup.cpp
